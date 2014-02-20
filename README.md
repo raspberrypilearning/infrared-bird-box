@@ -1,7 +1,7 @@
 Infrared Bird Box
 =================
 
-A bird box with a Raspberry Pi infra red camera inside
+A bird box with a Raspberry Pi infrared camera inside
 
 [![image](./images/cover.jpg)](http://www.gardman.co.uk/wild-bird-care "Wild Bird Care | Gardman")
 
@@ -83,3 +83,25 @@ First check that you have all the parts you need to get your Raspberry Pi set up
     Login: pi
     Password: raspberry
     ```
+
+##Step 2: Setting up the Camera Board
+
+Firstly set up the Pi NoIR camera board without touching the bird box, test it first and we'll come to putting everything into the bird box later on.  Follow the official instructions [here](http://www.raspberrypi.org/camera "Camera | Raspberry Pi") and stop once you have successfully used a few of the example commands.
+
+If you have not done so already you can test the camera video preview using the following command.
+
+`raspivid -t 0`
+
+You'll notice that everything looks a little strange.  This is because you're looking at a combination of visible light and infrared light.  A quick test is to turn the lights off and aim a TV remote control at your face (just press the buttons).  You should see your face illuminated in the darkness!
+
+Press `Ctrl - C` when you want to exit.
+
+##Step 3: Wire up the Infrared LED
+
+The intention is to have a single Infrared LED illuminating the inside of the bird box to allow the Pi NoIR camera to see.  The LED is essentially identical to the ones found inside TV remote controls however we need to keep it on constantly to facilitate the live stream.
+
+First check that you have all the required parts to do this.
+* **Female** to **Female** jumper wires, at least 3
+* 220 Ohm Resistor
+* Infrared LED 5mm 890nm
+
