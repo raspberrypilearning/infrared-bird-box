@@ -98,10 +98,29 @@ Press `Ctrl - C` when you want to exit.
 
 ##Step 3: Wire up the Infrared LED
 
-The intention is to have a single Infrared LED illuminating the inside of the bird box to allow the Pi NoIR camera to see.  The LED is essentially identical to the ones found inside TV remote controls however we need to keep it on constantly to facilitate the live stream.
+The intention is to have a single Infrared LED illuminating the inside of the bird box to allow the Pi NoIR camera to see something.  The 890nm IR LED is an identical component to the ones found inside TV remote controls.  The only difference being that we're going to keep it on constantly to facilitate the live stream.
 
 First check that you have all the required parts to do this.
 * **Female** to **Female** jumper wires, at least 3
 * 220 Ohm Resistor
 * Infrared LED 5mm 890nm
 
+You should do this with the Raspberry Pi turned off and unplugged from the mains for safety.  Use the following command to shut down the Pi.
+
+`sudo halt`
+
+Wait for the ACT (activity) LED to stop blinking before turning off the power.
+
+If you've wired up an LED to the Pi GPIO pins before then please note that *this* LED needs to be done slightly differently.  An Infrared LED requires more current than the general purpose pins can provide.  It needs to be connected directly to the 5 volt supply of the Raspberry Pi with the 220 ohm resistor inline (without the resistor the current will be too high and the LED will burn out after about ten seconds).
+
+The diagram below shows how the LED should be wired up.  You'll notice that the LED has two legs.  One slightly longer than the other.  The longer of the two is called the **anode** and the shorter is the **cathode**.  The LED needs power to flow into the anode and out of the cathode, if you get the polarity wrong then nothing will happen.
+
+Use the **female** to **female** jumper wires to make the following connections.
+
+* Connect the anode to +5 volts which is pin 2 on the Pi
+* Connect the cathode to the 220 ohm resistor
+* Connect the other side of the resistor to ground which is pin 6 on the Pi
+
+This will allow power to flow from the Pi into the LED and back to ground through the resistor.  The resistor will limit the current to about 100 mA so that the LED never burns out.
+
+![image](./images/solderless-led.png "IR LED wiring diagram")
