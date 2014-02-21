@@ -147,10 +147,22 @@ Try putting some car keys into the bird box and, with the roof open, hold the ca
 
 Press `Ctrl - C` when you want to exit.
 
-The Raspberry Pi NoIR camera does have a lens that can rotate to adjust the focus however it's sold as a fixed focus camera.  The camera actually ships with three blobs of glue to hold the rotatable lens in place.  Look at the image below the letters *A*, *B* and *C* mark the location of the blobs of glue.
+The Raspberry Pi NoIR camera does have a lens that can rotate to adjust the focus however it's sold as a fixed focus camera.  The camera actually ships with three blobs of glue to hold the rotatable lens in place.  Look at the image below.  The letters *A*, *B* and *C* mark the location of the glue.
 
 ![image](./images/pi-noir-glue.jpg "")
 
+To be able to rotate the lens to adjust the focus you will need to manually dig out these blobs of glue.  This is actually a lot easier than it sounds and only takes about five minutes.  You will need a sharp tool like a needle, a scalpel or a dental pick.  Doing this under a low powered microscope can also help a lot.
+
+Children should do this with adult supervision for safety, especially if a scalpel is being used.
+
+Resign yourself to the fact that the camera will end up looking a little scruffy after you have done this, but it doesn't really matter since it's going to live on the inside of a bird box without anyone looking at it.  See below for a comparison.
+
 ![image](./images/pi-noir-before-after.jpg "")
 
+Once you're satisfied that you have all of the glue out you can take a pair of tweezers and firmly grip the inner section of the camera as shown below.  You should then be able to rotate it left and right.  Carefully rotate it left a few turns and see how the keys look.
+
+You may wish to put something under the keys at this point to simulate the height of a nest, to make doubly sure that the birds will be in focus.  Once birds move in you can't come back and adjust the camera if you've got the focus wrong.
+
 ![image](./images/pi-noir-tweezers.jpg "")
+
+Be careful not to rotate too far left otherwise the lens will actually pop out and then it can be a bit tricky to get it back in and on the thread.  If this does happen just put it back in gently and rotate right until it catches.  Once the required focus has been found you don't need to re-glue it.  It won't move on its own even if it gets a few bumps and knocks.
