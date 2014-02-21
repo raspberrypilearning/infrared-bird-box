@@ -46,7 +46,7 @@ To begin with pupils should appreciate that garden birds are very choosy about w
 
 Once a bird has moved in the box must not be disturbed until they have finished breeding (usually between October and January in the UK).  If something goes wrong you can't just open the box and fiddle with your wires or adjust the camera as this will traumatise the birds and could cause eggs or hatchlings to be abandoned.
 
-A requirement of the camera is to see the birds in total darkness.  A light inside the bird box could attract insects and predators and therefore no birds would chose it as a nesting site.  It is possible though to illuminate the inside of the bird box with a kind of light that is invisible to animals and humans but *is* visible to a camera. This is commonly known as night vision.  Night vision works by using a spectrum of light called [Infrared](http://en.wikipedia.org/wiki/Infrared "Infrared - Wikipedia, the free encyclopedia") which has a longer wavelength than visible light.  Notice that IR is to the right hand side of the visible spectrum of light below.
+A requirement of the system is to see the birds in total darkness.  A light inside the bird box could attract insects and predators and therefore no birds would select it as a nesting site.  It is possible though to illuminate the inside of the bird box with a kind of light that is invisible to animals and humans but *is* visible to a camera. This is commonly known as night vision.  Night vision works by using a spectrum of light called [Infrared](http://en.wikipedia.org/wiki/Infrared "Infrared - Wikipedia, the free encyclopedia") which has a longer wavelength than visible light.  Notice that IR is to the right hand side of the visible spectrum of light below.
 
 ![image](./images/spectrum.jpg "Electromagnetic spectrum")
 
@@ -58,7 +58,7 @@ The image will look black and white (greyscale) though because there are no wave
 
 ![image](./images/pinoirada.jpg "Pi NoIR camera")
 
-Above is the special version of the Raspberry Pi camera board called Pi NoIR.  It's essentially identical the normal green camera but it has no infrared filter.  Meaning that it lets in infrared light.  This camera combined with an infra red light source will give you night vision.  It's also small and won't be too intrusive when mounted on the inside of a bird box.
+Above is the special version of the Raspberry Pi camera board called Pi NoIR.  It's essentially identical the normal green camera but it has no infrared filter.  Meaning that it lets in infrared light.  This camera combined with an infrared light source will give you night vision.  It's also small and won't be too intrusive when mounted on the inside of a bird box.
 
 ## Step 1: Setting Up your Pi
 First check that you have all the parts you need to get your Raspberry Pi set up and working.
