@@ -96,7 +96,7 @@ You'll notice that everything looks a little strange.  This is because you're lo
 
 Press `Ctrl - C` when you want to exit.
 
-##Step 3: Wire up the Infrared LED
+##Step 3: Wiring up the Infrared LED
 
 The intention is to have a single Infrared LED illuminating the inside of the bird box to allow the Pi NoIR camera to see something.  The 890nm IR LED is an identical component to the ones found inside TV remote controls.  The only difference being that we're going to keep it on constantly to facilitate the live stream.
 
@@ -117,10 +117,40 @@ The diagram below shows how the LED should be wired up.  You'll notice that the 
 
 Use the **female** to **female** jumper wires to make the following connections.
 
-* Connect the anode to +5 volts which is pin 2 on the Pi
-* Connect the cathode to the 220 ohm resistor
+* Connect the anode (long leg) to +5 volts which is pin 2 on the Pi
+* Connect the cathode (short leg) to the 220 ohm resistor
 * Connect the other side of the resistor to ground which is pin 6 on the Pi
 
 This will allow power to flow from the Pi into the LED and back to ground through the resistor.  The resistor will limit the current to about 100 mA so that the LED never burns out.
 
 ![image](./images/solderless-led.png "IR LED wiring diagram")
+
+Next turn the Raspberry Pi back on and log in as usual.  You'll quickly notice that the LED doesn't appear to be working... *it is working*.  Your human eyes can't see it though, but the Pi NoIR camera can.  Turn on the camera preview with this command.
+
+`raspivid -t 0`
+
+Hold the LED in front of the camera and it will look like this:
+
+![image](./images/ir-led.jpg "IR LED as seen by Pi NoIR camera")
+
+If the LED does not appear to be lit then you have most likely got the polarity of the anode and cathode wrong.  Double check your wiring against the diagram above.  Try turning out the lights and aiming the LED at yourself (don't look directly into it as infrared light can still cause harm to your eyes).  You'll see from the Pi NoIR camera preview that it will illuminate you quite well.
+
+Press `Ctrl - C` when you want to exit.
+
+##Step 4: Adjusting the camera focus
+
+Bird boxes tend to be quite small in size and because of this you will probably need to adjust the focus on the Pi NoIR camera.  Otherwise you're only going to see blurry images of birds.  It will depend on the bird box you have chosen however if you're using the [Gardman](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965 "Gardman Wild Bird Nest Box") one recommended by this guide (also recommended by [British Trust for Ornithology](http://www.bto.org/ "Welcome to the BTO | BTO - British Trust for Ornithology")) then you definitely will have to adjust the camera focus.  This is because the distance from the roof of the bird box to the base is too short.
+
+Try putting some car keys into the bird box and, with the roof open, hold the camera at the approximate height of the roof and see how the camera preview looks.  The keys will probably not be in focus.  Use the following command to start the camera preview.
+
+`raspivid -t 0`
+
+Press `Ctrl - C` when you want to exit.
+
+The Raspberry Pi NoIR camera does have a lens that can rotate to adjust the focus however it's sold as a fixed focus camera.  The camera actually ships with three blobs of glue to hold the rotatable lens in place.  Look at the image below the letters *A*, *B* and *C* mark the location of the blobs of glue.
+
+![image](./images/pi-noir-glue.jpg "")
+
+![image](./images/pi-noir-before-after.jpg "")
+
+![image](./images/pi-noir-tweezers.jpg "")
