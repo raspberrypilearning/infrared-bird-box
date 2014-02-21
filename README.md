@@ -139,7 +139,7 @@ Press `Ctrl - C` when you want to exit.
 
 ##Step 4: Adjusting the camera focus
 
-Bird boxes tend to be quite small in size and because of this you will probably need to adjust the focus on the Pi NoIR camera.  Otherwise you're only going to see blurry images of birds.  It will depend on the bird box you have chosen however if you're using the [Gardman](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965 "Gardman Wild Bird Nest Box") one recommended by this guide (also recommended by [British Trust for Ornithology](http://www.bto.org/ "Welcome to the BTO | BTO - British Trust for Ornithology")) then you definitely will have to adjust the camera focus.  This is because the distance from the roof of the bird box to the base is too short.
+Bird boxes tend to be quite small in size and because of this you will probably need to adjust the focus on the Pi NoIR camera.  Otherwise you're only going to see blurry images of birds.  It will depend on the bird box you have chosen however if you're using the [Gardman](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965 "Gardman Wild Bird Nest Box") one suggested by this guide (also recommended by [British Trust for Ornithology](http://www.bto.org/ "Welcome to the BTO | BTO - British Trust for Ornithology")) then you definitely will have to adjust the camera focus.  This is because the distance from the roof of the bird box to the base is too short.
 
 Try putting some car keys into the bird box and, with the roof open (remove the screw), hold the camera at the approximate height of the roof and see how the camera preview looks.  The keys will probably not be in focus.  Use the following command to start the camera preview.
 
@@ -151,7 +151,7 @@ The Raspberry Pi NoIR camera does have a lens that can rotate to adjust the focu
 
 ![image](./images/pi-noir-glue.jpg "Pi NoIR glue location")
 
-To be able to rotate the lens to adjust the focus you will need to manually dig out these blobs of glue.  This is actually a lot easier than it sounds and only takes about five minutes.  You will need a sharp tool like a needle, a scalpel or a dental pick.  Doing this under a low powered microscope can also help a lot.
+To be able to rotate the lens to adjust the focus you will need to manually dig out these blobs of glue.  This is actually a lot easier than it sounds and only takes about five minutes.  You will need a sharp tool like a needle, a scalpel or a dental pick.  Doing this under a low powered microscope can also help a lot.  It's advisable to completely disconnect the camera from the Raspberry Pi when you do this.
 
 Children should do this with adult supervision for safety, especially if a scalpel is being used.
 
@@ -159,7 +159,7 @@ Resign yourself to the fact that the camera will end up looking a little scruffy
 
 ![image](./images/pi-noir-before-after.jpg "Pi NoIR before and after")
 
-Once you're satisfied that you have all of the glue out you can take a pair of tweezers and firmly grip the inner section of the camera as shown below.  You should then be able to rotate it left and right.  Carefully rotate it left a few turns and see how the keys look.
+Once you're satisfied that you have all of the glue out you can take a pair of tweezers and firmly grip the inner section of the camera as shown below.  You should then be able to rotate it left and right.  Carefully rotate it left a few turns.  Now reconnect the camera to the Raspberry Pi and check to see how the keys look.
 
 You may wish to put something under the keys at this point to simulate the height of a nest, to make doubly sure that the birds will be in focus.  Once birds move in you can't come back and adjust the camera if you've got the focus wrong.
 
@@ -167,9 +167,11 @@ You may wish to put something under the keys at this point to simulate the heigh
 
 Be careful not to rotate too far left otherwise the lens will actually pop out and then it can be a bit tricky to get it back in and on the thread.  If this does happen just put it back in gently and rotate right until it catches.  Once the required focus has been found you don't need to re-glue it.  It won't move on its own even if it gets a few bumps and knocks.
 
-##Step 5: Installing the Pi NoIR camera into the Bird Box
+##Step 5: Installing the camera and LED into the Bird Box
 
 This part of the guide is going to be quite  [Blue Peter](http://www.bbc.co.uk/cbbc/shows/blue-peter "BBC - CBBC - Blue Peter").  This is a famous children's TV show in Britain which often involves making things out of cardboard toilet rolls, sticky back plastic and empty plastic bottles.  The idea here is simply to demonstrate what has to be achieved with installing the camera and it will then be up to you to come up with a more permanent solution (a tremendously fun group activity in itself).
+
+The following instructions are for the [Gardman](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965 "Gardman Wild Bird Nest Box") bird box.
 
 1.  Firstly place your finger on the roof above approximately the centre of the main body of the bird box.
 
@@ -180,10 +182,10 @@ This part of the guide is going to be quite  [Blue Peter](http://www.bbc.co.uk/c
 3.  Your thumb is now where the camera needs to be.  Take a pen and mark this spot with a cross.
 
     ![image](./images/bb-install-3.jpg "")
-4.  Cut out a rectangle of cardboard approximately 4 cm x 2 cm and fold it over length-ways.  Use some tape to secure it to the underside of the roof so that it is a few millimetres below where you drew the cross.  This is going to be used to compensate for the angle of the roof so that the camera board points directly down the middle of the bird box.
+4.  Cut out a rectangle of cardboard approximately 4 cm x 2 cm and fold it over length-ways.  Use some tape to secure it to the underside of the roof so that its a few millimetres below the cross.  This is going to be used to compensate for the angle of the roof so that the camera board points directly down the middle of the bird box.
 
     ![image](./images/bb-install-4.jpg "")
-5.  Next take the Pi NoIR camera board and slide the flex down between the roof hinge and the back wall.  Do this with the tin connectors facing away from the back wall.
+5.  Next take the Pi NoIR camera board and slide the flex down between the roof hinge and the back wall.  Do this with the tin connectors facing away from the back wall.  If you want to you could remove the two middle staples holding the hinge in place.  This will make the flex exit the bird box more neatly.
 
     ![image](./images/bb-install-5.jpg "")
 6.  Take some tape and put it across the top of the Pi NoIR camera board as shown.  Do not cover the camera lens.
@@ -192,9 +194,11 @@ This part of the guide is going to be quite  [Blue Peter](http://www.bbc.co.uk/c
 7.  Secure the camera in place so that the central lens is directly over the cross that you drew earlier.  The camera should sit at an angle.
 
     ![image](./images/bb-install-7.jpg "")
-8.  Close the lid and inspect the angle the camera is sitting at from the side, it needs to point directly at the centre of the base.  If it doesn't look right from this point of view then go back and adjust it until you're happy.
+8.  Close the lid and inspect the camera angle from the side, it needs to point directly at the centre of the base.  If it doesn't look right from this point of view then go back and adjust it until you're happy.
 
     ![image](./images/bb-install-8.jpg "")
-9.  Secure the infra LED to the underside of the roof but not too close to the camera otherwise you'll get a lot of glare on the video output.  The LED can go anywhere you like but it can help to bend the legs by 90 degrees as shown and secure it to the roof that way.
+9.  Secure the infra LED to the underside of the roof but not too close to the camera otherwise you'll see a lot of glare on the video.  The LED can go anywhere but it can help to bend the legs by 90 degrees as shown and secure it to the roof that way.  You may also wish to blank off the end of the LED with Tipp-Ex or by filing it down with a nail file.  This will prevent any spotlight effect on the video and create a more diffuse light effect.
 
     ![image](./images/bb-install-9.jpg "")
+
+###Advice 
