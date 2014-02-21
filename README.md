@@ -113,6 +113,10 @@ Wait for the ACT (activity) LED to stop blinking before turning off the power.
 
 If you've wired up an LED to the Pi GPIO pins before then please note that *this* LED needs to be done slightly differently.  An Infrared LED requires more current than the general purpose pins can provide.  It needs to be connected directly to the 5 volt supply of the Raspberry Pi with the 220 ohm resistor inline (without the resistor the current will be too high and the LED will burn out after about ten seconds).
 
+Ensure that you have the correct type of resistor, it needs to be 220 ohms *not* 220K ohms (220 thousand).  Please refer to the [electronic colour code](http://en.wikipedia.org/wiki/Electronic_color_code "Electronic color code - Wikipedia, the free encyclopedia") system for further guidance.  This is what it the resistor should look like:
+
+![image](./images/220ohm.JPG "220 Ohm resistor")
+
 The diagram below shows how the LED should be wired up.  You'll notice that the LED has two legs.  One slightly longer than the other.  The longer of the two is called the **anode** and the shorter is the **cathode**.  The LED needs power to flow into the anode and out of the cathode, if you get the polarity wrong then nothing will happen.
 
 Use the **female** to **female** jumper wires to make the following connections.
@@ -202,3 +206,5 @@ The following instructions are for the [Gardman](http://www.diy.com/nav/garden/p
     ![image](./images/bb-install-9.jpg "")
 
 ###Advice 
+
+
