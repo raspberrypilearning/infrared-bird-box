@@ -141,9 +141,11 @@ If the LED does not appear to be lit then you have most likely got the polarity 
 
 Press `Ctrl - C` when you want to exit.
 
-##Step 4: Adjusting the camera focus
+##Step 4: Adjusting the camera focus 
 
-Bird boxes tend to be quite small in size and because of this you will probably need to adjust the focus on the Pi NoIR camera.  Otherwise you're only going to see blurry images of birds.  It will depend on the bird box you have chosen however if you're using the [Gardman](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965 "Gardman Wild Bird Nest Box") one suggested by this guide (also recommended by [British Trust for Ornithology](http://www.bto.org/ "Welcome to the BTO | BTO - British Trust for Ornithology")) then you definitely will have to adjust the camera focus.  This is because the distance from the roof of the bird box to the base is too short.
+Bird boxes tend to be quite small in size and because of this you will probably need to reduce the focal length on the Pi NoIR camera.  Otherwise you're only going to see blurry images of birds.  It will depend on the bird box you have chosen however if you're using the [Gardman](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965 "Gardman Wild Bird Nest Box") one suggested by this guide (also recommended by [British Trust for Ornithology](http://www.bto.org/ "Welcome to the BTO | BTO - British Trust for Ornithology")) then you definitely will have to adjust the camera focus.
+
+The focal length of the camera is the distance from the front of the lens to an object which is in focus.  
 
 Try putting some car keys into the bird box and, with the roof open (remove the screw), hold the camera at the approximate height of the roof and see how the camera preview looks.  The keys will probably not be in focus.  Use the following command to start the camera preview.
 
