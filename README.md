@@ -30,7 +30,7 @@ This resource will walk you through the technical hurdles to allow you to have a
 *	A Monitor or TV
 *	Raspberry Pi NoIR Camera Board - has a **black** circuit board (try [CPC](http://cpc.farnell.com/jsp/search/productdetail.jsp?sku=SC13223 "RPI NOIR CAMERA BOARD - RASPBERRY-PI"))
 *	**Female** to **Female** jumper wires, at least 3 (try [Pimoroni](http://shop.pimoroni.com/collections/components "Components - Pimoroni"))
-*	220 Ohm Resistor, get several in case of breakages (try [Pimoroni](http://shop.pimoroni.com/collections/components "Components - Pimoroni"))
+*	220 Ohm 1% Resistor, get several in case of breakages (try [Pimoroni](http://shop.pimoroni.com/collections/components "Components - Pimoroni"))
 *	Infrared LED 5mm 890nm, get several in case of breakages (try [RS](http://uk.rs-online.com/web/p/ir-leds/6997663/ "Buy IR LEDs Infrared LED 5mm 890nm"))
 * Bird Box (try [B&Q](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965 "Gardman Wild Bird Nest Box"))
 
@@ -111,9 +111,9 @@ You should do this with the Raspberry Pi turned off and unplugged from the mains
 
 Wait for the ACT (activity) LED to stop blinking before turning off the power.
 
-If you've wired up an LED to the Pi GPIO pins before then please note that *this* LED needs to be done slightly differently.  An Infrared LED requires more current than the general purpose pins can provide.  It needs to be connected directly to the 5 volt supply of the Raspberry Pi with the 220 ohm resistor inline (without the resistor the current will be too high and the LED will burn out after about ten seconds).
+If you've wired up an LED to the Pi GPIO pins before then please note that *this* LED needs to be done slightly differently.  An Infrared LED requires more current than the general purpose pins can provide.  It needs to be connected directly to the 5 volt supply of the Raspberry Pi with a 220 ohm resistor inline (without the resistor the current will be too high and the LED will burn out after about ten seconds).
 
-Ensure that you have the correct type of resistor, it needs to be 220 ohms *not* 220K ohms (220 thousand).  Please refer to the [electronic colour code](http://en.wikipedia.org/wiki/Electronic_color_code "Electronic color code - Wikipedia, the free encyclopedia") system for further guidance.  This is what it the resistor should look like:
+Ensure that you have the correct type of resistor, it needs to be 220 ohms *not* 220K ohms (220 thousand).  The 5 band resistor colour code is red - red - black - black - brown.  Please refer to the [electronic colour code](http://en.wikipedia.org/wiki/Electronic_color_code "Electronic color code - Wikipedia, the free encyclopedia") system for further guidance.  This is what it the resistor should look like:
 
 ![image](./images/220ohm.JPG "220 Ohm resistor")
 
@@ -145,9 +145,13 @@ Press `Ctrl - C` when you want to exit.
 
 Bird boxes tend to be quite small in size and because of this you will probably need to reduce the focal length on the Pi NoIR camera.  Otherwise you're only going to see blurry images of birds.  It will depend on the bird box you have chosen however if you're using the [Gardman](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965 "Gardman Wild Bird Nest Box") one suggested by this guide (also recommended by [British Trust for Ornithology](http://www.bto.org/ "Welcome to the BTO | BTO - British Trust for Ornithology")) then you definitely will have to adjust the camera focus.
 
-The focal length of the camera is the distance from the front of the lens to an object which is in focus.  
+![image](./images/focal-length.png "Focal length diagram")
 
-Try putting some car keys into the bird box and, with the roof open (remove the screw), hold the camera at the approximate height of the roof and see how the camera preview looks.  The keys will probably not be in focus.  Use the following command to start the camera preview.
+The focal *length* of the camera is the distance from the front of the lens to the closest object which is in focus.  The *depth of field* is the range within which objects appear to be in focus.
+
+The Pi camera board has a focal length of about 50 cm and a depth of field of 50 cm to infinity.  Meaning that objects will only appear in focus if they’re at least 50 cm away from the lens of the camera.  Closer than that and they will be blurry and out of focus.  The Gardman bird box is about 18 cm high on the inside though.  So from that we know that if the camera is stuck to the inside of the roof all objects are going to be 18 cm or closer.  If we want them to be in focus then the camera focal depth will need to be reduced.
+
+As an experiment try putting some car keys into the bird box and, with the roof open (remove the screw), hold the camera at the approximate height of the roof and see how the camera preview looks.  The keys will probably not be in focus.  Use the following command to start the camera preview.
 
 `raspivid -t 0`
 
@@ -159,7 +163,9 @@ The Raspberry Pi NoIR camera does have a lens that can rotate to adjust the focu
 
 To be able to rotate the lens to adjust the focus you will need to manually dig out these blobs of glue.  This is actually a lot easier than it sounds and only takes about five minutes.  You will need a sharp tool like a needle, a scalpel or a dental pick.  Doing this under a low powered microscope can also help a lot.  It's advisable to completely disconnect the camera from the Raspberry Pi when you do this.
 
-Children should do this with adult supervision for safety, especially if a scalpel is being used.
+![image](./images/pi-noir-scalpel.jpg "Pi NoIR and scalpel")
+
+Take care not to cut your fingers.  Children should do this with adult supervision for safety, especially if a scalpel is being used.  The orange connector with the word `SUNNY` printed on it can pop out when you do this, don’t worry though because it pops right back in without any problems.  Unless you’re overly heavy handed, it’s unlikely that you will break the camera by doing this.  But if it does break then it’s your own responsibility.
 
 Resign yourself to the fact that the camera will end up looking a little scruffy after you have done this, but it doesn't really matter since it's going to live on the inside of a bird box without anyone looking at it.  See below for a comparison.
 
