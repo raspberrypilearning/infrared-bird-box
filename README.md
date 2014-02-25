@@ -219,8 +219,20 @@ The following instructions are for the [Gardman](http://www.diy.com/nav/garden/p
     ![image](./images/watch.jpg "A watch inside the bird box under IR light")
 12.  It is now helpful to put an object with some black-on-white text into the bird box to verify the focus, a watch or a business card is quite good for this.  Ensure that the text is in focus and readable, adjust the camera focus again as necessary before continuing.
 
+###Advice
 
+Here are some ideas for how you could make the installation more permanent and protect it from the elements.  Whether you choose to follow them is up to you.
 
-###Advice 
+*   If using the [Gardman](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965 "Gardman Wild Bird Nest Box") bird box do not trust the keyhole mount on the back.  Using it means the entire weight of the bird box will be supported on a very thin piece of wood.  It will not last a season.  It is recommended to drill through from the inside and mount using a large screw and washer.
 
+*   Consider that the Raspberry Pi does not need to be directly attached to the bird box itself.  You can buy a [replacement camera cable](http://shop.pimoroni.com/products/raspberry-pi-camera-cable "Raspberry Pi Camera Cable - Pimoroni") which can give you greater range.  The same connector found on the Raspberry Pi itself is also on the back of the camera board allowing you to easily change it (the tin connectors face the same side as the lens).
 
+*   The Raspberry Pi could live inside a Tupperware box to water proof it, you may get away with closing the camera flex into the lid.
+
+*   Choosing a site which is beneath the overhang of an existing roof will help a lot, thus avoiding the bird box from being rained on directly.
+
+*   Factor in getting power and an Ethernet/Internet connection to the bird box as well as avoiding prevailing winds and risk of predators.  You could use a wireless USB dongle, but Ethernet is more reliable for streaming video.  Especially in built up areas that have a lot of wireless traffic.
+
+*   The roof of the bird box could be sealed using silicone sealant.  Often used to seal the edges of windows and bathroom sinks.
+
+*   Try to make use of the four mounting holes on the camera board.  Perhaps you could jigsaw a wedge of wood to keep it at the right angle and put screws through to hold it in place.
