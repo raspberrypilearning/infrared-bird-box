@@ -303,12 +303,9 @@ The intention is to stream the video content from the bird box to the Internet o
 
 To do that we can create a small shell script with a while loop, inside that loop is the command to start the stream.  If something causes the stream command to go wrong and exit the shell script will go around the loop and try the command again... forever.
 
-On the Raspberry Pi lets create a script to do this.  Enter the following commands:
+On the Raspberry Pi lets create a script to do this.  Enter the following commands.
 
-```
-cd ~
-nano ustream
-```
+`nano ~/ustream`
 
 Now copy and paste the code below, but replace `rtmpurl/streamkey` (at the end of the raspivid line) with the values from your own Ustream channel.  Ensure there is a `/` character between the end of the RTMP URL and the Stream Key.
 ```bash
@@ -324,8 +321,14 @@ Press `Ctrl - O` to save and `Ctrl - X` to quit.
 
 Almost there.  Enter the following command to make the shell script executable.
 
-`chmod +x ./ustream`
+`chmod +x ~/ustream`
 
 Now, whenever you want to go live you just use the following command.
 
-`./ustream`
+`~/ustream`
+
+You can view the live stream on a PC or Laptop by going to the Ustream channel URL in a browser.  This can be accessed using the ![image](./images/ustream-channel-icon.png "UStream channel icon") icon which lives to the right of your channel name under **CHANNLES** in the Ustream dashboard.  See the green square in the screen shot above.
+
+When you have the video feed on screen do a test to see what the latency is like.  Poke your finger inside the entrance of the bird box and time how long it takes to appear online.  The URL in the browser address bar can now be sent to your friends over email, Facebook or Twitter and they should all be able to view what is happening in your bird box.
+
+Press `Ctrl - C` twice when you want to shut the stream down.
