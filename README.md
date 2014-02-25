@@ -264,14 +264,10 @@ sudo chown pi:users ffmpeg
 git clone git://source.ffmpeg.org/ffmpeg.git ffmpeg
 cd ffmpeg
 ./configure
-make
+make && sudo make install
 ```
 
 You can now do something else until you see the command prompt reappear.
-
-Then run this command to install FFmpeg.  **IMPORTANT, don't forget this!**
-
-`sudo make install`
 
 ###Create a free Ustream account
 
@@ -307,12 +303,14 @@ On the Raspberry Pi lets create a script to do this.  Enter the following comman
 
 `nano ~/ustream`
 
-Now copy and paste the code below, but replace `rtmpurl/streamkey` (at the end of the raspivid line) with the values from your own Ustream channel.  Ensure there is a `/` character between the end of the RTMP URL and the Stream Key.
+Now copy and paste the code below, but replace `<rtmpurl>` and `<streamkey>` with the corresponding values from your own Ustream channel.
 ```bash
 #!/bin/bash
+RTMP_URL=<rtmpurl>
+STREAM_KEY=<streamkey>
 while :
 do
-	raspivid -n -vf -hf -t 0 -w 960 -h 540 -fps 25 -b 500000 -o - | ffmpeg -i - -vcodec copy -an -metadata title="Streaming from Raspberry Pi" -f flv rtmpurl/streamkey
+	raspivid -n -vf -hf -t 0 -w 960 -h 540 -fps 25 -b 500000 -o - | ffmpeg -i - -vcodec copy -an -metadata title="Streaming from raspberry pi camera" -f flv $RTMP_URL/$STREAM_KEY
 	sleep 2
 done
 ```
