@@ -241,10 +241,91 @@ Here are some ideas for how you could make the installation more permanent and p
 
 ## Step 6: Streaming video to the Internet
 
-[UStream](http://www.ustream.tv/) is one of the most popular live video streaming sites on the Internet.  It's used by NASA to stream video from the [International Space Station](http://www.ustream.tv/channel/live-iss-stream "Live_ISS_Stream on USTREAM") all around the world.  Websites like [UStream](http://www.ustream.tv/), [YouTube Live](http://www.youtube.com/live), [Bambuser](http://bambuser.com/) and [justin.tv](http://www.justin.tv/) are known as *content distribution services*.
+[Ustream](http://www.ustream.tv/) is one of the most popular live video streaming sites on the Internet.  It's used by NASA to stream video from the [International Space Station](http://www.ustream.tv/channel/live-iss-stream "Live_ISS_Stream on USTREAM") to all over the world.  Websites like [Ustream](http://www.ustream.tv/), [YouTube Live](http://www.youtube.com/live), [Bambuser](http://bambuser.com/) and [justin.tv](http://www.justin.tv/) are known as *content distribution services*.
 
 We need to use a service like this because you could potentially have thousands of people watching your bird box simultaneously.  If you were to try and host that many viewers from your own Internet connection your router would probably go into meltdown.  There would simply not be enough upload [bandwidth](http://en.wikipedia.org/wiki/Bandwidth_%28computing%29 "Bandwidth (computing) - Wikipedia, the free encyclopedia").
 
-With a content distribution service you send your video content to them and they then host the connection to all the viewers.  Therefore you offload that bandwidth requirement from your own Internet connection *to them*.  You then don't have to worry about how many people are concurrently watching the bird box or how much bandwidth is being used.
+With a content distribution service provider you send your video content to them and they then host the connection to all the viewers.  Therefore you offload that bandwidth requirement from your own Internet connection *to them*.  That way you don't have to worry about how many people are concurrently watching the bird box or how much bandwidth is being used.
 
-The only drawback is that there will be a delay on the video.  For example if you poked your finger into the bird box, you would only see it appear in a web browser 20 to 30 seconds later.  Despite this though it will make a perfectly viable solution for sharing the bird box with the world.
+The only drawback is that there will be a delay on the video.  For example if you poked your finger into the bird box, you would only see it online 20 to 30 seconds later.  Despite this though it will make a perfectly viable solution for sharing the bird box with the world.
+
+###Compile FFmpeg
+
+Firstly you need to install some software called [FFmpeg](http://www.ffmpeg.org/ "FFmpeg") on the Raspberry Pi which will continually stream the video data from the camera board to the web.  Instructions are below.
+
+**NOTE:** This step is going to take about **two hours** since you have to [compile](http://en.wikipedia.org/wiki/Compiler "Compiler - Wikipedia, the free encyclopedia") the program from its source code.  The Raspbian FFmpeg package that can be installed using `apt-get` doesn't have the required `h264` video encoder support.  You can just set the process going and do something else during this time though, you'll only need to do it once too.
+
+The part that takes two hours is the `make` command at the end of the list below.  The `./configure` part takes a while too, just be patient.  Enter the following commands to download and compile FFmpeg:
+
+```
+cd /usr/src
+sudo mkdir ffmpeg
+sudo chown pi:users ffmpeg
+git clone git://source.ffmpeg.org/ffmpeg.git ffmpeg
+cd ffmpeg
+./configure
+make
+```
+
+You can now do something else until you see the command prompt reappear.
+
+Then run this command to install FFmpeg.  **IMPORTANT, don't forget this!**
+
+`sudo make install`
+
+###Create a free Ustream account
+
+If you have not done so already go to http://www.ustream.tv/ on a PC or Laptop and click `Sign Up`
+
+Enter your details to create an account for yourself.  During the sign up process you'll be asked to create a channel, try to think of an interesting name for it so that people who come across it will remember.
+
+Feel free to customise it, give your channel an avatar as well.
+
+The account will be free and it will do everything we need it to.  However after 30 days some adverts will show on the side of the page where your live video is.  This is part of the Ustream business model.  You can however buy a pro account and get access to many more features as well as disabling adverts.  That isn't necessary for this though.
+
+We need to copy two settings from your Ustream account to use on the Raspberry Pi.  The *RTMP address* and the *stream key*.  These two settings are needed by FFmpeg so that the data is streamed to the correct Ustream channel.
+
+To find these two settings follow the steps below.
+
+*   Log in
+*   Select **Dashboard** from the top right menu
+*   Select **CHANNELS** from the left hand menu
+*   Select your channel
+*   Select **Remote**
+
+You should then have the screen below however the **RTMP URL** and **Stream Key** fields will contain text.  Copy and paste these values into a text file for use later.
+
+![image](./images/ustream-remote-settings.png "UStream remote settings")
+
+###Go live!
+
+The intention is to stream the video content from the bird box to the Internet on a 24/7 basis.  So factoring in that sometimes Internet servers can go down it's a good idea to make it so that the Raspberry Pi will keep trying to send out the video stream if there is a problem.
+
+To do that we can create a small shell script with a while loop, inside that loop is the command to start the stream.  If something causes the stream command to go wrong and exit the shell script will go around the loop and try the command again... forever.
+
+On the Raspberry Pi lets create a script to do this.  Enter the following commands:
+
+```
+cd ~
+nano ustream
+```
+
+Now copy and paste the code below, but replace `rtmpurl/streamkey` (at the end of the raspivid line) with the values from your own Ustream channel.  Ensure there is a `/` character between the end of the RTMP URL and the Stream Key.
+```bash
+#!/bin/bash
+while :
+do
+	raspivid -n -vf -hf -t 0 -w 960 -h 540 -fps 25 -b 500000 -o - | ffmpeg -i - -vcodec copy -an -metadata title="Streaming from Raspberry Pi" -f flv rtmpurl/streamkey
+	sleep 2
+done
+```
+
+Press `Ctrl - O` to save and `Ctrl - X` to quit.
+
+Almost there.  Enter the following command to make the shell script executable.
+
+`chmod +x ./ustream`
+
+Now, whenever you want to go live you just use the following command.
+
+`./ustream`
