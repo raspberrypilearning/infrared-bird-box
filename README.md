@@ -40,6 +40,9 @@ If you want to be able to turn the Infrared LED on and off in code.
 * Breadboard (try [Pimoroni](http://shop.pimoroni.com/products/solderless-breadboard-830-point "Solderless Breadboard - 830 point - Pimoroni"))
 *	**Male** to **Female** jumper wires, at least 3 (try [Pimoroni](http://shop.pimoroni.com/collections/components "Components - Pimoroni"))
 
+###FYI for Teachers
+If this resource is going to be used in a class environment it will save a lot of time if the [Compile FFmpeg](#compile-ffmpeg) section of step 6 is done prior to starting the lesson.  I would recommend to also duplicate the SD card as many times as is necessary after doing the compile.
+
 ##Introduction
 
 To begin with pupils should appreciate that garden birds are very choosy about where they build their nest.  The bird box will need to be located out of any predator's reach, away from any prevailing winds and nowhere near a bird table or feeder.
@@ -255,7 +258,7 @@ Firstly you need to install some software called [FFmpeg](http://www.ffmpeg.org/
 
 **NOTE:** This step is going to take about **two hours** since you have to [compile](http://en.wikipedia.org/wiki/Compiler "Compiler - Wikipedia, the free encyclopedia") the program from its source code.  The Raspbian FFmpeg package that can be installed using `apt-get` doesn't have the required `h264` video encoder support.  You can just set the process going and do something else during this time though, you'll only need to do it once too.
 
-The part that takes two hours is the `make` command at the end of the list below.  The `./configure` part takes a while too, just be patient.  Enter the following commands to download and compile FFmpeg:
+The part that takes two hours is the `make` command at the end of the list below.  The `./configure` part takes a while too, just be patient.  Enter the following commands to download, compile and install FFmpeg:
 
 ```
 cd /usr/src
@@ -304,7 +307,7 @@ On the Raspberry Pi lets create a script to do this.  Enter the following comman
 `nano ~/ustream`
 
 Now copy and paste the code below, but replace `<rtmpurl>` and `<streamkey>` with the corresponding values from your own Ustream channel.
-```bash
+```
 #!/bin/bash
 RTMP_URL=<rtmpurl>
 STREAM_KEY=<streamkey>
