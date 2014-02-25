@@ -171,13 +171,13 @@ Resign yourself to the fact that the camera will end up looking a little scruffy
 
 ![image](./images/pi-noir-before-after.jpg "Pi NoIR before and after")
 
-Once you're satisfied that you have all of the glue out you can take a pair of tweezers and firmly grip the inner section of the camera as shown below.  You should then be able to rotate it left and right.  Carefully rotate it left a few turns.  Now reconnect the camera to the Raspberry Pi and check to see how the keys look.
+Once you're satisfied that you have all of the glue out you can take a pair of tweezers, or jewelry pliers, and firmly grip the inner section of the camera as shown below.  You should then be able to rotate it.  Carefully rotate it anti-clockwise a few turns.  Now reconnect the camera to the Raspberry Pi and check to see how the keys look.
 
-You may wish to put something under the keys at this point to simulate the height of a nest, to make doubly sure that the birds will be in focus.  Once birds move in you can't come back and adjust the camera if you've got the focus wrong.
+You may wish to put something under the keys at this point to simulate the height of a nest, to make doubly sure that the birds will be in focus.  Once birds move in you can't come back and adjust the camera if the focus is wrong.
 
 ![image](./images/pi-noir-tweezers.jpg "Pi NoIR with tweezers")
 
-Be careful not to rotate too far left otherwise the lens will actually pop out and then it can be a bit tricky to get it back in and on the thread.  If this does happen just put it back in gently and rotate right until it catches.  Once the required focus has been found you don't need to re-glue it.  It won't move on its own even if it gets a few bumps and knocks.
+Be careful not to rotate too far otherwise the lens will actually pop out and then it can be a bit tricky to get it back in and on the thread.  If this does happen just put it back in gently and rotate clockwise until it catches.  Once the required focus has been found you don't need to re-glue it.  It won't move on its own even if it gets a few bumps and knocks.
 
 ##Step 5: Installing the camera and LED into the Bird Box
 
@@ -187,31 +187,39 @@ The following instructions are for the [Gardman](http://www.diy.com/nav/garden/p
 
 1.  Firstly place your finger on the roof above approximately the centre of the main body of the bird box.
 
-    ![image](./images/bb-install-1.jpg "")
+    ![image](./images/bb-install-1.jpg "Installing step 1")
 2.  Lift up the roof and place your thumb directly below your finger so that you're pinching the lid as shown.
 
-    ![image](./images/bb-install-2.jpg "")
+    ![image](./images/bb-install-2.jpg "Installing step 2")
 3.  Your thumb is now where the camera needs to be.  Take a pen and mark this spot with a cross.
 
-    ![image](./images/bb-install-3.jpg "")
+    ![image](./images/bb-install-3.jpg "Installing step 3")
 4.  Cut out a rectangle of cardboard approximately 4 cm x 2 cm and fold it over length-ways.  Use some tape to secure it to the underside of the roof so that its a few millimetres below the cross.  This is going to be used to compensate for the angle of the roof so that the camera board points directly down the middle of the bird box.
 
-    ![image](./images/bb-install-4.jpg "")
+    ![image](./images/bb-install-4.jpg "Installing step 4")
 5.  Next take the Pi NoIR camera board and slide the flex down between the roof hinge and the back wall.  Do this with the tin connectors facing away from the back wall.  If you want to you could remove the two middle staples holding the hinge in place.  This will make the flex exit the bird box more neatly.
 
-    ![image](./images/bb-install-5.jpg "")
+    ![image](./images/bb-install-5.jpg "Installing step 5")
 6.  Take some tape and put it across the top of the Pi NoIR camera board as shown.  Do not cover the camera lens.
 
-    ![image](./images/bb-install-6.jpg "")
+    ![image](./images/bb-install-6.jpg "Installing step 6")
 7.  Secure the camera in place so that the central lens is directly over the cross that you drew earlier.  The camera should sit at an angle.
 
-    ![image](./images/bb-install-7.jpg "")
+    ![image](./images/bb-install-7.jpg "Installing step 7")
 8.  Close the lid and inspect the camera angle from the side, it needs to point directly at the centre of the base.  If it doesn't look right from this point of view then go back and adjust it until you're happy.
 
-    ![image](./images/bb-install-8.jpg "")
+    ![image](./images/bb-install-8.jpg "Installing step 8")
 9.  Secure the infra LED to the underside of the roof but not too close to the camera otherwise you'll see a lot of glare on the video.  The LED can go anywhere but it can help to bend the legs by 90 degrees as shown and secure it to the roof that way.  You may also wish to blank off the end of the LED with Tipp-Ex or by filing it down with a nail file.  This will prevent any spotlight effect on the video and create a more diffuse light effect.
 
-    ![image](./images/bb-install-9.jpg "")
+    ![image](./images/bb-install-9.jpg "Installing step 9")
+10.  Now reconnect the Raspberry Pi and test the focus once again.  I recommend to connect the camera flex, coming from back of the bird box, to the Pi first.  Then connect the LED and resistor, followed by the screen and keyboard.  Lastly the power.  When testing this it can be helpful to rest the Raspberry Pi upside down on the roof of the bird box.  Whatever works best for you.
+  
+11.  Boot up, log in as usual and then start the video preview with `raspivid -t 0`.  With the roof closed you should be able to see the inside of the bird box in a kind of black and white greyscale.  This is the infra red illumination working, you should even be able to cover the hole and still see the inside.  It will look similar to the picture below but will be slightly more zoomed in.  This image was taken using the `raspistill` command and not `raspivid`.  If you can't see anything at all then it's likely the infrared LED is not wired up correctly, double check the wiring and the polarity of the anode and cathode.
+
+    ![image](./images/watch.jpg "A watch inside the bird box under IR light")
+12.  It is now helpful to put an object with some black-on-white text into the bird box to verify the focus, a watch or a business card is quite good for this.  Ensure that the text is in focus and readable, adjust the camera focus again as necessary before continuing.
+
+
 
 ###Advice 
 
