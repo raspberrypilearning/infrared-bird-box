@@ -217,7 +217,7 @@ The following instructions are for the [Gardman](http://www.diy.com/nav/garden/p
 11.  Boot up, log in as usual and then start the video preview with `raspivid -t 0`.  With the roof closed you should be able to see the inside of the bird box in a kind of black and white greyscale.  This is the infra red illumination working, you should even be able to cover the hole and still see the inside.  It will look similar to the picture below but will be slightly more zoomed in.  This image was taken using the `raspistill` command and not `raspivid`.  If you can't see anything at all then it's likely the infrared LED is not wired up correctly, double check the wiring and the polarity of the anode and cathode.
 
     ![image](./images/watch.jpg "A watch inside the bird box under IR light")
-12.  It is now helpful to put an object with some black-on-white text into the bird box to verify the focus, a watch or a business card is quite good for this.  Ensure that the text is in focus and readable, adjust the camera focus again as necessary before continuing.
+12.  It is now helpful to put an object with some black-on-white text into the bird box to verify the focus, a watch or a business card is quite good for this.  Ensure that the text is in focus and readable, adjust the camera focus again as necessary before continuing.  Remember to compensate for nest height.
 
 ###Advice
 
@@ -233,6 +233,18 @@ Here are some ideas for how you could make the installation more permanent and p
 
 *   Factor in getting power and an Ethernet/Internet connection to the bird box as well as avoiding prevailing winds and risk of predators.  You could use a wireless USB dongle, but Ethernet is more reliable for streaming video.  Especially in built up areas that have a lot of wireless traffic.
 
-*   The roof of the bird box could be sealed using silicone sealant.  Often used to seal the edges of windows and bathroom sinks.
+*   Preventing ingress of water should be a priority.  The roof of the bird box could be sealed using silicone sealant.  Often used to seal the edges of windows and bathroom sinks.
 
 *   Try to make use of the four mounting holes on the camera board.  Perhaps you could jigsaw a wedge of wood to keep it at the right angle and put screws through to hold it in place.
+
+*   You may be tempted to look at [Never Wet](http://www.neverwet.com/ "Superhydrophobic Coatings | Corrosion Control & Waterproof Coatings | NeverWet") spray.  While this works very well at waterproofing things it degrades after some time and will not be a permanent enough solution.
+
+## Step 6: Streaming video to the Internet
+
+[UStream](http://www.ustream.tv/) is one of the most popular live video streaming sites on the Internet.  It's used by NASA to stream video from the [International Space Station](http://www.ustream.tv/channel/live-iss-stream "Live_ISS_Stream on USTREAM") all around the world.  Websites like [UStream](http://www.ustream.tv/), [YouTube Live](http://www.youtube.com/live), [Bambuser](http://bambuser.com/) and [justin.tv](http://www.justin.tv/) are known as *content distribution services*.
+
+We need to use a service like this because you could potentially have thousands of people watching your bird box simultaneously.  If you were to try and host that many viewers from your own Internet connection your router would probably go into meltdown.  There would simply not be enough upload [bandwidth](http://en.wikipedia.org/wiki/Bandwidth_%28computing%29 "Bandwidth (computing) - Wikipedia, the free encyclopedia").
+
+With a content distribution service you send your video content to them and they then host the connection to all the viewers.  Therefore you offload that bandwidth requirement from your own Internet connection *to them*.  You then don't have to worry about how many people are concurrently watching the bird box or how much bandwidth is being used.
+
+The only drawback is that there will be a delay on the video.  For example if you poked your finger into the bird box, you would only see it appear in a web browser 20 to 30 seconds later.  Despite this though it will make a perfectly viable solution for sharing the bird box with the world.
