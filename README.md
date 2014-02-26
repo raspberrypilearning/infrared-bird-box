@@ -10,13 +10,17 @@ This project will not only teach you about electronics and programming but can h
 This resource will walk you through the technical hurdles to allow you to have a working live webcam inside your bird box.  However it does not cover the DIY challenges required to protect your equipment from the elements.  Overcoming those is your own responsibility and will be quite a fun and motivating activity in its own right.
 
 ##Lesson objective
-* place holder
+* Appreciate the nesting needs of wild birds
+* Understand visible and infrared light
+* Understand the principles of focal length and depth in photography
+* Understand video streaming and content distribution services
 
 ##Lesson outcome
-*	place holder
+* To have made a bird box with a night vision camera inside
+* To have live streamed video content from the bird box to the Internet
 
 ##Time
-*	2-3 hours
+* 2-3 hours
 
 ##Requirements
 *	Raspberry Pi
@@ -33,12 +37,6 @@ This resource will walk you through the technical hurdles to allow you to have a
 *	220 Ohm 1% Resistor, get several in case of breakages (try [Pimoroni](http://shop.pimoroni.com/collections/components "Components - Pimoroni"))
 *	Infrared LED 5mm 890nm, get several in case of breakages (try [RS](http://uk.rs-online.com/web/p/ir-leds/6997663/ "Buy IR LEDs Infrared LED 5mm 890nm"))
 * Bird Box (try [B&Q](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965 "Gardman Wild Bird Nest Box"))
-
-##Optional extras
-If you want to be able to turn the Infrared LED on and off in code.
-* ULN2003 Transistor Array (try [RS](http://uk.rs-online.com/web/p/darlington-transistors/6868209 "Buy Darlington Transistors ULN2003"))
-* Breadboard (try [Pimoroni](http://shop.pimoroni.com/products/solderless-breadboard-830-point "Solderless Breadboard - 830 point - Pimoroni"))
-*	**Male** to **Female** jumper wires, at least 3 (try [Pimoroni](http://shop.pimoroni.com/collections/components "Components - Pimoroni"))
 
 ###FYI for Teachers
 If this resource is going to be used in a class environment it will save a lot of time if the [Compile FFmpeg](#compile-ffmpeg) section of step 6 is done prior to starting the lesson.  I would recommend to also duplicate the SD card as many times as is necessary after doing the compile.
