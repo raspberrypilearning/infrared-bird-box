@@ -340,7 +340,7 @@ You should familiarise yourself with SSH (Secure Shell Server).  This is a techn
 
 The instructions [here](https://github.com/raspberrypi/documentation/blob/master/remote-access/ssh.md "SSH, Secure Shell Server") cover how to do this from Windows, OS X or Linux.
 
-After you're comfortable with that you'll need a way to run `~/ustream` over SSH and then disconnect from the Pi leaving it running.  If you run `~/ustream` in an SSH window the streaming would stop when you close that window.  Ideally you don't really want to keep an SSH window open at all times on another PC or Mac, so here is a simple way to solve that problem.
+After you're comfortable with that you'll need a way to run `~/ustream` over SSH and then disconnect from the Pi leaving it running.  If you were to run `~/ustream` in an SSH window and then close that window you wouldn't be able to get back to it to see if there was a problem.  Ideally you don't really want to keep an SSH window open at all times on another PC or Mac, so here is a simple way to solve it.
 
 ###Screen
 
@@ -354,7 +354,7 @@ Then, to start a new session enter the following command.
 
 `screen bash`
 
-This will now give you a blank session showing the command prompt.  Enter the command below, this is a terminal equivalent of task manager in Windows.
+This will now give you a blank session showing the command prompt.  Let's do a test run using the *top* program.  Enter the command below, this is a terminal equivalent of task manager in Windows.
 
 `top`
 
