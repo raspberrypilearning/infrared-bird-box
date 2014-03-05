@@ -126,7 +126,7 @@ Use the **female** to **female** jumper wires to make the following connections.
 * Connect the cathode (short leg) to the 220 ohm resistor
 * Connect the other side of the resistor to ground which is pin 6 on the Pi
 
-This will allow power to flow from the Pi into the LED and back to ground through the resistor.  The resistor will limit the current to about 100 mA so that the LED never burns out.
+This will allow power to flow from the Pi into the LED and back to ground through the resistor.  The resistor will limit the current to about 23 mA so that the LED never burns out.
 
 ![image](./images/solderless-led.png "IR LED wiring diagram")
 
@@ -331,3 +331,43 @@ You can view the live stream on a PC or Laptop by going to the Ustream channel U
 When you have the video feed on screen do a test to see what the latency is like.  Poke your finger inside the entrance of the bird box and time how long it takes to appear online.  The URL in the browser address bar can now be sent to your friends over email, Facebook or Twitter and they should all be able to view what is happening in your bird box.
 
 Press `Ctrl - C` twice when you want to shut the stream down.
+
+## Step 7: Remote control
+
+The last thing you should consider is being able to remotely access the Raspberry Pi from another computer without having to have a keyboard, mouse and monitor connected to it.  This would be pretty inconvenient if it's somewhere outside or up a tree for example.
+
+You should familiarise yourself with SSH (Secure Shell Server).  This is a technique that allows you to have the Raspberry Pi command prompt inside a window on another PC or Mac.  As long as the other PC has network access to the Raspberry Pi you can have full remote control.
+
+The instructions [here](https://github.com/raspberrypi/documentation/blob/master/remote-access/ssh.md "SSH, Secure Shell Server") cover how to do this from Windows, OS X or Linux.
+
+After you're comfortable with that you'll need a way to run `~/ustream` over SSH and then disconnect from the Pi leaving it running.  If you run `~/ustream` in an SSH window the streaming would stop when you close that window.  Ideally you don't really want to keep an SSH window open at all times on another PC or Mac, so here is a simple way to solve that problem.
+
+###Screen
+
+Screen is a little utility that allows you to have multiple terminal sessions with only one SSH connection to the Pi.  It's incredibly handy and once you've used it you'll use it all the time.
+
+Firstly you'll need to install it as it doesn't come installed by default.  You'll only need to do this once.
+
+`sudo apt-get install screen`
+
+Then, to start a new session enter the following command.
+
+`screen bash`
+
+This will now give you a blank session showing the command prompt.  Enter the command below, this is a terminal equivalent of task manager in Windows.
+
+`top`
+
+We'll use this as our program to leave running.  Now press `Ctrl - A + D` to disconnect from screen.  You should be back at the previous command prompt.  Now close the SSH window completely, wait a few seconds and re-connect.
+
+To get back into and resume the screen session enter the following command.
+
+`screen -r`
+
+You should now be looking at top once again.  Press `Ctrl - C` to close top and then you can type `exit` to close down the screen session.
+
+I recommend to do the exact same thing with `~/ustream` instead of `top`.
+
+This will allow you to set up the Pi with only power and Ethernet connected, you'll then be able to login over SSH, start the streaming and then disconnect leaving the streaming going in the background.  If there is a problem or the streaming goes down for some reason you'll be able to login over SSH and resume the screen session to check.
+
+Good luck!
