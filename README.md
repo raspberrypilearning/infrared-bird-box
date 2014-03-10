@@ -358,4 +358,30 @@ After you're comfortable with that you'll need a way to run `~/ustream` over SSH
 
 ###Screen
 
-Screen is a little utility that allows you to have multi
+Screen is a little utility that allows you to have multiple terminal sessions with only one SSH connection to the Pi.  It's incredibly handy and once you've used it you'll use it all the time.
+
+Firstly you'll need to install it as it doesn't come installed by default.  You'll only need to do this once.
+
+`sudo apt-get install screen`
+
+Then, to start a new session enter the following command.
+
+`screen bash`
+
+This will now give you a blank session showing the command prompt.  Enter the command below, this is a terminal equivalent of task manager in Windows.
+
+`top`
+
+We'll use this as our program to leave running.  Now press `Ctrl - A + D` to disconnect from screen.  You should be back at the previous command prompt.  Now close the SSH window completely, wait a few seconds and re-connect.
+
+To get back into and resume the screen session enter the following command.
+
+`screen -r`
+
+You should now be looking at top once again.  Press `Ctrl - C` to close top and then you can type `exit` to close down the screen session.
+
+I recommend to do the exact same thing with `~/ustream` instead of `top`.
+
+This will allow you to set up the Pi with only power and Ethernet connected, you'll then be able to login over SSH, start the streaming and then disconnect leaving the streaming going in the background.  If there is a problem or the streaming goes down for some reason you'll be able to login over SSH and resume the screen session to check.
+
+Good luck!
