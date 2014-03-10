@@ -210,7 +210,7 @@ The following instructions are for the [Gardman](http://www.diy.com/nav/garden/p
 8.  Close the lid and inspect the camera angle from the side, it needs to point directly at the centre of the base.  If it doesn't look right from this point of view then go back and adjust it until you're happy.
 
     ![image](./images/bb-install-8.jpg "Installing step 8")
-9.  Secure the infra LED to the underside of the roof but not too close to the camera otherwise you'll see a lot of glare on the video.  The LED can go anywhere but it can help to bend the legs by 90 degrees as shown and secure it to the roof that way.  You may also wish to blank off the end of the LED with Tipp-Ex or by filing it down with a nail file.  This will prevent any spotlight effect on the video and create a more diffuse light effect.
+9.  Secure the infra red LED to the underside of the roof but not too close to the camera otherwise you'll see a lot of glare on the video.  The LED can go anywhere but it can help to bend the legs by 90 degrees as shown and secure it to the roof that way.  You may also wish to blank off the end of the LED with Tipp-Ex or by filing it down with a nail file.  This will prevent any spotlight effect on the video and create a more diffuse light effect.
 
     ![image](./images/bb-install-9.jpg "Installing step 9")
 10.  Now reconnect the Raspberry Pi and test the focus once again.  I recommend to connect the camera flex, coming from back of the bird box, to the Pi first.  Then connect the LED and resistor, followed by the screen and keyboard.  Lastly the power.  When testing this it can be helpful to rest the Raspberry Pi upside down on the roof of the bird box.  Whatever works best for you.
