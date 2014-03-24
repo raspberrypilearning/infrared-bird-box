@@ -2,7 +2,7 @@
 
 A bird box with a Raspberry Pi infrared camera inside.
 
-![](./images/cover.jpg)
+[![](./images/cover.jpg)](http://www.gardman.co.uk/wild-bird-care "Wild Bird Care | Gardman")
 
 This project will not only teach you about electronics and programming, but can help support the bird population in your area. Having a camera inside a nesting box can be tremendously rewarding; however, with the Raspberry Pi you can also share the nesting box with the world by streaming the video content to the Internet. Watch as your birds gain their own Internet following!
 
