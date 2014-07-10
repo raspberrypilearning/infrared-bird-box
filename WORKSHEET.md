@@ -75,9 +75,9 @@ sudo halt
 
 Wait for the ACT (activity) LED to stop blinking before turning off the power.
 
-If you've wired up an LED to the Pi GPIO pins before, then please note that *this- LED needs to be done slightly differently. An infrared LED requires more current than the general purpose pins can provide. It needs to be connected directly to the 5 volt supply of the Raspberry Pi with a 220 ohm resistor inline; without the resistor the current will be too high, and the LED will burn out after about ten seconds.
+If you've wired up an LED to the Pi GPIO pins before, then please note that *this* LED needs to be done slightly differently. An infrared LED requires more current than the general purpose pins can provide. It needs to be connected directly to the 5 volt supply of the Raspberry Pi with a 220 ohm resistor inline; without the resistor the current will be too high, and the LED will burn out after about ten seconds.
 
-Ensure that you have the correct type of resistor; it needs to be 220 ohms *not- 220K ohms (220 thousand). The 5 band resistor colour code is red - red - black - black - brown. Please refer to the [electronic colour code](http://en.wikipedia.org/wiki/Electronic_color_code) system for further guidance. This is what the resistor should look like:
+Ensure that you have the correct type of resistor; it needs to be 220 ohms *not* 220K ohms (220 thousand). The 5 band resistor colour code is red - red - black - black - brown. Please refer to the [electronic colour code](http://en.wikipedia.org/wiki/Electronic_color_code) system for further guidance. This is what the resistor should look like:
 
 ![](images/220ohm.JPG)
 
