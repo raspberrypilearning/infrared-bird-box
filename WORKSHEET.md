@@ -113,7 +113,7 @@ Bird boxes tend to be quite small, and because of this you will probably need to
 
 ![](images/focal-length.png)
 
-The focal *length- of the camera is the distance from the front of the lens to the closest object which is in focus. The *depth of field- is the range within which objects appear to be in focus.
+The focal *length* of the camera is the distance from the front of the lens to the closest object which is in focus. The *depth of field* is the range within which objects appear to be in focus.
 
 The Pi camera board has a focal length of about 50 cm and a depth of field of 50 cm to infinity. This means that objects will only appear in focus if they’re at least 50 cm away from the lens of the camera. If objects are closer then they will be blurry and out of focus. The Gardman bird box is about 18 cm high on the inside; therefore we know that if the camera is stuck to the inside of the roof, all objects are going to be 18 cm or closer. If we want them to be in focus then the camera focal depth will need to be reduced.
 
