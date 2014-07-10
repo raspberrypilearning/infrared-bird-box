@@ -6,23 +6,19 @@ A bird box with a Raspberry Pi infrared camera inside.
 
 This project will not only teach you about electronics and programming, but can help support the bird population in your area. Having a camera inside a nesting box can be tremendously rewarding; however, with the Raspberry Pi you can also share the nesting box with the world by streaming the video content to the Internet. Watch as your birds gain their own Internet following!
 
-##Lesson objectives
+## Lesson objectives
 
 - Appreciate the nesting needs of wild birds
 - Understand visible and infrared light
 - Understand the principles of focal length and depth in photography
 - Understand video streaming and content distribution services
 
-##Lesson outcomes
+## Lesson outcomes
 
 - To have made a bird box with a night vision camera inside
 - To have live streamed video content from the bird box to the Internet
 
-##Time required
-
-- 2-3 hours
-
-##Requirements
+## Requirements
 
 As well as a Raspberry Pi with an SD card loaded with Raspbian, you'll also need:
 
@@ -53,6 +49,10 @@ If this resource is going to be used in a class environment, it will save a lot 
 
 - Bird box (try [B&Q](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965))
 
+### Time required
+
+- 2-3 hours
+
 ## Steps
 
 1. Setting Up your Pi
@@ -69,7 +69,7 @@ If this resource is going to be used in a class environment, it will save a lot 
 - (Optional) Final version of ustream script [ustream](./ustream)
   - Download to your Pi with `wget https://raw.githubusercontent.com/raspberrypilearning/infrared-bird-box/master/ustream --no-check-certificate`
 
-##Disclaimer
+## Disclaimer
 
 This resource will walk you through overcoming the technical hurdles to have a working live webcam inside your bird box. However, it does not cover the DIY challenges required to protect your equipment from the elements. Overcoming those is your own responsibility, and will be quite a fun and motivating activity in its own right.
 
