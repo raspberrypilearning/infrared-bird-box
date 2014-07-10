@@ -63,7 +63,7 @@ The intention is to have a single infrared LED illuminating the inside of the bi
 
 First check that you have all the required parts to do this:
 
-- **Female*- to **Female*- jumper wires, at least 3
+- **Female** to **Female** jumper wires, at least 3
 - 220 Ohm Resistor
 - Infrared LED 5mm 890nm
 
@@ -81,9 +81,9 @@ Ensure that you have the correct type of resistor; it needs to be 220 ohms *not-
 
 ![](images/220ohm.JPG)
 
-The diagram below shows how the LED should be wired up. You'll notice that the LED has two legs, one slightly longer than the other. The longer of the two is called the **anode*- and the shorter is the **cathode**. The LED needs power to flow into the anode and out of the cathode; if you get the polarity wrong then nothing will happen.
+The diagram below shows how the LED should be wired up. You'll notice that the LED has two legs, one slightly longer than the other. The longer of the two is called the **anode** and the shorter is the **cathode**. The LED needs power to flow into the anode and out of the cathode; if you get the polarity wrong then nothing will happen.
 
-Use the **female*- to **female*- jumper wires to make the following connections:
+Use the **female** to **female** jumper wires to make the following connections:
 
 - Connect the anode (long leg) to +5 volts which is pin 2 on the Pi
 - Connect the cathode (short leg) to the 220 ohm resistor
@@ -251,7 +251,7 @@ The only drawback is that there will be a delay on the video. For example, if yo
 
 Firstly, you need to install some software called [FFmpeg](http://www.ffmpeg.org/) on the Raspberry Pi which will continually stream the video data from the camera board to the web. Instructions are below.
 
-**NOTE:*- This step is going to take about **two hours*- since you have to [compile](http://en.wikipedia.org/wiki/Compiler) the program from its source code. The Raspbian FFmpeg package that can be installed using `apt-get` doesn't have the required `h264` video encoder support. You can just set the process going and do something else during this time; you'll also only need to do it once.
+**NOTE:** This step is going to take about **two hours** since you have to [compile](http://en.wikipedia.org/wiki/Compiler) the program from its source code. The Raspbian FFmpeg package that can be installed using `apt-get` doesn't have the required `h264` video encoder support. You can just set the process going and do something else during this time; you'll also only need to do it once.
 
 The part that takes two hours is the `make` command at the end of the list below. The `./configure` part takes a while too; just be patient. Enter the following commands to download, compile and install FFmpeg:
 
@@ -282,12 +282,12 @@ We need to copy two settings from your Ustream account to use on the Raspberry P
 To find these two settings follow the steps below:
 
 - Log in
-- Select **Dashboard*- from the top right menu
-- Select **CHANNELS*- from the left hand menu
+- Select **Dashboard** from the top right menu
+- Select **CHANNELS** from the left hand menu
 - Select your channel
 - Select **Remote**
 
-You should then see the screen below; however, the **RTMP URL*- and **Stream Key*- fields will contain text. Copy and paste these values into a text file for use later.
+You should then see the screen below; however, the **RTMP URL** and **Stream Key** fields will contain text. Copy and paste these values into a text file for use later.
 
 ![](images/ustream-remote-settings.png)
 
@@ -330,7 +330,7 @@ Now whenever you want to go live just use the following command:
 ~/ustream
 ```
 
-You can view the live stream on a PC or laptop by going to the Ustream channel URL in a browser. This can be accessed using the ![](images/ustream-channel-icon.png) icon on the right of your channel name under **CHANNELS*- in the Ustream dashboard. See the green square in the screen shot above.
+You can view the live stream on a PC or laptop by going to the Ustream channel URL in a browser. This can be accessed using the ![](images/ustream-channel-icon.png) icon on the right of your channel name under **CHANNELS** in the Ustream dashboard. See the green square in the screen shot above.
 
 When you have the video feed on screen, perform a test to see what the latency is like. Poke your finger inside the entrance of the bird box and time how long it takes to appear online. The URL in the browser address bar can now be sent to your friends over email, Facebook or Twitter and they should all be able to view what is happening in your bird box.
 
