@@ -4,7 +4,7 @@ To begin with, pupils should appreciate that garden birds are very choosy about 
 
 Once a bird has moved in, the box must not be disturbed until they have finished breeding; this is usually between October and January in the UK. If something goes wrong you can't just open the box and fiddle with your wires or adjust the camera, as this will traumatise the birds and could cause eggs or hatchlings to be abandoned.
 
-A requirement of the system is to see the birds in total darkness. A light inside the bird box could attract insects and predators, and therefore no birds would select it as a nesting site. It is possible, however, to illuminate the inside of the bird box with a kind of light that is invisible to animals and humans, but *is- visible to a camera. This is commonly known as night vision. Night vision works by using a spectrum of light called [Infrared](http://en.wikipedia.org/wiki/Infrared) which has a longer wavelength than visible light. Notice that IR is to the right hand side of the visible spectrum of light below:
+A requirement of the system is to see the birds in total darkness. A light inside the bird box could attract insects and predators, and therefore no birds would select it as a nesting site. It is possible, however, to illuminate the inside of the bird box with a kind of light that is invisible to animals and humans, but *is* visible to a camera. This is commonly known as night vision. Night vision works by using a spectrum of light called [Infrared](http://en.wikipedia.org/wiki/Infrared) which has a longer wavelength than visible light. Notice that IR is to the right hand side of the visible spectrum of light below:
 
 ![](images/spectrum.jpg)
 
@@ -125,7 +125,7 @@ raspivid -t 0
 
 Press `Ctrl + C` when you want to exit.
 
-The Raspberry Pi NoIR camera has a lens that can rotate to adjust the focus; however, it's sold as a fixed focus camera. The camera actually ships with three blobs of glue to hold the rotatable lens in place. Look at the image below; the letters *A*, *B- and *C- mark the location of the glue:
+The Raspberry Pi NoIR camera has a lens that can rotate to adjust the focus; however, it's sold as a fixed focus camera. The camera actually ships with three blobs of glue to hold the rotatable lens in place. Look at the image below; the letters *A*, *B* and *C* mark the location of the glue:
 
 ![](images/pi-noir-glue.jpg)
 
@@ -277,7 +277,7 @@ Feel free to customise it; give your channel an avatar as well.
 
 The account will be free and will do everything we need it to. However, after 30 days some adverts will show on the side of the page where your live video is; this is part of the Ustream business model. You can buy a pro account and get access to many more features, as well as disabling adverts; that isn't necessary for this project, though.
 
-We need to copy two settings from your Ustream account to use on the Raspberry Pi: the *RTMP address- and the *stream key*. These two settings are needed by FFmpeg so that the data is streamed to the correct Ustream channel.
+We need to copy two settings from your Ustream account to use on the Raspberry Pi: the *RTMP address* and the *stream key*. These two settings are needed by FFmpeg so that the data is streamed to the correct Ustream channel.
 
 To find these two settings follow the steps below:
 
