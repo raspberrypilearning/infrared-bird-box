@@ -33,8 +33,8 @@ As well as a Raspberry Pi with an SD card loaded with Raspbian, you'll also need
 - Ethernet cable
 - LAN with Internet connection
 - A monitor or TV
-- Raspberry Pi NoIR Camera Board - has a **black*- circuit board (try [CPC](http://cpc.farnell.com/jsp/search/productdetail.jsp?sku=SC13223))
-- *Female*- to *Female*- jumper wires, at least 3 (try [Pimoroni](http://shop.pimoroni.com/collections/components))
+- Raspberry Pi NoIR Camera Board - has a **black** circuit board (try [CPC](http://cpc.farnell.com/jsp/search/productdetail.jsp?sku=SC13223))
+- **Female** to **Female** jumper wires, at least 3 (try [Pimoroni](http://shop.pimoroni.com/collections/components))
 - 220 Ohm 1% Resistor; get several in case of breakages (try [Pimoroni](http://shop.pimoroni.com/collections/components))
 - Infrared LED 5mm 890nm; get several in case of breakages (try [RS](http://uk.rs-online.com/web/p/ir-leds/6997663/))
 
