@@ -66,7 +66,7 @@ If this resource is going to be used in a class environment, it will save a lot 
 ## Worksheet & included files
 
 - [The worksheet](./WORKSHEET.md)
-- (Optional) Final version of ustream script [ustream](./ustream)
+- (Optional) Final version of ustream script [ustream](https://raw.githubusercontent.com/raspberrypilearning/infrared-bird-box/master/ustream)
   - Download to your Pi with `wget https://raw.githubusercontent.com/raspberrypilearning/infrared-bird-box/master/ustream --no-check-certificate`
 
 ## Disclaimer
