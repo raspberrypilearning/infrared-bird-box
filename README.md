@@ -45,6 +45,7 @@ As well as a Raspberry Pi with an SD card loaded with Raspbian, you'll also need
 ### Software
 
 - FFmpeg (internet streaming software)
+- Any web browser to access www.ustream.tv
 
 If this resource is going to be used in a class environment, it will save a lot of time if the *Compile FFmpeg* section under step 5 of the worksheet is done prior to starting the lesson.
 
