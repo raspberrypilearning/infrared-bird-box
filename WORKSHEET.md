@@ -1,6 +1,6 @@
 ##Introduction
 
-To begin with, pupils should appreciate that garden birds are very choosy about where they build their nest. The bird box will need to be located out of any predator's reach, away from any prevailing winds and nowhere near a bird table or feeder.
+Garden birds are very choosy about where they build their nest so in order to get good results from this activity, the bird box will need to be located out of any predator's reach, away from any prevailing winds and nowhere near a bird table or feeder.
 
 Once a bird has moved in, the box must not be disturbed until they have finished breeding; this is usually between October and January in the UK. If something goes wrong you can't just open the box and fiddle with your wires or adjust the camera, as this will traumatise the birds and could cause eggs or hatchlings to be abandoned.
 
@@ -17,31 +17,6 @@ The image will look black and white (greyscale) because there are no wavelengths
 ![](images/pinoirada.jpg)
 
 Pictured above is the special version of the Raspberry Pi camera board called Pi NoIR. It's essentially identical to the normal green camera but it has no infrared filter, meaning that it lets in infrared light. This camera, combined with an infrared light source, will give you night vision. It's also small and won't be too intrusive when mounted on the inside of a bird box.
-
-## Step 0: Setting Up your Pi
-
-First check that you have all the parts you need to get your Raspberry Pi set up and working.
-
-- Raspberry Pi
-- Micro USB power adaptor
-- An SD card with Raspbian already set up through NOOBS
-- USB keyboard
-- USB mouse
-- HDMI cable
-- A monitor or TV
-
-### Activity Checklist:
-
-1. Place the SD card into the slot of your Raspberry Pi. It will only fit one way so be careful not to break the card.
-2. Next connect the HDMI cable from the monitor (or TV) to the HDMI port on the Pi and turn on your monitor.
-3. Plug the USB keyboard and mouse into the USB ports on the Pi.
-4. Plug in the micro USB power supply and you should see some text appear on your screen.
-5. When prompted to login type:
-
-    ```bash
-    Login: pi
-    Password: raspberry
-    ```
 
 ## Step 1: Setting up the Camera Board
 
