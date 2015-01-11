@@ -1,4 +1,6 @@
-## Step 5: Streaming video to the Internet
+# Infrared Bird Box
+
+## Streaming video to the Internet
 
 [Ustream](http://www.ustream.tv/) is one of the most popular live video streaming sites on the Internet. It's used by NASA to stream video from the [International Space Station](http://www.ustream.tv/channel/live-iss-stream) to all over the world. Websites like [Ustream](http://www.ustream.tv/), [YouTube Live](http://www.youtube.com/live), [Bambuser](http://bambuser.com/) and [justin.tv](http://www.justin.tv/) are known as *content distribution services*.
 
@@ -97,7 +99,7 @@ When you have the video feed on screen, perform a test to see what the latency i
 
 Press `Ctrl + C` twice when you want to shut the stream down.
 
-## Step 6: Remote control
+## Remote control
 
 The last thing you should consider is being able to remotely access the Raspberry Pi from another computer without having to have a keyboard, mouse and monitor connected to it. This would be pretty inconvenient if it's somewhere outside, up a tree for example.
 
@@ -144,13 +146,3 @@ I recommend repeating this with `~/ustream` instead of `top`.
 This will allow you to set up the Pi with only power and Ethernet connected; you'll then be able to login over SSH, start the streaming and then disconnect, leaving the streaming continuing in the background. If there is a problem or the streaming goes down for some reason, you'll be able to login over SSH and resume the Screen session to check.
 
 Good luck!
-
-## Licence
-
-Unless otherwise specified, everything in this repository is covered by the following licence:
-
-![Creative Commons License](http://i.creativecommons.org/l/by-sa/4.0/88x31.png)
-
-***Infrared Bird Box*** by the [Raspberry Pi Foundation](http://raspberrypi.org) is licenced under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
-
-Based on a work at https://github.com/raspberrypilearning/infrared-bird-box

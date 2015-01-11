@@ -24,15 +24,6 @@ As well as a Raspberry Pi with an SD card loaded with Raspbian, you'll also need
 
 ### Hardware
 
-- Raspberry Pi
-- Micro USB power adaptor
-- An SD Card with Raspbian already set up through NOOBS
-- USB keyboard
-- USB mouse
-- HDMI cable
-- Ethernet cable
-- LAN with Internet connection
-- A monitor or TV
 - Raspberry Pi NoIR Camera Board - has a **black** circuit board (try [CPC](http://cpc.farnell.com/jsp/search/productdetail.jsp?sku=SC13223))
 - **Female** to **Female** jumper wires, at least 3 (try [Pimoroni](http://shop.pimoroni.com/collections/components))
 - 220 Ohm 1% Resistor; get several in case of breakages (try [Pimoroni](http://shop.pimoroni.com/collections/components))
@@ -53,21 +44,12 @@ If this resource is going to be used in a class environment, it will save a lot 
 
 - 2-3 hours
 
-## Steps
-
-1. Setting Up your Pi
-1. Setting up the Camera Board
-1. Wiring up the Infrared LED
-1. Adjusting the camera focus
-1. Installing the camera and LED into the bird box
-1. Streaming video to the Internet
-1. Remote control
-
 ## Worksheet & included files
 
-- [The worksheet](./WORKSHEET.md)
-- (Optional) Final version of ustream script [ustream](https://raw.githubusercontent.com/raspberrypilearning/infrared-bird-box/master/ustream)
-  - Download to your Pi with `wget https://raw.githubusercontent.com/raspberrypilearning/infrared-bird-box/master/ustream --no-check-certificate`
+- [The worksheet](worksheet.md)
+- [Advanced second worksheet](worksheet2.md)
+- (Optional) Final version of ustream script [ustream](https://raw.githubusercontent.com/raspberrypilearning/infrared-bird-box/master/code/ustream)
+  - Download to your Pi with `wget https://raw.githubusercontent.com/raspberrypilearning/infrared-bird-box/master/code/ustream --no-check-certificate`
 
 ## Disclaimer
 

@@ -1,4 +1,4 @@
-##Introduction
+# Infrared Bird Box
 
 Garden birds are very choosy about where they build their nest so in order to get good results from this activity, the bird box will need to be located out of any predator's reach, away from any prevailing winds and nowhere near a bird table or feeder.
 
@@ -18,7 +18,7 @@ The image will look black and white (greyscale) because there are no wavelengths
 
 Pictured above is the special version of the Raspberry Pi camera board called Pi NoIR. It's essentially identical to the normal green camera but it has no infrared filter, meaning that it lets in infrared light. This camera, combined with an infrared light source, will give you night vision. It's also small and won't be too intrusive when mounted on the inside of a bird box.
 
-## Step 1: Setting up the Camera Board
+## Setting up the Camera Board
 
 Firstly, set up the Pi NoIR camera board without touching the bird box. Test it first, and we'll come to putting everything into the bird box later on. Follow the official instructions [here](http://www.raspberrypi.org/camera) and stop once you have successfully used a few of the example commands.
 
@@ -32,7 +32,7 @@ You'll notice that everything looks a little strange. This is because you're loo
 
 Press `Ctrl + C` when you want to exit.
 
-## Step 2: Wiring up the Infrared LED
+## Wiring up the Infrared LED
 
 The intention is to have a single infrared LED illuminating the inside of the bird box, to allow the Pi NoIR camera to see something. The 890nm IR LED is an identical component to the ones found inside TV remote controls. The only difference is that we're going to keep it on constantly to facilitate the live stream.
 
@@ -82,7 +82,7 @@ If the LED does not appear to be lit then you have most likely mixed up the pola
 
 Press `Ctrl + C` when you want to exit.
 
-## Step 3: Adjusting the camera focus
+## Adjusting the camera focus
 
 Bird boxes tend to be quite small, and because of this you will probably need to reduce the focal length on the Pi NoIR camera; otherwise you're only going to see blurry images of birds. It will depend on the bird box you have chosen; however if you're using the [Gardman](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965) one suggested by this guide (also recommended by [British Trust for Ornithology](http://www.bto.org/)) then you will definitely have to adjust the camera focus.
 
@@ -122,7 +122,7 @@ You may wish to put something under the keys at this point to simulate the heigh
 
 Be careful not to rotate too far otherwise the lens will pop out, and it can be a bit tricky to get it back in and on the thread. If this happens just put it back in gently and rotate clockwise until it catches. Once the required focus has been found you don't need to re-glue it. It won't move on its own even if it gets a few bumps and knocks.
 
-##Step 4: Installing the camera and LED into the bird box
+## Installing the camera and LED into the bird box
 
 This part of the guide is going to be quite like [Blue Peter](http://www.bbc.co.uk/cbbc/shows/blue-peter). This is a famous children's TV show in Britain which often involves making things out of cardboard toilet rolls, sticky-back plastic and empty plastic bottles. The idea here is simply to demonstrate what has to be achieved with installing the camera; it will then be up to you to come up with a more permanent solution, which is a tremendously fun group activity in itself.
 
@@ -192,7 +192,7 @@ The following instructions are for the [Gardman](http://www.diy.com/nav/garden/p
     sudo reboot
     ```
 
-### Advice
+### What next?
 
 Here are some ideas for making the installation more permanent and protecting it from the elements. Whether you choose to follow them is up to you.
 
@@ -212,17 +212,6 @@ Here are some ideas for making the installation more permanent and protecting it
 
 - You may be tempted to use [Never Wet](http://www.neverwet.com/) spray. While this works very well at waterproofing things, it degrades after some time and will not be a permanent solution.
 
+- To learn how to stream video footage from your bird box over the internet to have a live stream of the activity inside move onto the [advenced steps here](worksheet2.md).
 
-## What next?
-- To learn how to stream video footage from your bird box over the internet to have a live stream of the activity inside move onto the [advenced steps here](worksheet-1.md).
 - What other uses can you think of for an infrared camera and led?
-
-## Licence
-
-Unless otherwise specified, everything in this repository is covered by the following licence:
-
-![Creative Commons License](http://i.creativecommons.org/l/by-sa/4.0/88x31.png)
-
-***Infrared Bird Box*** by the [Raspberry Pi Foundation](http://raspberrypi.org) is licenced under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
-
-Based on a work at https://github.com/raspberrypilearning/infrared-bird-box
