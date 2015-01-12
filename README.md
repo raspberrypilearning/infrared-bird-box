@@ -1,5 +1,7 @@
 # Infrared Bird Box
 
+![](cover.png)
+
 A bird box with a Raspberry Pi infrared camera inside.
 
 [![](images/cover.jpg)](http://www.gardman.co.uk/wild-bird-care)
