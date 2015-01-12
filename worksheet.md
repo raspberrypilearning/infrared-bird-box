@@ -192,7 +192,7 @@ The following instructions are for the [Gardman](http://www.diy.com/nav/garden/p
     sudo reboot
     ```
 
-### What next?
+## What next?
 
 Here are some ideas for making the installation more permanent and protecting it from the elements. Whether you choose to follow them is up to you.
 
