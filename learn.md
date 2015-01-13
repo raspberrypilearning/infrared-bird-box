@@ -1,4 +1,4 @@
-By creating an infrad bird box you will learn:
+By creating an infra-red bird box you will learn:
 
 - How to setup up a Raspberry Pi with an infra-red camera module
 - How to connect an infra-red LED to a Raspberry Pi
