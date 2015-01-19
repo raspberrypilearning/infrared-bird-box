@@ -60,9 +60,9 @@ The diagram below shows how the LED should be wired up. You'll notice that the L
 
 Use the **female** to **female** jumper wires to make the following connections:
 
-- Connect the anode (long leg) to +5 volts which is pin 2 on the Pi
+- Connect the anode (long leg) to 5 volts which is the first pin on the outside row on the Pi
 - Connect the cathode (short leg) to the 220 ohm resistor
-- Connect the other side of the resistor to ground which is pin 6 on the Pi
+- Connect the other side of the resistor to ground which is the third pin in on the outside on the Pi
 
 This will allow power to flow from the Pi into the LED and back to ground through the resistor. The resistor will limit the current to about 23 mA so that the LED never burns out.
 
