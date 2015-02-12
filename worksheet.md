@@ -216,6 +216,6 @@ Here are some ideas for making the installation more permanent and protecting it
 
 ## Streaming video to the Internet
 
-There is also a second worksheet that you can follow if you wish to stream your bird box live on the internet.
+There is also a second worksheet that you can follow if you wish to stream your bird box live on the Internet.
 
 - [Advanced second worksheet](worksheet2.md)

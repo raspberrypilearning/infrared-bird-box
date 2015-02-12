@@ -46,9 +46,10 @@ To find these two settings follow the steps below:
 - Select **Dashboard** from the top right menu
 - Select **CHANNELS** from the left hand menu
 - Select your channel
-- Select **Remote**
+- Select **Broadcast Settings**
+- Select **Encoder settings > View**
 
-You should then see the screen below; however, the **RTMP URL** and **Stream Key** fields will contain text. Copy and paste these values into a text file for use later.
+You should then see the screen below; however, the **RTMP URL** and **Stream Key** fields will contain text. Keep this page open for use in the next step.
 
 ![](images/ustream-remote-settings.png)
 
@@ -64,7 +65,7 @@ On the Raspberry Pi let's create a script to do this. Enter the following comman
 nano ~/ustream
 ```
 
-Now copy and paste the code below, but replace `<rtmpurl>` and `<streamkey>` with the corresponding values from your own Ustream channel:
+Now copy and paste the code below, but replace `<rtmpurl>` and `<streamkey>` with the corresponding values from your own Ustream encoder settings page (see previous step):
 
 ```bash
 #!/bin/bash
