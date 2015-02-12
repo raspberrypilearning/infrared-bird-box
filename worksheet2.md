@@ -148,7 +148,7 @@ Enter the command below:
 
 `sudo nano /etc/rc.local`
 
-This file is a script which runs every time the Raspberry Pi boots up. Copy and paste the command below just above and before the `exit 0` line at the bottom.
+This file is a script which runs every time the Raspberry Pi boots up. At the end of the file you'll see `exit 0`, copy and paste the command below onto the previous line:
 
 ```bash
 screen -S birdbox -dms birdbox /home/pi/ustream
