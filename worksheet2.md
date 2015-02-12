@@ -162,9 +162,9 @@ Reboot now to test it.
 sudo reboot
 ```
 
-When the Raspberry Pi comes back up reload the Ustream channel URL on another PC and you should see the video feed. Remember there will be about a 20 to 30 second delay on what you see.
+Reload the Ustream channel URL on another PC, when the Raspberry Pi comes back up, and you should see the video feed. Remember there will be about a 20 to 30 second delay on what you see.
 
-The screen session that we started automatically will be running as the *root* user so you can reconnect to us using the command below:
+The screen session that we started automatically will be running as the *root* user so you can reconnect to it using the command below:
 
 ```bash
 sudo screen -r
