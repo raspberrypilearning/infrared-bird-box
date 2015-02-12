@@ -213,3 +213,9 @@ Here are some ideas for making the installation more permanent and protecting it
 - You may be tempted to use [Never Wet](http://www.neverwet.com/) spray. While this works very well at waterproofing things, it degrades after some time and will not be a permanent solution.
 
 - What other uses can you think of for an infrared camera and led?
+
+## Streaming video to the Internet
+
+There is also a second worksheet that you can follow if you wish to stream your bird box live on the internet.
+
+- [Advanced second worksheet](worksheet2.md)

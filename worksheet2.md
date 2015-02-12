@@ -1,6 +1,4 @@
-# Infrared Bird Box
-
-## Streaming video to the Internet
+# Streaming video to the Internet
 
 [Ustream](http://www.ustream.tv/) is one of the most popular live video streaming sites on the Internet. It's used by NASA to stream video from the [International Space Station](http://www.ustream.tv/channel/live-iss-stream) to all over the world. Websites like [Ustream](http://www.ustream.tv/), [YouTube Live](http://www.youtube.com/live), [Bambuser](http://bambuser.com/) and [justin.tv](http://www.justin.tv/) are known as *content distribution services*.
 
@@ -10,7 +8,7 @@ With a content distribution service provider, you send your video content to the
 
 The only drawback is that there will be a delay on the video. For example, if you poked your finger into the bird box, you would only see it online 20 to 30 seconds later. Despite this, it will make a perfectly viable solution for sharing the bird box with the world.
 
-### Compile FFmpeg
+## Compile FFmpeg
 
 Firstly, you need to install some software called [FFmpeg](http://www.ffmpeg.org/) on the Raspberry Pi which will continually stream the video data from the camera board to the web. Instructions are below.
 
@@ -30,7 +28,7 @@ make && sudo make install
 
 You can now do something else until you see the command prompt reappear.
 
-### Create a free Ustream account
+## Create a free Ustream account
 
 If you have not done so already, go to [ustream.tv](http://www.ustream.tv/) on a PC or laptop and click `Sign Up`.
 
@@ -54,7 +52,7 @@ You should then see the screen below; however, the **RTMP URL** and **Stream Key
 
 ![](images/ustream-remote-settings.png)
 
-### Go live!
+## Go live!
 
 The intention is to stream the video content from the bird box to the Internet on a 24/7 basis. Considering that sometimes Internet servers can go down, it's a good idea to ensure that the Raspberry Pi will keep trying to send out the video stream if there is a problem.
 
@@ -79,7 +77,7 @@ do
 done
 ```
 
-Press `Ctrl + O` to save and `Ctrl + X` to quit.
+Press `Ctrl + O` then `Enter` to save and `Ctrl + X` to quit.
 
 We're almost there. Enter the following command to make the shell script executable:
 
@@ -109,10 +107,12 @@ The instructions [here](http://www.raspberrypi.org/documentation/remote-access/s
 
 After you're comfortable with that you'll need a way to run `~/ustream` over SSH and then disconnect from the Pi, leaving it running. If you were to run `~/ustream` in an SSH window and then close that window, you wouldn't be able to get back to it to see if there was a problem. Ideally, you don't really want to keep an SSH window open at all times on another PC or Mac, so here is a simple way to solve this problem.
 
-### Screen
+## Screen
 
 Screen is a little utility that allows you to have multiple terminal sessions with only one SSH connection to the Pi. It's incredibly handy and once you've used it, you'll use it all the time.
 
+It works like virtual command prompt. You can have as many of them as you want. When you start a screen you're automatically connected to it and can see what it shows. You can start a program and then disconnect from the screen but leave it running in the background. Later on you can come back and reconnect to the screen and see what has happened while you were away. Let's try it now.
+ 
 Firstly, you'll need to install it as it doesn't come installed by default. You'll only need to do this once:
 
 ```bash
@@ -131,18 +131,46 @@ This will now give you a blank session showing the command prompt. Enter the com
 top
 ```
 
-We'll use this as our program we will leave running. Now press `Ctrl + A + D` to disconnect from Screen. You should be back at the previous command prompt. Now close the SSH window completely, wait a few seconds and re-connect.
+We'll use this as our program to leave running in the background. Now press `Ctrl + A + D` to disconnect from the screen. You should be back at the previous command prompt. Now close the SSH window completely, wait a few seconds and re-connect.
 
-To get back into and resume the Screen session enter the following command:
+To get back into and resume the screen session enter the following command:
 
 ```bash
 screen -r
 ```
 
-You should now be looking at `top` once again. Press `Ctrl + C` to close `top`, and then you can type `exit` to close down the Screen session.
+You should now be looking at `top` once again, you can see it's still running and has been the entire time you were disconnected. Press `Ctrl + C` to close `top`, and then you can type `exit` to close down the screen session.
 
-I recommend repeating this with `~/ustream` instead of `top`.
+We can now make the Raspberry Pi start a screen for the `~/ustream` script at boot time. That way if the bird box ever loses power, from a power cut for instance, it will reboot and start streaming video to the Internet automatically without any human intervention.
 
-This will allow you to set up the Pi with only power and Ethernet connected; you'll then be able to login over SSH, start the streaming and then disconnect, leaving the streaming continuing in the background. If there is a problem or the streaming goes down for some reason, you'll be able to login over SSH and resume the Screen session to check.
+Enter the command below:
 
-Good luck!
+`sudo nano /etc/rc.local`
+
+This file is a script which runs every time the Raspberry Pi boots up. Copy and paste the command below just above and before the `exit 0` line at the bottom.
+
+```bash
+screen -S birdbox -dms birdbox /home/pi/ustream
+```
+
+Press `Ctrl + O` then `Enter` to save and `Ctrl + X` to quit.
+
+Reboot now to test it.
+
+```
+sudo reboot
+```
+
+When the Raspberry Pi comes back up reload the Ustream channel URL on another PC and you should see the video feed. Remember there will be about a 20 to 30 second delay on what you see.
+
+The screen session that we started automatically will be running as the *root* user so you can reconnect to us using the command below:
+
+```bash
+sudo screen -r
+```
+
+## What next?
+
+- Wait for some birds to move in
+- Tell the world about your bird box
+- Post the Ustream channel URL on social media or email it to your friends and family
