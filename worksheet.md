@@ -24,7 +24,7 @@ Pictured above is the special version of the Raspberry Pi camera board called Pi
 
 ## Setting up the Camera Board
 
-Firstly, set up the Pi NoIR camera board without touching the bird box. Test it first, and we'll come to putting everything into the bird box later on. Follow the official instructions [here](http://www.raspberrypi.org/camera) and stop once you have successfully used a few of the example commands.
+Firstly, set the Pi NoIR camera board up and test it, without fitting it to the bird box: we will come to that part later. Follow the instructions [here](http://www.raspberrypi.org/camera) and stop once you have successfully used a few of the example commands.
 
 If you have not done so already you can test the camera video preview using the following command:
 
@@ -32,19 +32,13 @@ If you have not done so already you can test the camera video preview using the 
 raspivid -t 0
 ```
 
-You'll notice that everything looks a little strange. This is because you're looking at a combination of visible light and infrared light. A quick test is to turn the lights off, aim a TV remote control at your face and press the buttons. You should see your face illuminated in the darkness!
+You'll notice that everything looks a little strange. This is because you're looking at a combination of visible light and infrared light. A quick test is to turn the lights off, aim a TV remote control at your face and press the buttons. You should see your face illuminated in the darkness.
 
 Press `Ctrl + C` when you want to exit.
 
-## Wiring up the Infrared LED
+## Wiring up the infrared LED
 
 The intention is to have a single infrared LED illuminating the inside of the bird box, to allow the Pi NoIR camera to see something. The 890nm IR LED is an identical component to the ones found inside TV remote controls. The only difference is that we're going to keep it on constantly to facilitate the live stream.
-
-First check that you have all the required parts to do this:
-
-- **Female** to **Female** jumper wires, at least 3
-- 220 Ohm Resistor
-- Infrared LED 5mm 890nm
 
 You should do this with the Raspberry Pi turned off and unplugged from the mains for safety. Use the following command to shut down the Pi:
 
@@ -54,15 +48,15 @@ sudo halt
 
 Wait for the ACT (activity) LED to stop blinking before turning off the power.
 
-If you've wired up an LED to the Pi GPIO pins before, then please note that *this* LED needs to be done slightly differently. An infrared LED requires more current than the general purpose pins can provide. It needs to be connected directly to the 5 volt supply of the Raspberry Pi with a 220 ohm resistor inline; without the resistor the current will be too high, and the LED will burn out after about ten seconds.
+If you've wired up an LED to the Pi GPIO pins before, then please note that this LED needs to be done slightly differently. An infrared LED requires more current than the GPIO pins can provide. It needs to be connected directly to the 5 volt supply of the Raspberry Pi with a 220 ohm resistor inline; without the resistor the current will be too high, and the LED will burn out after about ten seconds.
 
-Ensure that you have the correct type of resistor; it needs to be 220 ohms *not* 220K ohms (220 thousand). The 5 band resistor colour code is red - red - black - black - brown. Please refer to the [electronic colour code](http://en.wikipedia.org/wiki/Electronic_color_code) system for further guidance. This is what the resistor should look like:
+Ensure that you have the correct type of resistor; it needs to be 220 ohms, **not** 220K ohms. The 5 band resistor colour code is red - red - black - black - brown. Please refer to the [electronic colour code](http://en.wikipedia.org/wiki/Electronic_color_code) system for further guidance. This is what the resistor should look like:
 
 ![](images/220ohm.JPG)
 
 The diagram below shows how the LED should be wired up. You'll notice that the LED has two legs, one slightly longer than the other. The longer of the two is called the **anode** and the shorter is the **cathode**. The LED needs power to flow into the anode and out of the cathode; if you get the polarity wrong then nothing will happen.
 
-Use the **female** to **female** jumper wires to make the following connections:
+Use the female to female jumper wires to make the following connections:
 
 - Connect the anode (long leg) to 5 volts which is the first pin on the outside row on the Pi
 - Connect the cathode (short leg) to the 220 ohm resistor
@@ -216,7 +210,7 @@ Here are some ideas for making the installation more permanent and protecting it
 
 - You may be tempted to use [Never Wet](http://www.neverwet.com/) spray. While this works very well at waterproofing things, it degrades after some time and will not be a permanent solution.
 
-- What other uses can you think of for an infrared camera and led?
+- What other uses can you think of for an infrared camera and LED?
 
 ## Streaming video to the Internet
 
