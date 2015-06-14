@@ -122,11 +122,11 @@ Be careful not to rotate the lens too far, otherwise it will pop out, and it can
 
 ## Installing the camera and LED into the bird box
 
-This part of the guide is going to be quite like [Blue Peter](http://www.bbc.co.uk/cbbc/shows/blue-peter). This is a famous children's TV show in Britain which often involves making things out of cardboard toilet rolls, sticky-back plastic and empty plastic bottles. The idea here is simply to demonstrate what has to be achieved with installing the camera; it will then be up to you to come up with a more permanent solution, which is a tremendously fun group activity in itself.
+In this part of the guide, we will demonstrate what has to be achieved by installing the camera; it will then be up to you to come up with a more permanent solution, which is a fun group activity in itself.
 
 The following instructions are for the [Gardman](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965) bird box.
 
-1. Firstly, place your finger on the roof approximately above the centre of the main body of the bird box.
+1. Place your finger on the roof approximately above the centre of the main body of the bird box.
 
     ![](images/bb-install-1.jpg)
 
@@ -138,15 +138,15 @@ The following instructions are for the [Gardman](http://www.diy.com/nav/garden/p
 
     ![](images/bb-install-3.jpg)
 
-4. Cut out a rectangle of cardboard approximately 4 cm x 2 cm and fold it over lengthways. Use some tape to secure it to the underside of the roof so that it's a few millimetres below the cross. This is going to be used to compensate for the angle of the roof, so that the camera board points directly down the middle of the bird box.
+4. Cut out a rectangle of cardboard approximately 4 cm x 2 cm (1.5" x 0.75") and fold it in half lengthways. Use some tape to secure it to the underside of the roof so that it's a few millimetres below the cross. This is going to be used to compensate for the angle of the roof, so that the camera board points directly into the middle of the bird box.
 
     ![](images/bb-install-4.jpg)
 
-5. Next, take the Pi NoIR camera board and slide the flex down between the roof hinge and the back wall. Do this with the tin connectors facing away from the back wall. If you wish you can remove the two middle staples holding the hinge in place; this will make the flex exit the bird box more neatly.
+5. Next, take the Pi NoIR camera board and slide the flex down between the roof hinge and the back wall of the box. Do this with the tin connectors facing away from the back wall. If you wish you can remove the two middle staples holding the hinge in place; this will make the flex exit the bird box more neatly.
 
     ![](images/bb-install-5.jpg)
 
-6. Take some tape and put it across the top of the Pi NoIR camera board as shown. Do not cover the camera lens.
+6. Take some tape and put it across the top of the Pi NoIR camera board as shown. Do **not** cover the camera lens.
 
     ![](images/bb-install-6.jpg)
 
@@ -154,17 +154,17 @@ The following instructions are for the [Gardman](http://www.diy.com/nav/garden/p
 
     ![](images/bb-install-7.jpg)
 
-8. Close the lid and inspect the camera angle from the side; it needs to point directly at the centre of the base. If it doesn't look right from this point of view then go back and adjust it until you're happy.
+8. Close the lid and inspect the camera angle from the side: it needs to point directly at the centre of the base. If it doesn't look right, then go back and adjust it until you're happy.
 
     ![](images/bb-install-8.jpg)
 
-9. Secure the infrared LED to the underside of the roof but not too close to the camera, otherwise you'll see a lot of glare on the video. The LED can go anywhere, but it can help to bend the legs by 90 degrees as shown and secure it to the roof that way. You may also wish to blank off the end of the LED with Tipp-Ex or by filing it down with a nail file. This will prevent any spotlight effect on the video and create a more diffuse light effect.
+9. Secure the infrared LED to the underside of the roof. Don't attach it too close to the camera, or you'll see a lot of glare on the video. The LED can go anywhere, but it can help to bend the legs by 90 degrees as shown and secure it to the roof that way. You may also wish to blank off the end of the LED with correction fluid or by filing it down with a nail file. This will prevent any spotlight effect on the video and give a more diffuse light.
 
     ![](images/bb-install-9.jpg)
 
-10. Now reconnect the Raspberry Pi and test the focus once again. I recommend connecting the camera flex coming from the back of the bird box to the Pi first. Then connect the LED and resistor, followed by the screen and keyboard and finally the power supply. When testing this it can be helpful to rest the Raspberry Pi upside down on the roof of the bird box, but do whatever works best for you.
+10. Now reconnect the Raspberry Pi and test the focus once again. I recommend connecting the camera flex coming from the back of the bird box to the Pi first. Then connect the LED and resistor, followed by the screen, keyboard, and finally the power supply. When testing this setup, it can be helpful to rest the Raspberry Pi upside down on the roof of the bird box, but do whatever works best for you.
 
-11. Boot up, log in as usual and then start the video preview with `raspivid -t 0`. With the roof closed you should be able to see the inside of the bird box in black and white. This shows that the infrared illumination is working; you should even be able to cover the hole and still see the inside. It will look similar to the picture below but will be slightly more zoomed in. This image was taken using the `raspistill` command and not `raspivid`. If you can't see anything at all then it's likely the LED is not wired up correctly; double-check the wiring and the polarity of the anode and cathode.
+11. Boot up, log in as usual and then start the video preview with `raspivid -t 0`. With the roof closed you should be able to see the inside of the bird box in black and white. This shows that the infrared illumination is working; you should even be able to cover the hole and still see the inside. It will look similar to the picture below but will be slightly more zoomed in. This image was taken using the `raspistill` command and not `raspivid`. If you can't see anything at all then it's likely the LED is not wired up correctly: double-check the wiring and the polarity of the anode and cathode.
 
     ![](images/watch.jpg)
 
