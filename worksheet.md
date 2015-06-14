@@ -212,8 +212,5 @@ Here are some ideas for making the installation more permanent and protecting it
 
 - What other uses can you think of for an infrared camera and LED?
 
-## Streaming video to the Internet
+- If you want to take your project further, you could try following this [advanced worksheet](worksheet2.md) to stream your bird box live on the Internet.
 
-There is also a second worksheet that you can follow if you wish to stream your bird box live on the Internet.
-
-- [Advanced second worksheet](worksheet2.md)
