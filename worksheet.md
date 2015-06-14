@@ -2,7 +2,7 @@
 
 In this project, you will use a Raspberry Pi and a Pi NoIR camera to allow you to observe nesting birds without disturbing them. 
 
-## Why the Pi NoIR? 
+## Why use the Pi NoIR? 
 
 Garden birds are very choosy about where they build their nest. In order to get good results from this activity, the bird box will need to be located out of the reach of predators, away from any prevailing winds, and nowhere near a bird table or feeder.
 
