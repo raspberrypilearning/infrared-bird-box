@@ -116,9 +116,9 @@ After you're comfortable with that you'll need a way to run `~/ustream` over SSH
 
 ## Screen
 
-Screen is a utility that allows you to have multiple terminal sessions with only one SSH connection to the Pi. It's incredibly handy and once you've used it, you'll use it all the time.
+[Screen](https://en.wikipedia.org/wiki/GNU_Screen) is a utility that allows you to have multiple terminal sessions with only one SSH connection to the Pi. It's incredibly handy and once you've used it, you'll use it all the time.
 
-Screen works like virtual command prompt, and you can have as many of them as you want. When you start a screen you're automatically connected to it and can see what it shows. You can start a program and then disconnect from the screen but leave it running in the background. Later on you can come back and reconnect to the screen and see what has happened while you were away. Let's try it now.
+Screen works like virtual command prompt, and you can have as many screens open as you want. When you start a screen you're automatically connected to it and can see what it shows. You can start a program and then disconnect from the screen but leave it running in the background. Later on you can come back and reconnect to the screen and see what has happened while you were away. Let's try it now.
  
 Firstly, you'll need to install it as it doesn't come installed by default. You'll only need to do this once:
 
@@ -132,7 +132,7 @@ Then, to start a new session enter the following command:
 screen bash
 ```
 
-This will now give you a blank session showing the command prompt. Enter the command below; this is the terminal equivalent of Task Manager in Windows:
+This will now give you a blank session showing the command prompt. Enter the command below (this is the terminal equivalent of Task Manager in Windows):
 
 ```bash
 top
@@ -168,7 +168,7 @@ Reboot now to test it.
 sudo reboot
 ```
 
-Reload the Ustream channel URL on another PC, when the Raspberry Pi comes back up, and you should see the video feed. Remember there will be about a 20 to 30 second delay on what you see.
+Reload the Ustream channel URL on another computer, when the Raspberry Pi boots back up, and you should see the video feed. Remember there will be about a 20 to 30 second delay on what you see.
 
 The screen session that we started automatically will be running as the **root** user so you can reconnect to it using the command below:
 
