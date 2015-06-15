@@ -8,7 +8,7 @@ In this project, you will use a Raspberry Pi and a Pi NoIR camera to allow you t
 
 We need to use a service like this because you could potentially have thousands of people watching your bird box simultaneously. If you were to try and host that many viewers from your own internet connection, your router would probably go into meltdown. There would simply not be enough upload [bandwidth](http://en.wikipedia.org/wiki/Bandwidth_%28computing%29).
 
-With a content distribution service provider, you send your video content to them and they then host the connection to all the viewers. Therefore, you offload that bandwidth requirement from your own internet connection to them. That way, you don't have to worry about how many people are concurrently watching the bird box or how much bandwidth is being used.
+With a content distribution service provider, you send your video content to them and they then host the connection to all the viewers. Therefore, you offload that bandwidth requirement from your own internet connection to them, and you don't have to worry about how many people are concurrently watching the bird box or how much bandwidth is being used.
 
 The only drawback is that there will be a delay on the video. For example, if you poked your finger into the bird box, you would only see it online 20 to 30 seconds later. This delay is known as [latency](https://en.wikipedia.org/wiki/Latency_%28engineering%29). Despite this, however, the service will make a perfectly viable solution for sharing the bird box with the world.
 
