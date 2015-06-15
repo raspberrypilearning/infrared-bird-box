@@ -148,7 +148,7 @@ screen -r
 
 You should now be looking at `top` once again, you can see it's still running and has been the entire time you were disconnected. Press `Ctrl + C` to close `top`, and then you can type `exit` to close down the screen session.
 
-We can now make the Raspberry Pi start a screen for the `~/ustream` script at boot time. That way if the bird box ever loses power, from a power cut for instance, it will reboot and start streaming video to the Internet automatically without any human intervention.
+We can now make the Raspberry Pi start a screen for the `~/ustream` script at boot time. That way if the bird box ever loses power, from a power cut for instance, it will reboot and start streaming video to the internet automatically without any human intervention.
 
 Enter the command below:
 
