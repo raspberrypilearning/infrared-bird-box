@@ -1,4 +1,8 @@
-# Streaming video to the Internet
+# Infrared Bird Box - Part 2 
+
+In this project, you will use a Raspberry Pi and a Pi NoIR camera to allow you to observe nesting birds without disturbing them. 
+
+## Streaming video to the Internet
 
 [Ustream](http://www.ustream.tv/) is one of the most popular live video streaming sites on the Internet. It's used by NASA to stream video from the [International Space Station](http://www.ustream.tv/channel/live-iss-stream) to all over the world. Websites like [Ustream](http://www.ustream.tv/), [YouTube Live](http://www.youtube.com/live), [Bambuser](http://bambuser.com/) and [justin.tv](http://www.justin.tv/) are known as *content distribution services*.
 
@@ -164,7 +168,7 @@ sudo reboot
 
 Reload the Ustream channel URL on another PC, when the Raspberry Pi comes back up, and you should see the video feed. Remember there will be about a 20 to 30 second delay on what you see.
 
-The screen session that we started automatically will be running as the *root* user so you can reconnect to it using the command below:
+The screen session that we started automatically will be running as the **root** user so you can reconnect to it using the command below:
 
 ```bash
 sudo screen -r
