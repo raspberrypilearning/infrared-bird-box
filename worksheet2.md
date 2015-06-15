@@ -1,14 +1,14 @@
 # Infrared Bird Box - Part 2 
 
-In this project, you will use a Raspberry Pi and a Pi NoIR camera to allow you to observe nesting birds without disturbing them. 
+In this project, you will use a Raspberry Pi and a Pi NoIR camera to allow you to observe nesting birds without disturbing them. This advanced worksheet covers how to stream the video you produce to the internet. 
 
-## Streaming video to the Internet
+## Streaming video to the internet
 
-[Ustream](http://www.ustream.tv/) is one of the most popular live video streaming sites on the Internet. It's used by NASA to stream video from the [International Space Station](http://www.ustream.tv/channel/live-iss-stream) to all over the world. Websites like [Ustream](http://www.ustream.tv/), [YouTube Live](http://www.youtube.com/live), [Bambuser](http://bambuser.com/) and [justin.tv](http://www.justin.tv/) are known as *content distribution services*.
+[Ustream](http://www.ustream.tv/) is one of the most popular live video streaming sites on the Internet. It's used by NASA to stream video from the [International Space Station](http://www.ustream.tv/channel/live-iss-stream) to all over the world. Websites like [Ustream](http://www.ustream.tv/), [YouTube Live](http://www.youtube.com/live), and [Bambuser](http://bambuser.com/) are known as content distribution services.
 
-We need to use a service like this because you could potentially have thousands of people watching your bird box simultaneously. If you were to try and host that many viewers from your own Internet connection, your router would probably go into meltdown. There would simply not be enough upload [bandwidth](http://en.wikipedia.org/wiki/Bandwidth_%28computing%29).
+We need to use a service like this because you could potentially have thousands of people watching your bird box simultaneously. If you were to try and host that many viewers from your own internet connection, your router would probably go into meltdown. There would simply not be enough upload [bandwidth](http://en.wikipedia.org/wiki/Bandwidth_%28computing%29).
 
-With a content distribution service provider, you send your video content to them and they then host the connection to all the viewers. Therefore, you offload that bandwidth requirement from your own Internet connection *to them*. That way, you don't have to worry about how many people are concurrently watching the bird box or how much bandwidth is being used.
+With a content distribution service provider, you send your video content to them and they then host the connection to all the viewers. Therefore, you offload that bandwidth requirement from your own Internet connection to them. That way, you don't have to worry about how many people are concurrently watching the bird box or how much bandwidth is being used.
 
 The only drawback is that there will be a delay on the video. For example, if you poked your finger into the bird box, you would only see it online 20 to 30 seconds later. Despite this, it will make a perfectly viable solution for sharing the bird box with the world.
 
@@ -16,7 +16,7 @@ The only drawback is that there will be a delay on the video. For example, if yo
 
 Firstly, you need to install some software called [FFmpeg](http://www.ffmpeg.org/) on the Raspberry Pi which will continually stream the video data from the camera board to the web. Instructions are below.
 
-**NOTE:** This step is going to take about **two hours** since you have to [compile](http://en.wikipedia.org/wiki/Compiler) the program from its source code. The Raspbian FFmpeg package that can be installed using `apt-get` doesn't have the required `h264` video encoder support. You can just set the process going and do something else during this time; you'll also only need to do it once.
+**NOTE:** This step is going to take about two hours since you have to [compile](http://en.wikipedia.org/wiki/Compiler) the program from its source code. The Raspbian FFmpeg package that can be installed using `apt-get` doesn't have the required `h264` video encoder support. You can just set the process going and do something else during this time; you'll also only need to do it once.
 
 The part that takes two hours is the `make` command at the end of the list below. The `./configure` part takes a while too; just be patient. Enter the following commands to download, compile and install FFmpeg:
 
@@ -38,11 +38,11 @@ If you have not done so already, go to [ustream.tv](http://www.ustream.tv/) on a
 
 Enter your details to create an account for yourself. During the signup process you'll be asked to create a channel; try to think of an interesting name for it, so that people who find it will remember it easily.
 
-Feel free to customise it; give your channel an avatar as well.
+Feel free to customise it, and do give your channel an avatar as well.
 
-The account will be free and will do everything we need it to. However, after 30 days some adverts will show on the side of the page where your live video is; this is part of the Ustream business model. You can buy a pro account and get access to many more features, as well as disabling adverts; that isn't necessary for this project, though.
+The account will be free and will do everything we need it to. However, after 30 days some adverts will show on the side of the page where your live video is; this is part of the Ustream business model. You can buy a pro account which will give you access to many more features, as well as disabling the adverts, but that isn't necessary for this project.
 
-We need to copy two settings from your Ustream account to use on the Raspberry Pi: the *RTMP address* and the *stream key*. These two settings are needed by FFmpeg so that the data is streamed to the correct Ustream channel.
+We need to copy two settings from your Ustream account to use on the Raspberry Pi: the **RTMP address** and the **stream key**. These two settings are needed by FFmpeg so that the data is streamed to the correct Ustream channel.
 
 To find these two settings follow the steps below:
 
@@ -53,7 +53,7 @@ To find these two settings follow the steps below:
 - Select **Broadcast Settings**
 - Select **Encoder settings > View**
 
-You should then see the screen below; however, the **RTMP URL** and **Stream Key** fields will contain text. Keep this page open for use in the next step.
+You should then see the screen below. The RTMP URL and Stream Key fields will contain text. Keep this page open for use in the next step.
 
 ![](images/ustream-remote-settings.png)
 
