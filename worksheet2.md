@@ -4,11 +4,11 @@ In this project, you will use a Raspberry Pi and a Pi NoIR camera to allow you t
 
 ## Streaming video to the internet
 
-[Ustream](http://www.ustream.tv/) is one of the most popular live video streaming sites on the Internet. It's used by NASA to stream video from the [International Space Station](http://www.ustream.tv/channel/live-iss-stream) to all over the world. Websites like [Ustream](http://www.ustream.tv/), [YouTube Live](http://www.youtube.com/live), and [Bambuser](http://bambuser.com/) are known as content distribution services.
+[Ustream](http://www.ustream.tv/) is one of the most popular live video streaming sites on the internet. It's used by NASA to stream video from the [International Space Station](http://www.ustream.tv/channel/live-iss-stream) to all over the world. Websites like [Ustream](http://www.ustream.tv/), [YouTube Live](http://www.youtube.com/live), and [Bambuser](http://bambuser.com/) are known as content distribution services.
 
 We need to use a service like this because you could potentially have thousands of people watching your bird box simultaneously. If you were to try and host that many viewers from your own internet connection, your router would probably go into meltdown. There would simply not be enough upload [bandwidth](http://en.wikipedia.org/wiki/Bandwidth_%28computing%29).
 
-With a content distribution service provider, you send your video content to them and they then host the connection to all the viewers. Therefore, you offload that bandwidth requirement from your own Internet connection to them. That way, you don't have to worry about how many people are concurrently watching the bird box or how much bandwidth is being used.
+With a content distribution service provider, you send your video content to them and they then host the connection to all the viewers. Therefore, you offload that bandwidth requirement from your own internet connection to them. That way, you don't have to worry about how many people are concurrently watching the bird box or how much bandwidth is being used.
 
 The only drawback is that there will be a delay on the video. For example, if you poked your finger into the bird box, you would only see it online 20 to 30 seconds later. Despite this, it will make a perfectly viable solution for sharing the bird box with the world.
 
@@ -154,7 +154,7 @@ Enter the command below:
 
 `sudo nano /etc/rc.local`
 
-This file is a script which runs every time the Raspberry Pi boots up. At the end of the file you'll see `exit 0`, copy and paste the command below onto the previous line:
+This file is a script which runs every time the Raspberry Pi boots up. At the end of the file you'll see `exit 0`; copy and paste the command below onto the previous line:
 
 ```bash
 screen -S birdbox -dms birdbox /home/pi/ustream
