@@ -10,7 +10,7 @@ We need to use a service like this because you could potentially have thousands 
 
 With a content distribution service provider, you send your video content to them and they then host the connection to all the viewers. Therefore, you offload that bandwidth requirement from your own internet connection to them. That way, you don't have to worry about how many people are concurrently watching the bird box or how much bandwidth is being used.
 
-The only drawback is that there will be a delay on the video. For example, if you poked your finger into the bird box, you would only see it online 20 to 30 seconds later. Despite this, it will make a perfectly viable solution for sharing the bird box with the world.
+The only drawback is that there will be a delay on the video. For example, if you poked your finger into the bird box, you would only see it online 20 to 30 seconds later. This delay is known as [latency](https://en.wikipedia.org/wiki/Latency_%28engineering%29). Despite this, however, the service will make a perfectly viable solution for sharing the bird box with the world.
 
 ## Compile FFmpeg
 
@@ -98,7 +98,7 @@ Now whenever you want to go live just use the following command:
 
 You can view the live stream on a PC or laptop by going to the Ustream channel URL in a browser. This can be accessed using the ![](images/ustream-channel-icon.png) icon on the right of your channel name under **CHANNELS** in the Ustream dashboard. See the green square in the screen shot above.
 
-When you have the video feed on screen, perform a test to see what the [latency](https://en.wikipedia.org/wiki/Latency_%28engineering%29) is like. Poke your finger inside the entrance of the bird box and time how long it takes to appear online. The delay should only be about 20-30 seconds. 
+When you have the video feed on screen, perform a test to see what the latency is like. Poke your finger inside the entrance of the bird box and time how long it takes to appear online. The delay should only be about 20-30 seconds. 
 
 The URL in the browser address bar can now be sent to your friends over email, Facebook or Twitter and they should all be able to view what is happening in your bird box.
 
