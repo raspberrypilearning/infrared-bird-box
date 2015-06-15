@@ -61,9 +61,9 @@ You should then see the screen below. The RTMP URL and Stream Key fields will co
 
 The intention is to stream the video content from the bird box to the Internet on a 24/7 basis. Considering that sometimes Internet servers can go down, it's a good idea to ensure that the Raspberry Pi will keep trying to send out the video stream if there is a problem.
 
-To do that we can create a small shell script with a while loop; inside that loop is the command to start the stream. If something causes the stream command to go wrong and exit, the shell script will go around the loop and try the command again indefinitely.
+To do that we can create a small shell script with a `while` loop; inside that loop is the command to start the stream. If something causes the stream command to go wrong and exit, the shell script will go around the loop and try the command again indefinitely.
 
-On the Raspberry Pi let's create a script to do this. Enter the following command:
+Let's create a script on the Raspberry Pi to do this. Enter the following command:
 
 ```bash
 nano ~/ustream
@@ -98,7 +98,9 @@ Now whenever you want to go live just use the following command:
 
 You can view the live stream on a PC or laptop by going to the Ustream channel URL in a browser. This can be accessed using the ![](images/ustream-channel-icon.png) icon on the right of your channel name under **CHANNELS** in the Ustream dashboard. See the green square in the screen shot above.
 
-When you have the video feed on screen, perform a test to see what the latency is like. Poke your finger inside the entrance of the bird box and time how long it takes to appear online. The URL in the browser address bar can now be sent to your friends over email, Facebook or Twitter and they should all be able to view what is happening in your bird box.
+When you have the video feed on screen, perform a test to see what the [latency](https://en.wikipedia.org/wiki/Latency_%28engineering%29) is like. Poke your finger inside the entrance of the bird box and time how long it takes to appear online. The delay should only be about 20-30 seconds. 
+
+The URL in the browser address bar can now be sent to your friends over email, Facebook or Twitter and they should all be able to view what is happening in your bird box.
 
 Press `Ctrl + C` twice when you want to shut the stream down.
 
@@ -106,7 +108,7 @@ Press `Ctrl + C` twice when you want to shut the stream down.
 
 The last thing you should consider is being able to remotely access the Raspberry Pi from another computer without having to have a keyboard, mouse and monitor connected to it. This would be pretty inconvenient if it's somewhere outside, up a tree for example.
 
-You should familiarise yourself with SSH (Secure Shell Server). This is a technique that allows you to have the Raspberry Pi command prompt inside a window on another PC or Mac. As long as the other PC has network access to the Raspberry Pi, you can have full remote control.
+You should familiarise yourself with Secure Shell (SSH). This is a technique that allows you to have the Raspberry Pi command prompt inside a window on another PC or Mac. As long as the other computer has network access to the Raspberry Pi, you can have full remote control.
 
 The instructions [here](http://www.raspberrypi.org/documentation/remote-access/ssh/README.md) cover how to do this from Windows, OS X or Linux.
 
