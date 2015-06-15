@@ -106,7 +106,7 @@ Press `Ctrl + C` twice when you want to shut the stream down.
 
 ## Remote control
 
-The last thing you should consider is being able to remotely access the Raspberry Pi from another computer without having to have a keyboard, mouse and monitor connected to it. This would be pretty inconvenient if it's somewhere outside, up a tree for example.
+The last thing you should consider is being able to access the Raspberry Pi remotely from another computer without having to have a keyboard, mouse and monitor connected to it. This would be pretty inconvenient if it's somewhere outside, like up a tree.
 
 You should familiarise yourself with Secure Shell (SSH). This is a technique that allows you to have the Raspberry Pi command prompt inside a window on another PC or Mac. As long as the other computer has network access to the Raspberry Pi, you can have full remote control.
 
@@ -116,9 +116,9 @@ After you're comfortable with that you'll need a way to run `~/ustream` over SSH
 
 ## Screen
 
-Screen is a little utility that allows you to have multiple terminal sessions with only one SSH connection to the Pi. It's incredibly handy and once you've used it, you'll use it all the time.
+Screen is a utility that allows you to have multiple terminal sessions with only one SSH connection to the Pi. It's incredibly handy and once you've used it, you'll use it all the time.
 
-It works like virtual command prompt. You can have as many of them as you want. When you start a screen you're automatically connected to it and can see what it shows. You can start a program and then disconnect from the screen but leave it running in the background. Later on you can come back and reconnect to the screen and see what has happened while you were away. Let's try it now.
+Screen works like virtual command prompt, and you can have as many of them as you want. When you start a screen you're automatically connected to it and can see what it shows. You can start a program and then disconnect from the screen but leave it running in the background. Later on you can come back and reconnect to the screen and see what has happened while you were away. Let's try it now.
  
 Firstly, you'll need to install it as it doesn't come installed by default. You'll only need to do this once:
 
