@@ -59,7 +59,7 @@ You should then see the screen below. The RTMP URL and Stream Key fields will co
 
 ## Go live!
 
-The intention is to stream the video content from the bird box to the Internet on a 24/7 basis. Considering that sometimes Internet servers can go down, it's a good idea to ensure that the Raspberry Pi will keep trying to send out the video stream if there is a problem.
+The intention is to stream the video content from the bird box constantly to the internet. Considering that internet servers can go down, it's a good idea to ensure that the Raspberry Pi will keep trying to send out the video stream if there is a problem.
 
 To do that we can create a small shell script with a `while` loop; inside that loop is the command to start the stream. If something causes the stream command to go wrong and exit, the shell script will go around the loop and try the command again indefinitely.
 
