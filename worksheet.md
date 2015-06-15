@@ -200,7 +200,7 @@ Here are some ideas for making the installation more permanent and protecting it
 
 - The Raspberry Pi could be placed inside a plastic box to waterproof it; it should not be a problem to close the camera flex into the lid. Choosing a site which is beneath the overhang of an existing roof will help a lot, so the bird box will not be rained on directly.
 
-- How will you get power and an Internet connection to the bird box? You could use a wireless USB dongle but Ethernet is more reliable for streaming video, especially in built-up areas that have a lot of wireless traffic.
+- How will you get power and an internet connection to the bird box? You could use a wireless USB dongle but Ethernet is more reliable for streaming video, especially in built-up areas that have a lot of wireless traffic.
 
 - Preventing water getting into the box should be a priority. The roof could be sealed using silicone sealant, which is often used to seal the edges of windows and bathroom sinks.
 
@@ -208,5 +208,5 @@ Here are some ideas for making the installation more permanent and protecting it
 
 - What other uses can you think of for an infrared camera and LED?
 
-- You could try following this [advanced worksheet](worksheet2.md) to stream your bird box live on the Internet.
+- You could try following this [advanced worksheet](worksheet2.md) to stream your bird box live on the internet.
 
