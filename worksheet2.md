@@ -34,13 +34,13 @@ You can now do something else until you see the command prompt reappear.
 
 ## Create a free Ustream account
 
-If you have not done so already, go to [ustream.tv](http://www.ustream.tv/) on a PC or laptop and click `Sign Up`.
+If you have not done so already, go to [ustream.tv](http://www.ustream.tv/) and click **Sign Up**.
 
 Enter your details to create an account for yourself. During the signup process you'll be asked to create a channel; try to think of an interesting name for it, so that people who find it will remember it easily.
 
 Feel free to customise it, and do give your channel an avatar as well.
 
-The account will be free and will do everything we need it to. However, after 30 days some adverts will show on the side of the page where your live video is; this is part of the Ustream business model. You can buy a pro account which will give you access to many more features, as well as disabling the adverts, but that isn't necessary for this project.
+The account will be free and will do everything we need it to. However, after 30 days some adverts will show on the side of the page where your live video is: this is part of the Ustream business model. You can buy a pro account which will give you access to many more features, as well as disabling the adverts, but that isn't necessary for this project.
 
 We need to copy two settings from your Ustream account to use on the Raspberry Pi: the **RTMP address** and the **stream key**. These two settings are needed by FFmpeg so that the data is streamed to the correct Ustream channel.
 
