@@ -106,7 +106,7 @@ Press `Ctrl + C` twice when you want to shut the stream down.
 
 ## Remote control
 
-The last thing you should consider is being able to access the Raspberry Pi remotely from another computer without having to have a keyboard, mouse and monitor connected to it. This would be pretty inconvenient if it's somewhere outside, like up a tree.
+The last thing you should consider is being able to access the Raspberry Pi remotely from another computer without having to have a keyboard, mouse and monitor connected to it. This would be pretty inconvenient if the Pi is located somewhere outside, like up a tree.
 
 You should familiarise yourself with Secure Shell (SSH). This is a technique that allows you to have the Raspberry Pi command prompt inside a window on another PC or Mac. As long as the other computer has network access to the Raspberry Pi, you can have full remote control.
 
