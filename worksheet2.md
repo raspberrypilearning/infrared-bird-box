@@ -34,7 +34,7 @@ You can now do something else until you see the command prompt reappear.
 
 ## Create a free Ustream account
 
-If you have not done so already, go to [ustream.tv](http://www.ustream.tv/) and click **Sign Up**.
+If you have not done so already, go to [ustream.tv](http://www.ustream.tv/) and click **Sign Up** (you can use another computer or device for this instead of the Pi).
 
 Enter your details to create an account for yourself. During the signup process you'll be asked to create a channel; try to think of an interesting name for it, so that people who find it will remember it easily.
 
