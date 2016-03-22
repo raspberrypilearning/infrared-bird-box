@@ -3,6 +3,6 @@
 - name: 3 or more x Female-to-female jumper leads
   img: jumper-female-to-female
 - name: Some 220 Ohm 1% Resistors
-  img: resistor
+  img: resistor-220r
 - name: Some Infrared LEDs (5mm 890nm)
   img: led-ir
