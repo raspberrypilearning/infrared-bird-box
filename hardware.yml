@@ -1,12 +1,8 @@
 - name: Raspberry Pi NOIR camera module
   img: camera-noir
-  url: http://www.raspberrypi.org/products/pi-noir-camera/
 - name: 3 or more x Female-to-female jumper leads
   img: jumper-female-to-female
-  url: http://shop.pimoroni.com/products/jumper-jerky
 - name: Some 220 Ohm 1% Resistors
   img: resistor
-  url: http://shop.pimoroni.com/collections/components
 - name: Some Infrared LEDs (5mm 890nm)
   img: led-ir
-  url: http://uk.rs-online.com/web/p/ir-leds/6997663/
