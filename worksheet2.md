@@ -7,19 +7,19 @@ In this project, you will use a Raspberry Pi and a Pi NoIR camera to allow you t
 1. Go to [YouTube](https://www.youtube.com/), and sign in.
 2. On the left hand side of the screen you should see a menu with the *My Channel* option available
 
-  ![channel](youtube-stream/channel.png)
+  ![channel](images/channel.png)
 
 3. Then, in the middle of the screen you should see the *Video Manager* option available
 
-  ![video manager](youtube-stream/video-manager.png)
+  ![video manager](images/video-manager.png)
 
 4. In the menu on the left you should see a *LIVE STREAMING* option and within that a *Stream now BETA* option.
 
-  ![live stream](youtube-stream/live-stream.png)
+  ![live stream](images/live-stream.png)
 
 5. Scroll down to the bottom of the page, and you should see the *ENCODER SETUP* option
 
-  ![encoder setup](youtube-stream/encoder-setup.png)
+  ![encoder setup](images/encoder-setup.png)
   
 6. Within the the *ENCODER SETUP* there is a *Server URL* and a *Stream name/key*. The key will appear to be just a line of asterisks, until you click on the *Reveal* button. You need to keep the key secret though, so make sure you don't share it online.
 
@@ -56,7 +56,7 @@ It's never a good idea to copy and paste commands from the internet into a termi
 - `raspivid -o -` Tells the Raspberry Pi to start capturing video.
 - `-t 0` is an option to keep recording forever.
 - `-w 1280 -h 720` sets the video's width and height in pixels.
-- `-fps 25` set the frame rate to 25 frames per second
+- `-fps 25` set the framen rate to 25 frames per second
 - `-b 4000000` sets the bitrate (the speed of data transfer) to 4Mbps
 - `-g 50` sets the key-frame rate. So a complete picture will be recorded every 50 frames, while the ones in between will be compressed.
 
