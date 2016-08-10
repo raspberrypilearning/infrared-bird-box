@@ -16,7 +16,7 @@ Look at the night vision surveillance camera below, for example. Around the came
 
 ![](images/surveillance.jpg)
 
-The image will look black and white (greyscale) because there are no wavelengths of light from the visible spectrum being detected. However, a black and white image is good enough to allow you to watch what is happening inside a bird box, and it doesn't disturb or interfere with the birds in any way.
+The image will look black and white (grey-scale) because there are no wavelengths of light from the visible spectrum being detected. However, a black and white image is good enough to allow you to watch what is happening inside a bird box, and it doesn't disturb or interfere with the birds in any way.
 
 ![](images/pinoirada.jpg)
 
