@@ -5,29 +5,29 @@ In this project, you will use a Raspberry Pi and a Pi NoIR camera to allow you t
 ## YouTube Setup
 
 1. Go to [YouTube](https://www.youtube.com/), and sign in.
-1. On the left-hand side of the screen you should see a menu with the *My Channel* option available:
+1. On the left-hand side of the screen you should see a menu with the **My Channel** option available:
 
   ![channel](images/channel.png)
 
-1. In the middle of the screen you should see the *Video Manager* option:
+1. In the middle of the screen you should see the **Video Manager** option:
 
   ![video manager](images/video-manager.png)
 
-1. In the menu on the left you should see a *LIVE STREAMING* option, and within that a *Stream now BETA* option:
+1. In the menu on the left you should see a **LIVE STREAMING** option, and within that a **Stream now BETA** option:
 
   ![live stream](images/live-stream.png)
 
-1. Scroll down to the bottom of the page, and you should see the *ENCODER SETUP* option:
+1. Scroll down to the bottom of the page, and you should see the **ENCODER SETUP** option:
 
   ![encoder setup](images/encoder-setup.png)
   
-1. Within the the *ENCODER SETUP* there is a *Server URL* and a *Stream name/key*. The key will appear to be just a line of asterisks, until you click on the *Reveal* button. You need to keep the key secret, though, so make sure you don't share it online.
+1. Within the the **ENCODER SETUP** there is a **Server URL** and a **Stream name/key**. The key will appear to be just a line of asterisks, until you click on the **Reveal** button. You need to keep the key secret, though, so make sure you don't share it online.
 
 ## Compile FFmpeg
 
 Firstly, you need to install some software called [FFmpeg](http://www.ffmpeg.org/), which will continually stream the video data from the Camera Module to the web. Instructions are below.
 
-**NOTE:** This step is going to take about two hours, since you have to [compile](http://en.wikipedia.org/wiki/Compiler) the program from its source code. The Raspbian FFmpeg package that can be installed using `apt-get` doesn't have the required `h264` video encoder support. You can just set the process going and do something else during this time; you'll also only need to do it once.
+**NOTE**: This step is going to take about two hours, since you have to [compile](http://en.wikipedia.org/wiki/Compiler) the program from its source code. The Raspbian FFmpeg package that can be installed using `apt-get` doesn't have the required `h264` video encoder support. You can just set the process going and do something else during this time; you'll also only need to do it once.
 
 The part that takes two hours is the `make` command at the end of the list below. The `./configure` part takes a while too; just be patient. Enter the following commands to download, compile, and install FFmpeg:
 
@@ -45,15 +45,15 @@ You can now do something else until you see the command prompt reappear.
 
 ## Streaming with FFmpeg
 
-Open a terminal and then, with this single command, you can start streaming to YouTube. You'll need to remove the `<key goes here>` part of the command and replace it with your key copied from YouTube:
+Open a terminal window and then, with this single command, you can start streaming to YouTube. You'll need to remove the `<key goes here>` part of the command and replace it with your key copied from YouTube:
 
 ``` bash
 raspivid -o - -t 0 -w 1280 -h 720 -fps 25 -b 4000000 -g 50 | ffmpeg -re -ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero -f h264 -i - -vcodec copy -acodec aac -ab 128k -g 50 -strict experimental -f flv rtmp://a.rtmp.youtube.com/live2/<key goes here>
 ```
 
-It's never a good idea to copy and paste commands from the internet into a terminal without understanding what you're typing, so let's break it down a little. The first half of the command has the following options:
+It's never a good idea to copy and paste commands from the internet into a terminal window without understanding what you're typing, so let's break it down a little. The first half of the command has the following options:
 
-- `raspivid -o -` Tells the Raspberry Pi to start capturing video.
+- `raspivid -o -` tells the Raspberry Pi to start capturing video.
 - `-t 0` is an option to keep recording forever.
 - `-w 1280 -h 720` sets the video's width and height in pixels.
 - `-fps 25` set the frame rate to 25 frames per second.
@@ -69,9 +69,9 @@ The second half of the command is for streaming. The `|` symbol takes the data f
 
 ## Viewing your stream
 
-Once you have run the command, you can hop back over to YouTube and after a minute or two, you should see your video being streamed to YouTube and available for anyone to watch.
+Once you have run the command, you can hop back over to YouTube and, after a minute or two, you should see your video being streamed for anyone to watch.
 
-Be careful about what content you place on the internet, especially in a public channel.
+Remember: be careful about what content you place on the internet, especially in a public channel.
 
 ## Remote control
 
@@ -82,14 +82,14 @@ The easiest way to remotely access the Pi is to use VNC.
 ## VNC setup on the Raspberry Pi
 
 1. First, you'll need to get the RealVNC server for your Raspberry Pi. You can download the **deb** package [here](https://github.com/RealVNC/raspi-preview/releases/download/5.3.1.18206/VNC-Server-5.3.1-raspi-alpha1.deb).
-  - To install the package, open a terminal (`Ctrl`+`Alt`+`T`) and type the following command in the directory the *deb* package was downloaded to:
+  - To install the package, open a terminal (**Ctrl + Alt + T**) and type the following command in the directory the deb package was downloaded to:
 
   ``` bash
   sudo dpkg -i VNC-Server-5.3.1-raspi-alpha1.deb
   ```
 
 1. You'll need a license key for the server, but don't worry: these are completely free. On the [RealVNC website](https://www.realvnc.com/purchase/activate/), you can fill in your details and obtain your free license key.
-1. Next, you need to apply the license key. This is again done in the terminal with the following command:
+1. Next, you need to apply the license key. This is again done in a terminal window with the following command:
 
   ``` bash
   sudo vnclicense -add <your-license-key-here->
@@ -101,7 +101,7 @@ The easiest way to remotely access the Pi is to use VNC.
   hostname -I
   ```
 
-1. The next command will start your VNC server each time the Raspberry Pi is started. Again, it needs to be typed into the terminal:
+1. The next command will start your VNC server each time the Raspberry Pi is started. Again, it needs to be typed into a terminal window:
 
   ``` bash
   sudo systemctl enable vncserver-x11-serviced.service
