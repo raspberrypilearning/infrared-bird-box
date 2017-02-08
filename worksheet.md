@@ -50,7 +50,7 @@ Wait for the ACT (activity) LED to stop blinking before turning off the power.
 
 If you've wired up an LED to the Pi GPIO pins before, then please note that this LED needs to be done slightly differently. An infrared LED requires more current than the GPIO pins can provide. It needs to be connected directly to the 5 volt supply of the Raspberry Pi with a 220 ohm resistor inline; without the resistor the current will be too high, and the LED will burn out after about ten seconds.
 
-Ensure that you have the correct type of resistor; it needs to be 220 ohms, **not** 220K ohms. The 5-band resistor colour code is red - red - black - black - brown. Please refer to the [electronic colour code](http://en.wikipedia.org/wiki/Electronic_color_code) system for further guidance. This is what the resistor should look like:
+Ensure that you have the correct type of resistor; it needs to be 220 ohms, **not** 220K ohms. The resistor colour code is red - red - black - black - brown. Please refer to the [electronic colour code](http://en.wikipedia.org/wiki/Electronic_color_code) system for further guidance. This is what the resistor should look like:
 
 ![](images/220ohm.JPG)
 
@@ -58,8 +58,8 @@ The diagram below shows how the LED should be wired up. You'll notice that the L
 
 Use the female-to-female jumper wires to make the following connections:
 
-- Connect the anode (long leg) to 5 volts, which is the first pin on the outside row on the Pi
-- Connect the cathode (short leg) to the 220 ohm resistor
+- Connect the anode to 5 volts, which is the first pin on the outside row on the Pi
+- Connect the cathode to the 220 ohm resistor
 - Connect the other side of the resistor to ground, which is the third pin in on the outside row on the Pi
 
 This will allow power to flow from the Pi into the LED and back to ground through the resistor. The resistor will limit the current to about 23 mA so that the LED doesn't burn out.
@@ -90,7 +90,7 @@ The focal length of the camera is the distance from the front of the lens to the
 
 The Pi Camera Module has a focal length of about 50 cm and a depth of field of 50 cm to infinity. This means that objects will only appear in focus if they’re at least 50 cm away from the lens of the camera. If objects are closer, then they will be blurry and out of focus. The Gardman bird box is about 18 cm high on the inside; therefore we know that if the camera is stuck to the inside of the roof, all objects are going to be 18 cm or closer. If we want them to be in focus, then the camera focal length will need to be reduced.
 
-As an experiment, try putting some car keys into the bird box and, with the roof open (remove the screw), hold the camera at the approximate height of the roof and look at the camera preview. The keys will probably not be in focus. Use the following command to start the camera preview:
+As an experiment, try putting some keys into the bird box and, with the roof open (remove the screw), hold the camera at the approximate height of the roof and look at the camera preview. The keys will probably not be in focus. Use the following command to start the camera preview:
 
 ```bash
 raspivid -t 0
