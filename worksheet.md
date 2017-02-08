@@ -96,7 +96,7 @@ As an experiment, try putting some keys into the bird box and, with the roof ope
 raspivid -t 0
 ```
 
-Press `Ctrl + C` when you want to exit.
+Press **Ctrl + C** when you want to exit.
 
 The Raspberry Pi NoIR camera has a lens that can rotate to adjust the focus. It's sold as a fixed-focus camera, but it ships with three blobs of glue to hold the rotatable lens in place. Look at the image below: the letters **A**, **B**, and **C** mark the location of the glue:
 
@@ -106,7 +106,7 @@ To be able to rotate the lens to adjust the focus, you'll need to dig out these 
 
 ![](images/pi-noir-scalpel.jpg)
 
-Take care not to cut your fingers. Children should only do this under adult supervision for safety, especially if a scalpel is being used. The orange connector with the word `SUNNY` printed on it can pop out when you're scraping the glue away; don’t worry, though, because it pops right back in without any problems. Unless you’re very heavy-handed, it’s unlikely that you will break the camera; if it does break then it’s your own responsibility.
+Take care not to cut your fingers. Children should only do this under adult supervision for safety, especially if a scalpel is being used. The orange connector with the word **SUNNY** printed on it can pop out when you're scraping the glue away; don’t worry, though, because it pops right back in without any problems. Unless you’re very heavy-handed, it’s unlikely that you will break the camera; if it does break, though, it’s your own responsibility.
 
 The camera will end up looking a little scruffy after you have removed the glue, but it doesn't really matter since it's going to live on the inside of a bird box without anyone looking at it. See below for a comparison:
 
@@ -122,7 +122,7 @@ Be careful not to rotate the lens too far, otherwise it will pop out, and it can
 
 ## Installing the camera and LED into the bird box
 
-In this part of the guide, we will demonstrate how to install the camera; it will then be up to you to come up with a more permanent solution, which is a fun group activity in itself.
+In this part of the guide, we will demonstrate how to install the camera; it will then be up to you to come up with a more permanent solution, which is a fun activity in itself.
 
 The following instructions are for the [Gardman](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965) bird box.
 
@@ -170,7 +170,7 @@ The following instructions are for the [Gardman](http://www.diy.com/nav/garden/p
 
 1. It's now helpful to put an object with some black-on-white text into the bird box to verify the focus; a good object to use would be a watch or a business card. Ensure that the text is in focus and readable; adjust the camera focus again as necessary before continuing. Remember to compensate for the nest height.
 
-    Press `Ctrl + C` when you want to stop the camera preview.
+    Press **Ctrl + C** when you want to stop the camera preview.
 
 1. Lastly, consider the red LED on the camera. By default, it comes on whenever the camera is on. This will be a huge deterrent to birds moving in, so you should disable it. This can be done by editing the Raspberry Pi configuration file. Enter the command below:
 
@@ -184,7 +184,7 @@ The following instructions are for the [Gardman](http://www.diy.com/nav/garden/p
     disable_camera_led=1
     ```
 
-    Press `Ctrl + O` to save and `Ctrl + X` to quit. The changes will only take effect after a reboot:
+    Press **Ctrl + O** to save and **Ctrl + X** to quit. The changes will only take effect after a reboot:
 
     ```bash
     sudo reboot
@@ -196,7 +196,7 @@ Here are some ideas for making the installation more permanent and protecting it
 
 - If you're using the Gardman bird box, don't trust the keyhole mount on the back. This mount supports the entire weight of the bird box on a single thin piece of wood. It's better to drill through from the inside and mount it using a large screw and washer. 
 
-- Consider that the Raspberry Pi doesn't need to be directly attached to the bird box itself. You can buy a [replacement camera cable](http://shop.pimoroni.com/products/raspberry-pi-camera-cable) which can give you greater range. The same connector found on the Raspberry Pi itself is also found on the back of the Camera Module, allowing you to easily change it; the tin connectors face the same side as the lens.
+- Consider that the Raspberry Pi doesn't need to be directly attached to the bird box itself. You can buy a [replacement camera cable](http://shop.pimoroni.com/products/raspberry-pi-camera-cable) which can give you greater range. The same connector found on the Raspberry Pi itself is also found on the back of the Camera Module, allowing you to change it easily; the tin connectors face the same side as the lens.
 
 - The Raspberry Pi could be placed inside a plastic box to make it waterproof; it shouldn't be a problem to close the camera flex into the lid. Choosing a site which is beneath the overhang of an existing roof will help a lot, so the bird box will not be rained on directly.
 
