@@ -13,15 +13,15 @@ In this project, you will use a Raspberry Pi and a Pi NoIR camera to allow you t
 
   ![video manager](images/video-manager.png)
 
-1. In the menu on the left you should see a **LIVE STREAMING** option, and within that a **Stream now BETA** option:
+1. In the menu on the left you should see a **Live Streaming** option, and within that a **Stream now BETA** option:
 
   ![live stream](images/live-stream.png)
 
-1. Scroll down to the bottom of the page, and you should see the **ENCODER SETUP** option:
+1. Scroll down to the bottom of the page, and you should see the **Encoder Setup** option:
 
   ![encoder setup](images/encoder-setup.png)
   
-1. Within the the **ENCODER SETUP** there is a **Server URL** and a **Stream name/key**. The key will appear to be just a line of asterisks, until you click on the **Reveal** button. You need to keep the key secret, though, so make sure you don't share it online.
+1. Within the the **Encoder Setup** there is a **Server URL** and a **Stream name/key**. The key will appear to be just a line of asterisks, until you click on the **Reveal** button. You need to keep the key secret, though, so make sure you don't share it online.
 
 ## Compile FFmpeg
 
