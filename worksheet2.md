@@ -84,4 +84,4 @@ The easiest way to remotely access the Pi is to use VNC. Instructions for workin
 
 - Wait for some birds to move in
 - Tell the world about your bird box
-- Share the YouTube channel URL on social media or with to your friends and family
+- Share the YouTube channel URL on social media or with your friends and family
