@@ -1,22 +1,18 @@
 # Infrared Bird Box
 
-In this project, you will use a Raspberry Pi and a Pi NoIR camera to allow you to observe nesting birds without disturbing them. 
+In this project, you will use a Raspberry Pi and a Pi NoIR camera to allow you to observe nesting birds without disturbing them.
 
-## Why use the Pi NoIR? 
+## Why use the Pi NoIR?
 
 Garden birds are very choosy about where they build their nest. In order to get good results from this activity, the bird box will need to be located out of the reach of predators, away from any prevailing winds, and nowhere near a bird table or feeder.
 
 Once birds have moved in, the box must not be disturbed until they have finished breeding; this is usually between October and January in the UK. If something goes wrong with the project, you can't simply open the box and fiddle with your wires or adjust the camera, as this will traumatise the birds and could cause eggs or hatchlings to be abandoned.
 
-A requirement of the system is to be able to see the birds in total darkness. A light inside the bird box could attract insects and predators, and therefore no birds would select it as a nesting site. It's possible, however, to illuminate the inside of the bird box with a kind of light that's invisible to animals and humans, but is visible to a camera. This is commonly known as night vision. Night vision works by using a spectrum of light called [infrared](http://en.wikipedia.org/wiki/Infrared) which has a longer wavelength than visible light. Notice that IR is to the right-hand side of the visible spectrum of light below:
+A requirement of the system is to be able to see the birds in total darkness. A light inside the bird box could attract insects and predators, and therefore no birds would select it as a nesting site. It's possible, however, to illuminate the inside of the bird box with a kind of light that's invisible to animals and humans, but is visible to a camera. This is commonly known as night vision. Night vision works by using a spectrum of light called [infrared](http://en.wikipedia.org/wiki/Infrared) which has a longer wavelength than visible light. Notice that IR wavelengths are shown below the visible spectrum of light (VIS) in this diagram:
 
-![](images/spectrum.jpg)
+![](images/light-spectrum.png)
 
-Look at the night vision surveillance camera below, for example. Around the camera lens, there are lots of infrared LEDs (light-emitting diodes). These emit infrared light which will then bounce off various objects and return to the camera lens, allowing it to create an image.
-
-![](images/surveillance.jpg)
-
-The image will look black and white (greyscale), because there are no wavelengths of light from the visible spectrum being detected. However, a black and white image is good enough to allow you to watch what's happening inside a bird box, and it doesn't disturb or interfere with the birds in any way.
+Many devices incorporate night vision via the infrared spectrum. A night vision surveillance camera, for example, typically has lots of infrared LEDs (light-emitting diodes) built into it around the lens. These emit infrared light which will then bounce off various objects and return to the camera lens, allowing it to create an image. The image will look black and white (greyscale), because there are no wavelengths of light from the visible spectrum being detected. However, a black and white image is good enough to allow you to watch what's happening inside a bird box, and it doesn't disturb or interfere with the birds in any way.
 
 ![](images/pinoirada.jpg)
 
@@ -49,10 +45,6 @@ sudo halt
 Wait for the ACT (activity) LED to stop blinking before turning off the power.
 
 If you've wired up an LED to the Pi GPIO pins before, then please note that this LED needs to be done slightly differently. An infrared LED requires more current than the GPIO pins can provide. It needs to be connected directly to the 5 volt supply of the Raspberry Pi with a 220 ohm resistor inline; without the resistor the current will be too high, and the LED will burn out after about ten seconds.
-
-Ensure that you have the correct type of resistor; it needs to be 220 ohms, **not** 220K ohms. The resistor colour code is red - red - black - black - brown. Please refer to the [electronic colour code](http://en.wikipedia.org/wiki/Electronic_color_code) system for further guidance. This is what the resistor should look like:
-
-![](images/220ohm.JPG)
 
 The diagram below shows how the LED should be wired up. You'll notice that the LED has two legs, one slightly longer than the other. The longer of the two is called the **anode** and the shorter is the **cathode**. The LED needs power to flow into the anode and out of the cathode; if you get the polarity wrong then nothing will happen.
 
@@ -194,7 +186,7 @@ The following instructions are for the [Gardman](http://www.diy.com/nav/garden/p
 
 Here are some ideas for making the installation more permanent and protecting it from the elements. Whether you choose to follow them is up to you.
 
-- If you're using the Gardman bird box, don't trust the keyhole mount on the back. This mount supports the entire weight of the bird box on a single thin piece of wood. It's better to drill through from the inside and mount it using a large screw and washer. 
+- If you're using the Gardman bird box, don't trust the keyhole mount on the back. This mount supports the entire weight of the bird box on a single thin piece of wood. It's better to drill through from the inside and mount it using a large screw and washer.
 
 - Consider that the Raspberry Pi doesn't need to be directly attached to the bird box itself. You can buy a [replacement camera cable](http://shop.pimoroni.com/products/raspberry-pi-camera-cable) which can give you greater range. The same connector found on the Raspberry Pi itself is also found on the back of the Camera Module, allowing you to change it easily; the tin connectors face the same side as the lens.
 
@@ -209,4 +201,3 @@ Here are some ideas for making the installation more permanent and protecting it
 - What other uses can you think of for an infrared camera and LED?
 
 - You could try following this [advanced worksheet](worksheet2.md) to stream your bird box live on the internet.
-
