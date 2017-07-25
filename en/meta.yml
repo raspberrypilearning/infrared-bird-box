@@ -1,0 +1,33 @@
+---
+title: Infrared Bird Box
+hero_image: images/banner.png
+description: Build a better bird box with infrared and a Pi Camera
+original_url: https://raspberrypi.org/learning/infrared-bird-box
+theme: red
+duration: 2
+listed: false
+ingredient: false
+copyedit: true
+curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
+interests: ''
+technologies: rpi, physical computing, python
+site_areas: ''
+steps:
+- title: Introduction
+- title: What you will need
+- title: Infrared Bird Box
+- title: Why use the Pi NoIR?
+- title: Setting up the Pi NoIR
+- title: Wiring up the infrared LED
+- title: Adjusting the camera focus
+- title: Installing the camera and LED into the bird box
+- title: What next?
+- title: 'Infrared Bird Box - Part 2 '
+- title: YouTube Setup
+- title: Compile FFmpeg
+- title: Streaming with FFmpeg
+- title: Viewing your stream
+- title: Remote control
+- title: VNC setup on the Raspberry Pi
+- title: What next?
+
