@@ -1,30 +1,24 @@
-## VNC setup on the Raspberry Pi
+## What next?
 
-- First, you'll need to get the RealVNC server for your Raspberry Pi. You can download the **deb** package [here](https://github.com/RealVNC/raspi-preview/releases/download/5.3.1.18206/VNC-Server-5.3.1-raspi-alpha1.deb).
-  - To install the package, open a terminal (**Ctrl + Alt + T**) and type the following command in the directory the deb package was downloaded to:
+Here are some ideas for making the installation more permanent and protecting it from the elements. Whether you choose to follow them is up to you.
 
-  ``` bash
-  sudo dpkg -i VNC-Server-5.3.1-raspi-alpha1.deb
-  ```
+- If you're using the Gardman bird box, don't trust the keyhole mount on the back. This mount supports the entire weight of the bird box on a single thin piece of wood. It's better to drill through from the inside and mount it using a large screw and washer.
 
-- You'll need a license key for the server, but don't worry: these are completely free. On the [RealVNC website](https://www.realvnc.com/purchase/activate/), you can fill in your details and obtain your free license key.
-- Next, you need to apply the license key. This is again done in a terminal window with the following command:
+- Consider that the Raspberry Pi doesn't need to be directly attached to the bird box itself. You can buy a [replacement camera cable](http://shop.pimoroni.com/products/raspberry-pi-camera-cable) which can give you greater range. The same connector found on the Raspberry Pi itself is also found on the back of the Camera Module, allowing you to change it easily; the tin connectors face the same side as the lens.
 
-  ``` bash
-  sudo vnclicense -add <your-license-key-here->
-  ```
+- The Raspberry Pi could be placed inside a plastic box to make it waterproof; it shouldn't be a problem to close the camera flex into the lid. Choosing a site which is beneath the overhang of an existing roof will help a lot, so the bird box will not be rained on directly.
 
-- It's a good idea to find the IP address of your Pi. Be warned, though: this can change when it disconnects and reconnects to your network, although most networks will let the Raspberry Pi retain the same IP address for quite some time. To find your IP address, you can hover your mouse over the network icon in the top-left of the screen, or alternatively use the following command in the terminal:
+- How will you get power and an internet connection to the bird box? You could use a wireless USB dongle but Ethernet is more reliable for streaming video, especially in built-up areas that have a lot of wireless traffic.
 
-  ``` bash
-  hostname -I
-  ```
+- Preventing water getting into the box should be a priority. The roof could be sealed using silicone sealant, which is often used to seal the edges of windows and bathroom sinks.
 
-- The next command will start your VNC server each time the Raspberry Pi is started. Again, it needs to be typed into a terminal window:
+- Try to make use of the four mounting holes on the Camera Module. Perhaps you could jigsaw a wedge of wood to keep it at the right angle, and put screws through to hold it in place.
 
-  ``` bash
-  sudo systemctl enable vncserver-x11-serviced.service
-  ```
+- What other uses can you think of for an infrared camera and LED?
 
-- On your Windows, MacOS, or Linux computer, you can now take control of your Raspberry Pi. You'll need a VNC viewer, and 
+
+
+- Wait for some birds to move in
+- Tell the world about your bird box
+- Post the Ustream channel URL on social media or email it to your friends and family
 

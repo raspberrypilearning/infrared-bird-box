@@ -1,21 +1,20 @@
-## YouTube Setup
+## Compile FFmpeg
 
-- Go to [YouTube](https://www.youtube.com/), and sign in.
-- On the left-hand side of the screen you should see a menu with the **My Channel** option available:
+Firstly, you need to install some software called [FFmpeg](http://www.ffmpeg.org/), which will continually stream the video data from the Camera Module to the web. Instructions are below.
 
-  ![channel](images/channel.png)
+**NOTE**: This step is going to take about two hours, since you have to [compile](http://en.wikipedia.org/wiki/Compiler) the program from its source code. The Raspbian FFmpeg package that can be installed using `apt-get` doesn't have the required `h264` video encoder support. You can just set the process going and do something else during this time; you'll also only need to do it once.
 
-- In the middle of the screen you should see the **Video Manager** option:
+The part that takes two hours is the `make` command at the end of the list below. The `./configure` part takes a while too; just be patient. Enter the following commands to download, compile, and install FFmpeg:
 
-  ![video manager](images/video-manager.png)
+```bash
+cd /usr/src
+sudo mkdir ffmpeg
+sudo chown pi:users ffmpeg
+git clone git://source.ffmpeg.org/ffmpeg.git ffmpeg
+cd ffmpeg
+./configure
+make && sudo make install
+```
 
-- In the menu on the left you should see a **LIVE STREAMING** option, and within that a **Stream now BETA** option:
-
-  ![live stream](images/live-stream.png)
-
-- Scroll down to the bottom of the page, and you should see the **ENCODER SETUP** option:
-
-  ![encoder setup](images/encoder-setup.png)
-  
-- Within the the **ENCODER SETUP** there is a **Server URL** and a **Stream name/key**. The key will appear to be just a line of asterisks, until you click on the **Reveal** button. You need to keep the key secret, though, so make sure you don't share it online.
+You can now do something else until you see the command prompt reappear.
 
