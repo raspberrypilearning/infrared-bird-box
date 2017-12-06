@@ -3,14 +3,14 @@ title: Infrared Bird Box
 hero_image: images/banner.png
 description: Build a better bird box with infrared and a Pi Camera
 original_url: https://raspberrypi.org/learning/infrared-bird-box
-theme: red
+theme: orange
 duration: 2
 listed: true
 ingredient: false
 copyedit: true
 curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
-interests: ''
-technologies: rpi, physical computing, python
+interests: photography
+technologies: physical computing, python
 site_areas: ''
 steps:
 - title: Introduction
