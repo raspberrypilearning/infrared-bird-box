@@ -15,4 +15,8 @@ You'll need to make sure you have the following packages installed to proceed wi
 
 - ffmpeg
 
-Instructions for installing ffmpeg are provided [late on in the resource](compile-ffmpeg)
+To install ffmpeg, open a Terminal and type:
+```bash
+sudo apt update && suod apt upgrade
+sudo apt install ffmpeg
+```
