@@ -14,7 +14,7 @@ technologies: electronic-components, python
 site_areas: projects
 hardware: electronic-components
 software: python
-version: 3
+version: 3.01
 last_tested: 2017-01-01
 steps: 
 - title: Introduction
@@ -27,7 +27,6 @@ steps:
 - title: Installing the camera and LED into the bird box
 - title: 'Infrared Bird Box - Part 2 '
 - title: YouTube Setup
-- title: Compile FFmpeg
 - title: Streaming with FFmpeg
 - title: Viewing your stream
 - title: Remote control
