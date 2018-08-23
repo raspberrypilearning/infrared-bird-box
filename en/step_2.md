@@ -17,6 +17,6 @@ You'll need to make sure you have the following packages installed to proceed wi
 
 To install ffmpeg, open a Terminal and type:
 ```bash
-sudo apt update && suod apt upgrade
+sudo apt update && sudo apt upgrade
 sudo apt install ffmpeg
 ```
