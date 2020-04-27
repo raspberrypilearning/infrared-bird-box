@@ -1,35 +1,49 @@
 ---
-hero_image: images/happy-birthday.png
-theme: turquoise
-duration: 2
+title: Infrared Bird Box
+hero_image: images/banner.png
+description: Build a better bird box with infrared and a Pi Camera
+original_url: https://raspberrypi.org/learning/infrared-bird-box
+theme: orange
+duration: 3
 listed: true
 ingredient: false
-copyedit: false
-curriculum: 1, design-1, programming-0, phys-comp-0, manufacture-0, community-0
-title: Gratulerer med dagen
-description: Lag et online bursdagskort på en nettside
-original_url: https://codeclubprojects.org/en-GB/webdev/happy-birthday
-interests: art
-technologies: html-css-javascript
+copyedit: true
+curriculum: 3, design-0, programming-0, phys-comp-2, manufacture-3, community-0
+interests: photography, big-project
+technologies: electronic-components, python
 site_areas: projects
-hardware: ''
-software: html-css-javascript
-version: 4
+hardware: electronic-components
+software: python
+version: 3.01
 last_tested: 2017-01-01
 steps:
   - 
-    title: Introduksjon
+    title: Introduction
   - 
-    title: Dette trenger du
+    title: What you will need
   - 
-    title: Hva er HTML?
+    title: Infrared Bird Box
   - 
-    title: 'Utfordring: Legg til et nytt avsnitt'
+    title: Why use the Pi NoIR?
   - 
-    title: Hva er CSS?
+    title: Setting up the Pi NoIR
   - 
-    title: 'Utfordring: Legg til flere stiler'
+    title: Wiring up the infrared LED
   - 
-    title: Lage et bursdagskort
+    title: Adjusting the camera focus
   - 
-    title: 'Utfordring: Lag et personlig kort'
+    title: Installing the camera and LED into the bird box
+  - 
+    title: 'Infrared Bird Box - Part 2 '
+  - 
+    title: YouTube Setup
+  - 
+    title: Streaming with FFmpeg
+  - 
+    title: Viewing your stream
+  - 
+    title: Remote control
+  - 
+    title: VNC setup on the Raspberry Pi
+  - 
+    title: What next?
