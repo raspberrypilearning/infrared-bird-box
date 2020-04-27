@@ -1,0 +1,35 @@
+---
+hero_image: images/happy-birthday.png
+theme: turquoise
+duration: 2
+listed: true
+ingredient: false
+copyedit: false
+curriculum: 1, design-1, programming-0, phys-comp-0, manufacture-0, community-0
+title: Gratulerer med dagen
+description: Lag et online bursdagskort på en nettside
+original_url: https://codeclubprojects.org/en-GB/webdev/happy-birthday
+interests: art
+technologies: html-css-javascript
+site_areas: projects
+hardware: ''
+software: html-css-javascript
+version: 4
+last_tested: 2017-01-01
+steps:
+  - 
+    title: Introduksjon
+  - 
+    title: Dette trenger du
+  - 
+    title: Hva er HTML?
+  - 
+    title: 'Utfordring: Legg til et nytt avsnitt'
+  - 
+    title: Hva er CSS?
+  - 
+    title: 'Utfordring: Legg til flere stiler'
+  - 
+    title: Lage et bursdagskort
+  - 
+    title: 'Utfordring: Lag et personlig kort'
