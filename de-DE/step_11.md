@@ -1,24 +1,24 @@
-## Streaming with FFmpeg
+## Streaming mit FFmpeg
 
-Open a terminal window and then, with this single command, you can start streaming to YouTube. You'll need to remove the `<key goes here>` part of the command and replace it with your key copied from YouTube:
+Öffne ein Terminalfenster und mit nur einem Befehl kannst du mit dem Streaming zu YouTube beginnen. Du musst den `<key goes here>` Teil des Befehls entfernen und ihn durch deinen von YouTube kopierten Schlüssel ersetzen:
 
 ``` bash
 raspivid -o - -t 0 -w 1280 -h 720 -fps 25 -b 4000000 -g 50 | ffmpeg -re -ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero -f h264 -i - -vcodec copy -acodec aac -ab 128k -g 50 -strict experimental -f flv rtmp://a.rtmp.youtube.com/live2/<key goes here>
 ```
 
-It's never a good idea to copy and paste commands from the internet into a terminal window without understanding what you're typing, so let's break it down a little. The first half of the command has the following options:
+Es ist nie eine gute Idee, Befehle aus dem Internet zu kopieren und in ein Terminalfenster einzufügen ohne zu verstehen, was du eingibst. Lass es uns also ein wenig aufschlüsseln. Die erste Hälfte des Befehls bietet folgende Optionen:
 
-- `raspivid -o -` tells the Raspberry Pi to start capturing video.
-- `-t 0` is an option to keep recording forever.
-- `-w 1280 -h 720` sets the video's width and height in pixels.
-- `-fps 25` set the frame rate to 25 frames per second.
-- `-b 4000000` sets the bit rate (the speed of data transfer) to 4Mbps.
-- `-g 50` sets the key frame rate. So a complete picture will be recorded every 50 frames, while the ones in between will be compressed.
+- `raspivid -o -` weist den Raspberry Pi an, mit der Videoaufnahme zu beginnen.
+- `-t 0` ist eine Option, um die Aufnahme für immer fortzusetzen.
+- `-w 1280 -h 720` legt die Breite und Höhe des Videos in Pixeln fest.
+- `-fps 25` stellt die Bildrate auf 25 Bilder pro Sekunde ein.
+- `-b 4000000` stellt die Bitrate (die Geschwindigkeit der Datenübertragung) auf 4 Mbit/s ein.
+- `-g 50` legt die Schlüsselbildrate fest. So wird alle 50 Bilder ein vollständiges Bild aufgenommen, während die Bilder dazwischen komprimiert werden.
 
-The second half of the command is for streaming. The `|` symbol takes the data from `raspivid` and passes it to `ffmpeg`.
+Die zweite Hälfte des Befehls dient zum Streamen. Das `|` Symbol nimmt die Daten von `raspivid` und übergibt sie an `ffmpeg`.
 
-- The `-re` flag tells FFmpeg to use the same frame rate as captured by the camera.
-- `-ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero`, `-acodec aac -ab 128k` and `-strict experimental` creates a silent audio stream, as YouTube needs audio to accompany its videos.
-- `-f h264` and `-f flv` are the codecs FFmpeg is receiving from the PiCamera and the output it's sending to YouTube.
-- The very last option is just your personal streaming details for YouTube.
+- Das `-re` Flag weist FFmpeg an, dieselbe Bildrate zu verwenden, die von der Kamera aufgenommen wurde.
+- `-ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero`, `-acodec aac -ab 128k` und `-strict experimental` erstellt einen stillen Audiostream, da YouTube Videos mit Audio benötigt.
+- `-f h264` und `-f flv` sind die Codecs, die FFmpeg von der Pi-Kamera empfängt und für die Ausgabe, die an YouTube gesendet wird.
+- Die allerletzte Option sind deine persönlichen Streaming-Daten für YouTube.
 
