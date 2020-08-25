@@ -1,40 +1,40 @@
-## Wiring up the infrared LED
+## Verkabelung der Infrarot-LED
 
-The intention is to have a single infrared LED illuminating the inside of the bird box, to allow the Pi NoIR camera to see something. The 890nm IR LED is an identical component to the ones found inside TV remote controls. The only difference is that we're going to keep it on constantly to help the live stream.
+Es ist beabsichtigt, dass eine einzige Infrarot-LED das Innere des Nistkastens beleuchtet, damit die Pi NoIR-Kamera etwas sehen kann. Die 890-nm-IR-LED ist ein identisches Bauteil, wie es in TV-Fernbedienungen verbaut wird. Der einzige Unterschied ist, dass sie ständig eingeschaltet bleiben muss, um den Live-Stream zu ermöglichen.
 
-You should wire the LED up with the Raspberry Pi turned off and unplugged from the mains for safety. Use the following command to shut down the Pi:
+Du solltest die LED bei ausgeschaltetem Raspberry Pi verkabeln. Aus Sicherheitsgründen trenne ihn vom Stromnetz. Verwende den folgenden Befehl, um den Pi herunterzufahren:
 
 ```bash
 sudo halt
 ```
 
-Wait for the ACT (activity) LED to stop blinking before turning off the power.
+Warte, bis die ACT (Aktivitäts) -LED nicht mehr blinkt, bevor du das Gerät ausschaltest.
 
-If you've wired up an LED to the Pi GPIO pins before, then please note that this LED needs to be done slightly differently. An infrared LED requires more current than the GPIO pins can provide. It needs to be connected directly to the 5 volt supply of the Raspberry Pi with a 220 ohm resistor inline; without the resistor the current will be too high, and the LED will burn out after about ten seconds.
+Wenn du zuvor eine LED an die Pi-GPIO-Pins angeschlossen hast, beachte bitte, dass diese LED etwas anders ausgeführt werden muss. Eine Infrarot-LED benötigt mehr Strom, als die GPIO-Pins liefern können. Sie muss direkt an die 5-Volt-Versorgung des Raspberry Pi, mit einem 220-Ohm Widerstand in Serie geschaltet, angeschlossen werden. Ohne den Widerstand ist der Strom zu hoch und die LED brennt nach etwa zehn Sekunden durch.
 
-The diagram below shows how the LED should be wired up. You'll notice that the LED has two legs, one slightly longer than the other. The longer of the two is called the **anode** and the shorter is the **cathode**. The LED needs power to flow into the anode and out of the cathode; if you get the polarity wrong then nothing will happen.
+Das folgende Diagramm zeigt, wie die LED verkabelt werden soll. Du wirst feststellen, dass die LED zwei Beine hat, eines etwas länger als das andere. Das längere der beiden wird als **Anode** bezeichnet und das kürzere ist die **Kathode**. Die LED benötigt Strom, der in die Anode hinein und aus der Kathode heraus fließt. Wenn du die Polarität vertauschst, passiert nichts.
 
-Use the female-to-female jumper wires to make the following connections:
+Verwende die Buchse-Buchse-Verbindungskabel, um die folgenden Verbindungen herzustellen:
 
-- Connect the anode to 5 volts, which is the first pin on the outside row on the Pi
-- Connect the cathode to the 220 ohm resistor
-- Connect the other side of the resistor to ground, which is the third pin in on the outside row on the Pi
+- Verbinde die Anode mit 5 Volt. Dies ist der erste Pin in der äußeren Reihe des Pi
+- Verbinde die Kathode mit dem 220-Ohm-Widerstand
+- Verbinde die andere Seite des Widerstands mit Masse. Dies ist der dritte Pin in der äußeren Reihe des Pi
 
-This will allow power to flow from the Pi into the LED and back to ground through the resistor. The resistor will limit the current to about 23 mA so that the LED doesn't burn out.
+Dadurch kann Strom vom Pi in die LED und über den Widerstand zurück zur Erde fließen. Der Widerstand begrenzt den Strom auf ca. 23 mA, damit die LED nicht durchbrennt.
 
 ![](images/solderless-led.png)
 
-Next, turn the Raspberry Pi back on and log in as usual. You'll quickly notice that the LED doesn't appear to be working, but in fact it is. Your human eyes can't see it, but the Pi NoIR camera can. Turn on the camera preview with this command:
+Schalte anschließend den Raspberry Pi wieder ein und melde dich wie gewohnt an. Du wirst schnell feststellen, dass die LED nicht funktioniert, aber tatsächlich funktioniert sie. Deine Augen können es nicht sehen, aber die Pi NoIR-Kamera kann es. Schalte die Kameravorschau mit diesem Befehl ein:
 
 ```bash
 raspivid -t 0
 ```
 
-Hold the LED in front of the camera and it will look like this:
+Halte die LED vor die Kamera und es sieht folgendermaßen aus:
 
 ![](images/ir-led.jpg)
 
-If the LED still doesn't appear to be lit, then you may have mixed up the polarity of the anode and cathode. Double-check your wiring against the diagram above. Try turning out the lights and aiming the LED at yourself; don't look directly into it, however, as infrared light can still cause harm to your eyes. You'll see from the Pi NoIR camera preview that it will illuminate you quite well.
+Wenn die LED immernoch nicht leuchtet, hast du möglicherweise die Polarität von Anode und Kathode vertauscht. Überprüfe deine Verkabelung anhand des obigen Diagramms. Versuche, das Licht auszuschalten und die LED auf dich selbst zu richten. Schau jedoch nicht direkt hinein, da Infrarotlicht deine Augen immernoch schädigen kann. Du wirst anhand der Vorschau der Pi NoIR-Kamera sehen, dass sie dich recht gut beleuchtet.
 
-Press `Ctrl + C` when you want to exit.
+Drücke `Strg +C` wenn du die Vorschau beenden möchtest.
 
