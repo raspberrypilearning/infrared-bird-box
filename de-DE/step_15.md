@@ -1,24 +1,24 @@
-## What next?
+## Was kommt als Nächstes?
 
-Here are some ideas for making the installation more permanent and protecting it from the elements. Whether you choose to follow them is up to you.
+Hier sind einige Ideen, wie du die Installation dauerhafter machen und vor Witterungseinflüssen schützen kannst. Ob du ihnen folgen willst, liegt bei dir.
 
-- If you're using the Gardman bird box, don't trust the keyhole mount on the back. This mount supports the entire weight of the bird box on a single thin piece of wood. It's better to drill through from the inside and mount it using a large screw and washer.
+- Wenn du den Gardman-Nistkasten verwendest, vertraue der Schlüssellochhalterung auf der Rückseite nicht. Diese Halterung trägt das gesamte Gewicht des Nistkastens auf einem einzigen dünnen Stück Holz. Es ist besser, von innen durchzubohren und ihn mit einer großen Schraube und Unterlegscheibe zu befestigen.
 
-- Consider that the Raspberry Pi doesn't need to be directly attached to the bird box itself. You can buy a [replacement camera cable](http://shop.pimoroni.com/products/raspberry-pi-camera-cable) which can give you greater range. The same connector found on the Raspberry Pi itself is also found on the back of the Camera Module, allowing you to change it easily; the tin connectors face the same side as the lens.
+- Beachte, dass der Raspberry Pi nicht direkt am Nistkasten selbst befestigt werden muss. Du kannst ein [Ersatzkamerakabel](http://shop.pimoroni.com/products/raspberry-pi-camera-cable) kaufen, das eine größere Reichweite hat. Der gleiche Anschluss, der sich am Raspberry Pi selbst befindet, befindet sich auch auf der Rückseite des Kameramoduls, sodass du ihn problemlos ändern kannst. Die Kontakte zeigen zur gleichen Seite wie die Linse.
 
-- The Raspberry Pi could be placed inside a plastic box to make it waterproof; it shouldn't be a problem to close the camera flex into the lid. Choosing a site which is beneath the overhang of an existing roof will help a lot, so the bird box will not be rained on directly.
+- Der Raspberry Pi kann in eine Plastikbox gelegt werden, um ihn wasserdicht zu machen. Es sollte kein Problem sein, das Kameraflachbandkabel durch den Deckelverschluss zu führen. Die Wahl eines Standorts unter dem Überhang eines vorhandenen Daches hilft sehr, sodass der Nistkasten nicht direkt nassregnet.
 
-- How will you get power and an internet connection to the bird box? You could use a wireless USB dongle but Ethernet is more reliable for streaming video, especially in built-up areas that have a lot of wireless traffic.
+- Wie bekommst du Strom und eine Internetverbindung zum Nistkasten? Du kannst einen WiFi USB-Dongle verwenden, aber Ethernet ist zuverlässiger für das Streamen von Videos, insbesondere in bebauten Gebieten mit viel drahtlosem Datenverkehr.
 
-- Preventing water getting into the box should be a priority. The roof could be sealed using silicone sealant, which is often used to seal the edges of windows and bathroom sinks.
+- Die Verhinderung des Eindringens von  Wasser in die Box sollte Priorität haben. Das Dach könnte mit Silikondichtmittel abgedichtet werden, welches häufig zum Abdichten von Fensterkanten und Waschbecken verwendet wird.
 
-- Try to make use of the four mounting holes on the Camera Module. Perhaps you could jigsaw a wedge of wood to keep it at the right angle, and put screws through to hold it in place.
+- Versuche, die vier Befestigungslöcher am Kameramodul zu verwenden. Vielleicht kannst du einen Holzkeil sägen, um ihn im richtigen Winkel zu halten und Schrauben durchstecken, um ihn an Ort und Stelle zu halten.
 
-- What other uses can you think of for an infrared camera and LED?
+- Welche anderen Verwendungsmöglichkeiten kannst du dir für eine Infrarotkamera und eine LED vorstellen?
 
 
 
-- Wait for some birds to move in
-- Tell the world about your bird box
-- Post the Ustream channel URL on social media or email it to your friends and family
+- Warte, bis einige Vögel eingezogen sind
+- Erzähle der Welt von deinem Nistkasten
+- Poste die Ustream-Kanal-URL in den sozialen Medien oder sende sie per E-Mail an deine Freunde und Familie
 
