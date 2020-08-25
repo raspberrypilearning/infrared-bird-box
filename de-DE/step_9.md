@@ -1,4 +1,4 @@
-## Infrared Bird Box - Part 2
+## Infrarot-Nistkasten - Teil 2
 
-In this project, you will use a Raspberry Pi and a Pi NoIR camera to allow you to observe nesting birds without disturbing them. This advanced worksheet covers how to stream the video you produce to the internet. 
+In diesem Projekt verwendest du einen Raspberry Pi und ein Pi NoIR Kameramodul, um nistende Vögel zu beobachten, ohne sie zu stören. In diesem erweiterten Arbeitsblatt erfährst du, wie du das von dir erstellte Video ins Internet streamst. 
 
