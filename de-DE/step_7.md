@@ -1,40 +1,40 @@
-## Adjusting the camera focus
+## Anpassen des Kamerafokus
 
-Bird boxes tend to be quite small, and because of this you'll probably need to reduce the focal length on the Pi NoIR camera, otherwise you're only going to see blurry images of birds. It will depend on the bird box you have chosen; however, if you're using the [Gardman](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965) box suggested by this guide (which is also recommended by the [British Trust for Ornithology](http://www.bto.org/)), then you will definitely have to adjust the camera focus.
+Nistkästen sind in der Regel recht klein. Aus diesem Grund musst du wahrscheinlich die Brennweite der Pi NoIR-Kamera verringern, da sonst nur verschwommene Bilder von Vögeln angezeigt werden. Dies hängt von dem von dir ausgewählten Nistkasten ab. Wenn du jedoch den von uns vorgeschlagenen [Gardman](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965) verwendest (der auch vom [British Trust for Ornithology](http://www.bto.org/) empfohlen wird), musst du auf jeden Fall den Kamerafokus einstellen.
 
 ![](images/focal-length.png)
 
-The focal length of the camera is the distance from the front of the lens to the closest object which is in focus. The depth of field is the range within which objects appear to be in focus.
+Die Brennweite der Kamera ist der Abstand von der Vorderseite des Objektivs zum nächstliegenden fokussierten Objekt. Die Schärfentiefe ist der Bereich, in dem Objekte im Fokus erscheinen.
 
-The Pi Camera Module has a focal length of about 50 cm and a depth of field of 50 cm to infinity. This means that objects will only appear in focus if they’re at least 50 cm away from the lens of the camera. If objects are closer, then they will be blurry and out of focus. The Gardman bird box is about 18 cm high on the inside; therefore we know that if the camera is stuck to the inside of the roof, all objects are going to be 18 cm or closer. If we want them to be in focus, then the camera focal length will need to be reduced.
+Das Pi-Kameramodul hat eine Brennweite von ca. 50 cm und eine Schärfentiefe von 50 cm bis unendlich. Dies bedeutet, dass Objekte nur dann scharf erscheinen, wenn sie mindestens 50 cm vom Objektiv der Kamera entfernt sind. Wenn Objekte näher sind, sind sie verschwommen und unscharf. Der Gardman-Nistkasten ist innen ca. 18 cm hoch. Daher wissen wir, dass alle Objekte 18 cm entfernt oder näher sind, wenn die Kamera an der Innenseite des Daches befestigt ist. Wenn wir möchten, dass sie scharfgestellt sind, muss die Brennweite der Kamera reduziert werden.
 
-As an experiment, try putting some keys into the bird box and, with the roof open (remove the screw), hold the camera at the approximate height of the roof and look at the camera preview. The keys will probably not be in focus. Use the following command to start the camera preview:
+Versuche als Experiment, einige Schlüssel in den Nistkasten zu legen, halte die Kamera bei geöffnetem Dach (entferne die Schraube) auf ungefähre Dachhöhe und sieh dir die Kameravorschau an. Die Schlüssel werden wahrscheinlich nicht scharfgestellt. Verwende den folgenden Befehl, um die Kameravorschau zu starten:
 
 ```bash
 raspivid -t 0
 ```
 
-Press **Ctrl + C** when you want to exit.
+Drücke **Strg + C** wenn du die Vorschau beenden möchtest.
 
-The Raspberry Pi NoIR camera has a lens that can rotate to adjust the focus. It's sold as a fixed-focus camera, but it ships with three blobs of glue to hold the rotatable lens in place. Look at the image below: the letters **A**, **B**, and **C** mark the location of the glue:
+Die Raspberry Pi NoIR-Kamera verfügt über ein Objektiv, das sich drehen lässt, um den Fokus anzupassen. Es wird als Kamera mit festem Fokus verkauft, wird jedoch mit drei Klebestellen geliefert, um das drehbare Objektiv an Ort und Stelle zu halten. Schau dir das Bild unten an: die Buchstaben **A**, **B** und **C** markieren die Position des Klebers:
 
 ![](images/pi-noir-glue.jpg)
 
-To be able to rotate the lens to adjust the focus, you'll need to dig out these blobs of glue manually. This is easier than it sounds and only takes about five minutes. You will need a sharp tool like a needle, a scalpel or a dental pick. Doing the work under a low power microscope can also help a lot. You should completely disconnect the camera from the Raspberry Pi when you do this.
+Um den Focus einzustellen, muss das Objektiv gedreht werden. Dafür musst du die Klebertropfen manuell entfernen. Dies ist einfacher, als es sich anhört und dauert nur etwa fünf Minuten. Du benötigst ein scharfes Werkzeug, etwa eine Nadel, ein Skalpell oder einen Zahnstocher. Die Arbeit unter einem Mikroskop mit geringer Leistung kann ebenfalls sehr hilfreich sein. Du solltest die Kamera dabei vollständig vom Raspberry Pi trennen.
 
 ![](images/pi-noir-scalpel.jpg)
 
-Take care not to cut your fingers. Children should only do this under adult supervision for safety, especially if a scalpel is being used. The orange connector with the word **SUNNY** printed on it can pop out when you're scraping the glue away; don’t worry, though, because it pops right back in without any problems. Unless you’re very heavy-handed, it’s unlikely that you will break the camera; if it does break, though, it’s your own responsibility.
+Achte darauf, dir nicht in die Finger zu schneiden. Kinder sollten dies aus Sicherheitsgründen nur unter Aufsicht von Erwachsenen tun, insbesondere, wenn ein Skalpell verwendet wird. Der orangefarbene Anschluss mit dem Aufdruck **SUNNY** kann herausspringen, wenn du den Kleber abkratzt. Mach dir aber keine Sorgen, denn er springt ohne Probleme wieder zurück. Es ist unwahrscheinlich, dass du die Kamera beschädigst, es sei denn, du bist sehr ungeschickt. Wenn sie jedoch kaputt geht, bist du selbst verantwortlich.
 
-The camera will end up looking a little scruffy after you have removed the glue, but it doesn't really matter since it's going to live on the inside of a bird box without anyone looking at it. See below for a comparison:
+Die Kamera sieht nach dem Entfernen des Klebers etwas unsauber aus, aber das spielt keine Rolle, da sie sich im Inneren des Nistkastens befindet und niemand das sehen kann. Siehe unten für einen Vergleich:
 
 ![](images/pi-noir-before-after.jpg)
 
-Once you're satisfied that you have removed all of the glue, use a pair of tweezers or jewellery pliers to grip the inner section of the camera as shown below; you should then be able to turn it. Carefully rotate it **anti-clockwise** a few times. Now reconnect the camera to the Raspberry Pi and check to see how the keys look.
+Wenn du den gesamten Kleber zu deiner Zufriedenheit entfernt hast, verwende eine Pinzette oder eine Schmuckzange, um den inneren Teil der Kamera wie unten gezeigt zu greifen. Du solltest ihn dann drehen können. Dreh ihn vorsichtig einige Male **gegen den Uhrzeigersinn**. Schließe die Kamera nun wieder an den Raspberry Pi an und überprüfe, wie die Schlüssel aussehen.
 
-You may wish to put something under the keys at this point to simulate the height of a nest, to make doubly sure that the birds will be in focus. Remember that once birds move in, you can't come back and adjust the camera if the focus is wrong.
+Möglicherweise möchtest du an dieser Stelle etwas unter die Schlüssel legen, um die Höhe eines Nestes zu simulieren und um sicherzustellen, dass die Vögel im Fokus sind. Denke daran, dass du nach dem Einzug der Vögel den Nistkasten nicht mehr öffnen kannst um die Kamera einzustellen, falls der Fokus falsch ist.
 
 ![](images/pi-noir-tweezers.jpg)
 
-Be careful not to rotate the lens too far, otherwise it will pop out, and it can be a bit tricky to get it back in and on the thread. If this does happen, just put it back in gently and rotate clockwise until it catches. Once the required focus has been found, you don't need to re-glue it. It won't move on its own, even if it gets a few bumps and knocks.
+Achte darauf, das Objektiv nicht zu weit zu drehen, da es sonst herausspringt und es etwas schwierig sein kann, es wieder einzuschrauben. In diesem Fall setze es einfach wieder vorsichtig ein und dreh es im Uhrzeigersinn, bis es einrastet. Sobald der gewünschte Fokus gefunden wurde, musst du die Kamera nicht mehr neu verkleben. Sie bewegt sich nicht von allein, selbst wenn sie ein paar Stöße und Schläge abbekommt.
 
