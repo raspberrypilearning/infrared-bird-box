@@ -1,21 +1,21 @@
-## YouTube Setup
+## YouTube-Setup
 
-- Go to [YouTube](https://www.youtube.com/), and sign in.
-- On the left-hand side of the screen you should see a menu with the **My Channel** option available:
+- Gehe zu [YouTube](https://www.youtube.com/) und melde dich an.
+- Auf der linken Seite des Bildschirms sollte ein Menü mit der Option **Mein Kanal** angezeigt werden:
 
-  ![channel](images/channel.png)
+  ![Kanal](images/channel.png)
 
-- In the middle of the screen you should see the **Video Manager** option:
+- In der Mitte des Bildschirms sollte die Option **Video Manager** angezeigt werden:
 
-  ![video manager](images/video-manager.png)
+  ![Video-Manager](images/video-manager.png)
 
-- In the menu on the left you should see a **LIVE STREAMING** option, and within that a **Stream now BETA** option:
+- Im Menü links sollte die Option **LIVE STREAMING** und darin die Option **Stream jetzt BETA** angezeigt werden:
 
-  ![live stream](images/live-stream.png)
+  ![Livestream](images/live-stream.png)
 
-- Scroll down to the bottom of the page, and you should see the **ENCODER SETUP** option:
+- Scrolle zum Ende der Seite, dort solltest du die **ENCODER SETUP** Option sehen:
 
-  ![encoder setup](images/encoder-setup.png)
+  ![Encoder-Setup](images/encoder-setup.png)
 
-- Within the the **ENCODER SETUP** there is a **Server URL** and a **Stream name/key**. The key will appear to be just a line of asterisks, until you click on the **Reveal** button. You need to keep the key secret, though, so make sure you don't share it online.
+- Innerhalb des **ENCODER SETUP** gibt es die **Server-URL** und den ** Stream-Namen/ Schlüssel**. Der Schlüssel scheint nur eine Reihe von Sternchen zu sein, bis du auf den **Anzeigen** Button klickst. Du musst den Schlüssel jedoch geheim halten, stelle also sicher, dass du ihn nicht online teilst.
 
