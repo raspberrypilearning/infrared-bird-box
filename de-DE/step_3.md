@@ -1,4 +1,4 @@
-## Infrared Bird Box
+## Infrarot-Nistkasten
 
-In this project, you will use a Raspberry Pi and a Pi NoIR Camera Module to allow you to observe nesting birds without disturbing them.
+In diesem Projekt verwendest du einen Raspberry Pi und ein Pi NoIR Kameramodul, um nistende Vögel zu beobachten, ohne sie zu stören.
 
