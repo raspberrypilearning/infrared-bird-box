@@ -1,6 +1,6 @@
-## Viewing your stream
+## Anzeigen deines Streams
 
-Once you have run the command, you can hop back over to YouTube and, after a minute or two, you should see your video being streamed for anyone to watch.
+Sobald du den Befehl ausgeführt hast, kannst du zu YouTube zurückkehren. Nach ein oder zwei Minuten sollte dein Video gestreamt werden, damit jeder es sehen kann.
 
-Remember: be careful about what content you place on the internet, especially in a public channel.
+Denke daran: Achte darauf, welche Inhalte du im Internet platzierst, insbesondere in einem öffentlichen Kanal.
 
