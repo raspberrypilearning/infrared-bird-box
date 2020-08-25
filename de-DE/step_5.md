@@ -1,14 +1,14 @@
-## Setting up the Pi NoIR
+## Pi NoIR einrichten
 
-Firstly, set up the Pi NoIR camera module and test it, without fitting it to the bird box: we will come to that part later. Follow the instructions [here](http://www.raspberrypi.org/camera) and stop once you have successfully used a few of the example commands.
+Richten Sie zunächst das Pi NoIR-Kameramodul ein und testen Sie es, ohne es an der Vogelbox anzubringen. Wir werden später auf diesen Teil zurückkommen. Folge den Anweisungen [hier](http://www.raspberrypi.org/camera) und stoppe, sobald du einige der Beispielbefehle erfolgreich verwendet hast.
 
-If you have not done so already, you can test the camera video preview using the following command:
+Wenn du dies noch nicht getan hast, kannst du die Videovorschau der Kamera mit dem folgenden Befehl testen:
 
 ```bash
 raspivid -t 0
 ```
 
-You'll notice that everything looks a little strange. This is because you're looking at a combination of visible light and infrared light. A quick test is to turn the lights off, and then aim a TV remote control at your face and press the buttons. You should see your face illuminated in the darkness.
+Du wirst feststellen, dass alles etwas seltsam aussieht. Dies liegt daran, dass du eine Kombination aus sichtbarem Licht und Infrarotlicht betrachtest. Ein schneller Test besteht darin, das Licht auszuschalten, dann eine TV-Fernbedienung auf dein Gesicht zu richten und die Tasten zu drücken. Du solltest dein Gesicht in der Dunkelheit beleuchtet sehen.
 
-Press `Ctrl + C` when you want to exit.
+Drücke ` Strg + C. ` wenn du die Vorschau beenden möchtest.
 
