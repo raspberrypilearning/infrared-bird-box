@@ -1,68 +1,68 @@
-## Installing the camera and LED into the bird box
+## Installation der Kamera und der LED im Nistkasten
 
-In this part of the guide, we will demonstrate how to install the camera; it will then be up to you to come up with a more permanent solution, which is a fun activity in itself.
+In diesem Teil der Anleitung zeigen wir dir, wie du die Kamera installierst. Es liegt dann an dir, eine dauerhaftere Lösung zu finden, was an sich schon Spaß macht.
 
-The following instructions are for the [Gardman](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965) bird box.
+Die folgenden Anweisungen gelten für den [Gardman](http://www.diy.com/nav/garden/pet-bird-care/bird-care/nesting_boxes/Gardman-Wild-Bird-Nest-Box-9374965) Nistkasten.
 
-- Place your finger on the roof, approximately above the centre of the main body of the bird box:
+- Lege deinen Finger auf das Dach, ungefähr über der Mitte des Grundkörpers des Nistkastens:
 
     ![](images/bb-install-1.jpg)
 
-- Lift up the roof and place your thumb directly below your finger, so that you're pinching the lid as shown:
+- Nimm das Dach ab und lege deinen Daumen direkt unter deinen Finger, sodass du den Deckel wie gezeigt einklemmst:
 
     ![](images/bb-install-2.jpg)
 
-- Your thumb is now where the camera needs to be. Take a pen and mark this spot with a cross:
+- Dein Daumen ist jetzt dort, wo die Kamera sein muss. Nimm einen Stift und markiere diese Stelle mit einem Kreuz:
 
     ![](images/bb-install-3.jpg)
 
-- Cut out a rectangle of cardboard approximately 4 cm x 2 cm (1.5" x 0.75") and fold it in half lengthways. Use some tape to secure it to the underside of the roof so that it's a few millimetres below the cross. This is going to be used to compensate for the angle of the roof, so that the camera points directly into the middle of the bird box.
+- Schneide ein Rechteck aus Pappe (ca. 4 cm x 2 cm) aus und falte es der Länge nach in zwei Hälften. Befestige es mit Klebeband an der Unterseite des Daches, sodass es sich einige Millimeter unter dem Kreuz befindet. Damit soll der Dachwinkel ausgeglichen werden, sodass die Kamera direkt in die Mitte des Nistkastens zeigt.
 
     ![](images/bb-install-4.jpg)
 
-- Next, take the Pi NoIR and slide the flex down between the roof hinge and the back wall of the box. Do this with the tin connectors facing away from the back wall. If you wish, you can remove the two middle staples holding the hinge in place; this will make the flex exit the bird box more neatly.
+- Nimm als Nächstes die Pi NoIR und schiebe das Flachbandkabel zwischen dem Dachscharnier und der Rückwand des Kastens nach unten. Dabei müssen die Kontakte von der Rückwand weg zeigen. Wenn du möchtest, kannst du die beiden mittleren Heftklammern entfernen, mit denen das Scharnier befestigt ist. Dadurch verlässt das Flachbandkabel den Nistkasten ordentlicher.
 
     ![](images/bb-install-5.jpg)
 
-- Take some tape and put it across the top of the Pi NoIR as shown. Do **not** cover the camera lens.
+- Nimm etwas Klebeband und klebe es wie gezeigt über die Pi NoIR. Verdecke **nicht** das Kameraobjektiv.
 
     ![](images/bb-install-6.jpg)
 
-- Secure the camera in place so that the central lens is directly over the cross that you drew earlier. The camera should sit at an angle.
+- Befestige die Kamera so, dass sich die Mitte des Objektivs direkt über dem Kreuz befindet, das du zuvor gezeichnet hast. Die Kamera sollte in einem Winkel angebracht sein.
 
     ![](images/bb-install-7.jpg)
 
-- Close the lid and inspect the camera angle from the side: it needs to point directly at the centre of the base. If it doesn't look right, then go back and adjust it until you're happy.
+- Schließe den Deckel und überprüfe den Kamerawinkel von der Seite: die Kamera muss direkt auf die Mitte des Kastens zeigen. Wenn es nicht richtig aussieht, geh zurück und passe sie erneut an, bis du zufrieden bist.
 
     ![](images/bb-install-8.jpg)
 
-- Secure the infrared LED to the underside of the roof. Don't attach it too close to the camera, or you'll see a lot of glare on the video. The LED can go anywhere, but it can help to bend its legs by 90 degrees as shown and secure it to the roof that way. You may also wish to blank off the end of the LED with correction fluid or by filing it down with a nail file. This will prevent any spotlight effect on the video and give a more diffuse light.
+- Befestige die Infrarot-LED an der Unterseite des Daches. Befestige sie nicht zu nahe an der Kamera, da sonst die Kamera stark geblendet wird. Die LED kann überall eingebaut werden, hilfreich ist es, die Beine wie gezeigt um 90 Grad zu biegen und sie auf diese Weise am Dach zu befestigen. Möglicherweise möchtest du auch das Ende der LED mit Korrekturflüssigkeit abdunkeln oder durch Abfeilen mit einer Nagelfeile abblenden. Dadurch wird ein Scheinwerfereffekt auf das Video verhindert und ein diffuseres Licht erzeugt.
 
     ![](images/bb-install-9.jpg)
 
-- Now reconnect the Raspberry Pi and test the focus once again. We recommend connecting the camera flex coming from the back of the bird box to the Pi first. Then connect the LED and resistor, followed by the screen, keyboard, and finally the power supply. When testing this setup, it can be helpful to rest the Raspberry Pi upside down on the roof of the bird box, but do whatever works best for you.
+- Schließe nun den Raspberry Pi wieder an und teste den Fokus erneut. Wir empfehlen, zuerst das Flachbandkabel der Kamera von der Rückseite des Nistkastens an den Pi anzuschließen. Schließ dann die LED und den Widerstand an gefolgt von Bildschirm, Tastatur und schließlich der Stromversorgung. Wenn du den Aufbau testest, kann es hilfreich sein, den Raspberry Pi verkehrt herum auf dem Dach des Nistkastens abzulegen, aber mach es so, wie es für dich am besten funktioniert.
 
-- Boot up, log in as usual and then start the video preview with `raspivid -t 0`. With the roof of the bird box closed, you should be able to see the inside in black and white. This shows that the infrared illumination is working; you should even be able to cover the hole and still see the inside. It will look similar to the picture below but will be slightly more zoomed in. This is because this image was taken using the `raspistill` command and not `raspivid`. If you can't see anything at all, then it's likely the LED is not wired up correctly: double-check the wiring and the polarity of the anode and cathode.
+- Boote den Pi, melde dich wie gewohnt an und starte dann die Videovorschau mit `raspivid -t 0`. Bei geschlossenem Dach des Nistkastens solltest du das Innere in Schwarzweiß sehen können. Dies zeigt, dass die Infrarotbeleuchtung funktioniert; du solltest sogar in der Lage sein, das Loch abzudecken und trotzdem das Innere zu sehen. Es sieht ähnlich aus wie auf dem Bild unten, wird jedoch etwas vergrößert. Dies liegt daran, dass dieses Bild mit dem Befehl `raspistill` aufgenommen wurde und nicht mit `raspivid`. Wenn du überhaupt nichts sehen kannst, ist die LED wahrscheinlich nicht richtig verdrahtet: überprüfe die Verdrahtung und die Polarität von Anode und Kathode.
 
     ![](images/watch.jpg)
 
-- It's now helpful to put an object with some black-on-white text into the bird box to verify the focus; a good object to use would be a watch or a business card. Ensure that the text is in focus and readable; adjust the camera focus again as necessary before continuing. Remember to compensate for the nest height.
+- Es ist jetzt hilfreich, ein Objekt mit Schwarz-Weiß-Text in die Vogelbox zu legen, um den Fokus zu überprüfen. Ein gutes Objekt wäre eine Uhr oder eine Visitenkarte. Stelle sicher, dass der Text scharf und lesbar ist. Passe den Kamerafokus nach Bedarf erneut an, bevor du fortfährst. Denk daran, die Nesthöhe auszugleichen.
 
-    Press **Ctrl + C** when you want to stop the camera preview.
+    Drücke **Strg + C** wenn du die Vorschau beenden möchtest.
 
-- Lastly, consider the red LED on the camera. By default, it comes on whenever the camera is on. This will be a huge deterrent to birds moving in, so you should disable it. This can be done by editing the Raspberry Pi configuration file. Enter the command below:
+- Betrachte zum Schluss die rote LED an der Kamera. Standardmäßig wird sie eingeschaltet, wenn die Kamera eingeschaltet ist. Dies ist eine große Abschreckung für einziehende Vögel, daher solltest du sie deaktivieren. Dies kann durch Bearbeiten der Raspberry Pi-Konfigurationsdatei erfolgen. Gib den folgenden Befehl ein:
 
     ```bash
     sudo nano /boot/config.txt
     ```
 
-    Add the following line to the end of the file:
+    Füge am Ende der Datei die folgende Zeile hinzu:
 
     ```bash
     disable_camera_led=1
     ```
 
-    Press **Ctrl + O** to save and **Ctrl + X** to quit. The changes will only take effect after a reboot:
+    Drücke **Strg + O** zum Speichern und **Strg + X** zum Beenden. Die Änderungen werden erst nach einem Neustart wirksam:
 
     ```bash
     sudo reboot
