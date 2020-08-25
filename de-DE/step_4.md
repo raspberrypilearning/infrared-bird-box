@@ -1,18 +1,18 @@
-## Why use the Pi NoIR?
+## Warum die Pi NoIR benutzen?
 
-Garden birds are very choosy about where they build their nest. In order to get good results from this activity, the bird box will need to be located out of the reach of predators, away from any prevailing winds, and nowhere near a bird table or feeder.
+Gartenvögel sind sehr wählerisch, wo sie ihr Nest bauen. Um gute Ergebnisse zu erzielen, muss sich der Nistkasten außerhalb der Reichweite von Raubtieren, von der vorherrschenden Windrichtung abgewandt und nicht in der Nähe eines Vogel-Futterplatzes oder Vogel-Futterhauses befinden.
 
-Once birds have moved in, the box must not be disturbed until they have finished breeding; this is usually between October and January in the UK. If something goes wrong with the project, you can't simply open the box and fiddle with your wires or adjust the camera, as this will traumatise the birds and could cause eggs or hatchlings to be abandoned.
+Sobald die Vögel eingezogen sind, dürfen sie bis zur Beendigung der Aufzucht nicht gestört werden. Deshalb sollte der Nistkasten in Deutschland, Österreich und der Schweiz bereits im Spätsommer oder anfangs Herbst aufgestellt werden. Wenn mit dem Projekt etwas schiefgeht, kannst du die Box nicht einfach öffnen und an den Drähten herumspielen oder die Kamera einstellen, da dies die Vögel traumatisiert und dazu führen kann, dass die Eier oder Jungtiere ausgesetzt werden.
 
-A requirement of the system is to be able to see the birds in total darkness. A light inside the bird box could attract insects and predators, and therefore no birds would select it as a nesting site. It's possible, however, to illuminate the inside of the bird box with a kind of light that's invisible to animals and humans, but is visible to a camera. This is commonly known as night vision. Night vision works by using a spectrum of light called [infrared](http://en.wikipedia.org/wiki/Infrared) which has a longer wavelength than visible light. Notice that IR wavelengths are shown below the visible spectrum of light (VIS) in this diagram:
+Eine Anforderung an das System ist, die Vögel in völliger Dunkelheit sehen zu können. Ein Licht in der Vogelbox könnte Insekten und Raubtiere anziehen, daher würde kein Vogel diesen Nistplatz auswählen. Es ist jedoch möglich, das Innere der Vogelbox mit einer Art Licht zu beleuchten, das für Tiere und Menschen unsichtbar, für eine Kamera jedoch sichtbar ist. Dies ist allgemein als Nachtsicht bekannt. Nachtsicht funktioniert mit einem Lichtspektrum namens [Infrarot](http://en.wikipedia.org/wiki/Infrared). Dieses hat eine längere Wellenlänge als sichtbares Licht. Beachte, dass die IR-Wellenlängen in diesem Diagramm unterhalb des sichtbaren Lichtspektrums (VIS) angezeigt werden:
 
 ![](images/light-spectrum.png)
 
-*Image from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Light_spectrum_(precise_colors).svg).*
+*Bild von [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Light_spectrum_(precise_colors).svg).*
 
-Many devices incorporate night vision via the infrared spectrum. A night vision surveillance camera, for example, typically has lots of infrared LEDs (light-emitting diodes) built into it around the lens. These emit infrared light which will then bounce off various objects and return to the camera lens, allowing it to create an image. The image will look black and white (greyscale), because there are no wavelengths of light from the visible spectrum being detected. However, a black and white image is good enough to allow you to watch what's happening inside a bird box, and it doesn't disturb or interfere with the birds in any way.
+Viele Geräte verfügen über eine Nachtsichtfähigkeit, da sie das Infrarotspektrum wahrnehmen. In einer Nachtsicht-Überwachungskamera sind typischerweise viele Infrarot-LEDs (Leuchtdioden) um das Objektiv herum eingebaut. Diese senden Infrarotlicht aus, das dann von verschiedenen Objekten reflektiert wird und zum Kameraobjektiv zurückkehrt, sodass ein Bild aufgenommen werden kann. Das Bild sieht schwarzweiß (Graustufen) aus, da keine Wellenlängen des Lichts aus dem sichtbaren Spektrum erfasst werden. Ein Schwarzweißbild ist jedoch gut genug um zu beobachten, was in einem Nistkasten passiert und es stört oder beeinträchtigt die Vögel in keiner Weise.
 
 ![](images/pinoirada.jpg)
 
-Pictured above is the special version of the Raspberry Pi Camera Module called Pi NoIR. It's essentially identical to the normal camera but it has no infrared filter, meaning that it lets in infrared light. This camera, combined with an infrared light source, will give you night vision. It's also small and won't be too intrusive when mounted on the inside of a bird box.
+Oben abgebildet ist die spezielle Version des Raspberry Pi-Kameramoduls namens Pi NoIR. Es ist im Wesentlichen identisch mit der normalen Kamera, hat jedoch keinen Infrarotfilter, was bedeutet, dass es Infrarotlicht einlässt. Diese Kamera bietet in Kombination mit einer Infrarotlichtquelle Nachtsicht. Es ist auch klein und nicht zu aufdringlich, wenn es an der Innenseite einer Vogelbox montiert wird.
 
