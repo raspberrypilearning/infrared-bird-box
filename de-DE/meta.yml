@@ -1,7 +1,7 @@
 ---
-title: Infrared Bird Box
+title: Infrarot-Nistkasten
 hero_image: images/banner.png
-description: Build a better bird box with infrared and a Pi Camera
+description: Baue einen besseren Nistkasten mit Infrarot und einer Pi-Kamera
 original_url: https://raspberrypi.org/learning/infrared-bird-box
 theme: orange
 duration: 3
@@ -13,37 +13,37 @@ interests: photography, big-project
 technologies: electronic-components, python
 site_areas: projects
 hardware: electronic-components
-software: python
+software: Python
 version: 3.01
 last_tested: 2017-01-01
 steps:
   - 
-    title: Introduction
+    title: Einleitung
   - 
-    title: What you will need
+    title: Was du brauchen wirst
   - 
-    title: Infrared Bird Box
+    title: Infrarot-Nistkasten
   - 
-    title: Why use the Pi NoIR?
+    title: Warum die Pi NoIR benutzen?
   - 
-    title: Setting up the Pi NoIR
+    title: Pi NoIR einrichten
   - 
-    title: Wiring up the infrared LED
+    title: Verkabelung der Infrarot-LED
   - 
-    title: Adjusting the camera focus
+    title: Anpassen des Kamerafokus
   - 
-    title: Installing the camera and LED into the bird box
+    title: Installation der Kamera und der LED im Nistkasten
   - 
-    title: 'Infrared Bird Box - Part 2 '
+    title: 'Infrarot-Nistkasten - Teil 2 '
   - 
-    title: YouTube Setup
+    title: YouTube-Setup
   - 
-    title: Streaming with FFmpeg
+    title: Streaming mit FFmpeg
   - 
-    title: Viewing your stream
+    title: Anzeigen deines Streams
   - 
-    title: Remote control
+    title: Fernbedienung
   - 
-    title: VNC setup on the Raspberry Pi
+    title: VNC-Setup auf dem Raspberry Pi
   - 
-    title: What next?
+    title: Wie geht es weiter?
