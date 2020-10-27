@@ -1,18 +1,12 @@
 ## VNC on the Raspberry Pi
 
-Raspberry Pi is small and requires very little power, making it a great choice if you need an always-on device such as a file server or media player. In these cases, you may not necessarily want to have a monitor, keyboard, and mouse always attached to your Raspberry Pi.
-
-Running a computer without a monitor, keyboard, or mouse is often called running it headless, and uses a set of rules known as a communication protocol that allows two or more computers to communicate with each other. The two main protocols that you are likely to use to control your Raspberry Pi from another computer (such as your laptop, phone, or tablet) are VNC and SSH. VNC allows you to access the Raspberry Pi Desktop remotely, whereas SSH just allows you to access the command line.
-
-In this step, I'll show you how to use VNC from a Windows, MacOS, or Linux computer, or a device running Android or iOS.
+This step will look at how to use VNC from a Windows, MacOS, or Linux computer, or a device running Android or iOS.
 
 ### VNC Raspberry Pi set-up
 
-VNC is an acronym for **Virtual Network Computing**, and it allows your Raspberry Pi to send its screen to another device, as well as allowing your laptop, phone, or tablet to send keyboard, mouse, and touchscreen commands to your Raspberry Pi.
+As VNC (or Virtual Network Computing) can potentially be a security risk, especially on open networks, it is not enabled by default. Before you enable VNC, you should make sure that you have permission from whoever looks after your network.
 
-As VNC can potentially be a security risk, especially on open networks, it is not enabled by default. Before you enable VNC, you should make sure that your home network router has an enabled firewall and a secure password, and that any wireless connections are using WPA2, as earlier security methods are insecure. If you're unsure about how to do this, you or whoever looks after your router and network should visit the website of your internet service provider (ISP) to find out how to access these settings (it's usually done through your web browser).
-
-Open the **Raspberry Pi Configuration** menu from the Preferences option in the main menu, and set VNC to **Enabled**.
+To enable VNC, open the **Raspberry Pi Configuration** menu from the Preferences option in the main menu, and set VNC to **Enabled**.
 
 ![the VNC option being enabled in the Interfaces tab of the Raspberry Pi Configuration Menu](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/enable_vnc.png)
 
