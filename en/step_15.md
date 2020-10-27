@@ -36,11 +36,11 @@ Switch to the device that you want to use to remotely access your Raspberry Pi. 
 
 6. Enter your Raspberry Pi username and password into the fields provided and click on **OK**.
 
-   ![dialog box with fields for username and password for Raspberry Pi, along with a check box for remembering the password](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_auto_connect_mac.png)
+   ![dialog box with fields for username and password for Raspberry Pi, along with a check box for remembering the password](images/vnc_auto_connect_mac.png)
 
 7. You should now see the Raspberry Pi Desktop in a window. You can use your keyboard and mouse to control your Raspberry Pi. Everything inside the window is remotely controlling your Raspberry Pi. Click outside the window to use your Windows or Mac as normal.
 
-   ![a remote connection, with the Raspberry Pi Desktop viewable from the remote PC in a window](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_remote_connection_mac.png)
+   ![a remote connection, with the Raspberry Pi Desktop viewable from the remote PC in a window](images/vnc_remote_connection_mac.png)
 
 ### Android and iOS
 
@@ -48,11 +48,11 @@ You can find the [RealVNC Viewer for Android](https://play.google.com/store/apps
 
 Install the app, open it, and click on the `+` icon to add the Raspberry Pi that you wish to connect to. You'll have to enter the IP address of your Raspberry Pi, check the signature and catchphrase, and sign in to your user account in much the same way as was shown for Windows, Mac OS and Linux.
 
-![The VNC Viewer app with a plus button at the bottom-right](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_add_computer_android_cropped.png)
+![The VNC Viewer app with a plus button at the bottom-right](images/vnc_add_computer_android_cropped.png)
 
 The touchscreen works to move a mouse cursor around the screen, and tapping the screen works as a mouse left-click. For other options and information on using special keys, check the help included in the app.
 
-![Raspberry Pi desktop through the Android VNC viewer](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_remote_connection_android.png)
+![Raspberry Pi desktop through the Android VNC viewer](images/vnc_remote_connection_android.png)
 
 
 
