@@ -1,30 +1,65 @@
-## VNC setup on the Raspberry Pi
+## VNC on the Raspberry Pi
 
-- First, you'll need to get the RealVNC server for your Raspberry Pi. You can download the **deb** package [here](https://github.com/RealVNC/raspi-preview/releases/download/5.3.1.18206/VNC-Server-5.3.1-raspi-alpha1.deb).
-  - To install the package, open a terminal (**Ctrl + Alt + T**) and type the following command in the directory the deb package was downloaded to:
+Raspberry Pi is small and requires very little power, making it a great choice if you need an always-on device such as a file server or media player. In these cases, you may not necessarily want to have a monitor, keyboard, and mouse always attached to your Raspberry Pi.
 
-  ``` bash
-  sudo dpkg -i VNC-Server-5.3.1-raspi-alpha1.deb
-  ```
+Running a computer without a monitor, keyboard, or mouse is often called running it headless, and uses a set of rules known as a communication protocol that allows two or more computers to communicate with each other. The two main protocols that you are likely to use to control your Raspberry Pi from another computer (such as your laptop, phone, or tablet) are VNC and SSH. VNC allows you to access the Raspberry Pi Desktop remotely, whereas SSH just allows you to access the command line.
 
-- You'll need a license key for the server, but don't worry: these are completely free. On the [RealVNC website](https://www.realvnc.com/purchase/activate/), you can fill in your details and obtain your free license key.
-- Next, you need to apply the license key. This is again done in a terminal window with the following command:
+In this step, I'll show you how to use VNC from a Windows, MacOS, or Linux computer, or a device running Android or iOS.
 
-  ``` bash
-  sudo vnclicense -add <your-license-key-here->
-  ```
+### VNC Raspberry Pi set-up
 
-- It's a good idea to find the IP address of your Pi. Be warned, though: this can change when it disconnects and reconnects to your network, although most networks will let the Raspberry Pi retain the same IP address for quite some time. To find your IP address, you can hover your mouse over the network icon in the top-left of the screen, or alternatively use the following command in the terminal:
+VNC is an acronym for **Virtual Network Computing**, and it allows your Raspberry Pi to send its screen to another device, as well as allowing your laptop, phone, or tablet to send keyboard, mouse, and touchscreen commands to your Raspberry Pi.
 
-  ``` bash
-  hostname -I
-  ```
+As VNC can potentially be a security risk, especially on open networks, it is not enabled by default. Before you enable VNC, you should make sure that your home network router has an enabled firewall and a secure password, and that any wireless connections are using WPA2, as earlier security methods are insecure. If you're unsure about how to do this, you or whoever looks after your router and network should visit the website of your internet service provider (ISP) to find out how to access these settings (it's usually done through your web browser).
 
-- The next command will start your VNC server each time the Raspberry Pi is started. Again, it needs to be typed into a terminal window:
+Open the **Raspberry Pi Configuration** menu from the Preferences option in the main menu, and set VNC to **Enabled**.
 
-  ``` bash
-  sudo systemctl enable vncserver-x11-serviced.service
-  ```
+![the VNC option being enabled in the Interfaces tab of the Raspberry Pi Configuration Menu](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/enable_vnc.png)
 
-- On your Windows, MacOS, or Linux computer, you can now take control of your Raspberry Pi. You'll need a VNC viewer, and 
+Click on the **OK** button, and a new VNC icon should appear in the top right-hand corner of the screen. Click on this to open up **VNC Connect**. This window will provide some important information on your Raspberry Pi, including the Internet Protocol (IP) address. This will probably be something similar to `192.168.1.xxx`, where xxx is replaced by a number between 0 and 255 inclusive.
+
+![the VNC connect application displaying the IP address of 192 dot 168 dot 1 dot 206](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_connect.png)
+
+Now that VNC is enabled, you can connect to your Raspberry Pi using another device. You'll need VNC Viewer software running on that device.
+
+### VNC Viewer installation and set-up for Windows, Linux, or MacOS
+
+Switch to the device that you want to use to remotely access your Raspberry Pi. The screenshots in this section are from a computer running Windows 10, but the process is very similar for other operating systems.
+
+1. Go to the [VNC Connect downloads page](http://rpf.io/vnc-viewer) and download the VNC Viewer for your operating system.
+2. Install the application once it has downloaded. You may need to allow the installation of untrusted software for your OS.
+3. Open the VNC Viewer and dismiss any opening message you receive.
+
+   ![VNC Viewer open with the welcome message box showing](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_open_win.png)
+
+4. Enter the IP address of your Raspberry Pi (the address you found in VNC Connect) into the bar at the top.
+
+   ![a search for an IP address in the VNC viewer](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_viewer_search_IP_mac.png)
+
+5. A warning dialog box will appear. Check that the **Signature** and **Catchphrase** shown are the same as those displayed on the VNC Connect application on your Raspberry Pi, to ensure you are connecting to the correct device. If they are, click on **Continue**.
+
+   ![an Identity Check for connection from the VNC Viewer to Raspberry Pi](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_first_connect_win.png)
+
+6. Enter your Raspberry Pi username and password into the fields provided and click on **OK**.
+
+   ![dialog box with fields for username and password for Raspberry Pi, along with a check box for remembering the password](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_auto_connect_mac.png)
+
+7. You should now see the Raspberry Pi Desktop in a window. You can use your keyboard and mouse to control your Raspberry Pi. Everything inside the window is remotely controlling your Raspberry Pi. Click outside the window to use your Windows or Mac as normal.
+
+   ![a remote connection, with the Raspberry Pi Desktop viewable from the remote PC in a window](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_remote_connection_mac.png)
+
+### Android and iOS
+
+You can find the [RealVNC Viewer for Android](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android&hl=en_GB) in the Google Play store and the [RealVNC Viewer for iOS in the Apple App Store](https://apps.apple.com/us/app/vnc-viewer/id352019548).
+
+Install the app, open it, and click on the `+` icon to add the Raspberry Pi that you wish to connect to. You'll have to enter the IP address of your Raspberry Pi, check the signature and catchphrase, and sign in to your user account in much the same way as was shown for Windows, Linux, and Mac OS X.
+
+![The VNC Viewer app with a plus button at the bottom-right](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_add_computer_android_cropped.png)
+
+The touchscreen works to move a mouse cursor around the screen, and tapping the screen works as a mouse left-click. For other options and information on using special keys, check the help included in the app.
+
+![Raspberry Pi desktop through the Android VNC viewer](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_remote_connection_android.png)
+
+VNC is useful if you want to access the graphical desktop and use applications remotely. If you just need to be able to type commands remotely, then SSH (Secure Shell) is much faster and more secure. I'll show you how to use it in the next step.
+
 
