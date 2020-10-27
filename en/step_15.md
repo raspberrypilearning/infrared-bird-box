@@ -24,15 +24,15 @@ Switch to the device that you want to use to remotely access your Raspberry Pi. 
 2. Install the application once it has downloaded. You may need to allow the installation of untrusted software for your OS.
 3. Open the VNC Viewer and dismiss any opening message you receive.
 
-   ![VNC Viewer open with the welcome message box showing](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_open_win.png)
+   ![VNC Viewer open with the welcome message box showing](images/vnc_open_win.png)
 
 4. Enter the IP address of your Raspberry Pi (the address you found in VNC Connect) into the bar at the top.
 
-   ![a search for an IP address in the VNC viewer](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_viewer_search_IP_mac.png)
+   ![a search for an IP address in the VNC viewer](images/vnc_viewer_search_IP_mac.png)
 
 5. A warning dialog box will appear. Check that the **Signature** and **Catchphrase** shown are the same as those displayed on the VNC Connect application on your Raspberry Pi, to ensure you are connecting to the correct device. If they are, click on **Continue**.
 
-   ![an Identity Check for connection from the VNC Viewer to Raspberry Pi](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_first_connect_win.png)
+   ![an Identity Check for connection from the VNC Viewer to Raspberry Pi](images/vnc_first_connect_win.png)
 
 6. Enter your Raspberry Pi username and password into the fields provided and click on **OK**.
 
