@@ -8,11 +8,11 @@ As VNC (or Virtual Network Computing) can potentially be a security risk, especi
 
 To enable VNC, open the **Raspberry Pi Configuration** menu from the Preferences option in the main menu, and set VNC to **Enabled**.
 
-![the VNC option being enabled in the Interfaces tab of the Raspberry Pi Configuration Menu](vnc_connect.png)
+![the VNC option being enabled in the Interfaces tab of the Raspberry Pi Configuration Menu](images/enable_vnc.png)
 
 Click on the **OK** button, and a new VNC icon should appear in the top right-hand corner of the screen. Click on this to open up **VNC Connect**. This window will provide some important information on your Raspberry Pi, including the IP (Internet Protocol) address. This will probably be something similar to `192.168.1.xxx`, where xxx is replaced by a number from 0 to 255.
 
-![the VNC connect application displaying the IP address of 192 dot 168 dot 1 dot 206](https://rpf-futurelearn.s3-eu-west-1.amazonaws.com/Getting+Started+with+your+Raspberry+Pi/Screenshots/Week+3/vnc_connect.png)
+![the VNC connect application displaying the IP address of 192 dot 168 dot 1 dot 206](images/vnc_connect.png)
 
 Now that VNC is enabled, you can connect to your Raspberry Pi using another device that has VNC Viewer software running on it.
 
