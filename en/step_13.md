@@ -1,6 +1,6 @@
-## Viewing your stream
+## Remote control
 
-Once you have run the command, you can hop back over to YouTube and, after a minute or two, you should see your video being streamed for anyone to watch.
+The last thing you should consider is being able to access the Raspberry Pi remotely from another computer, without having to have a keyboard, mouse, and monitor connected to it. Having these attached would be pretty inconvenient if the Pi is located somewhere outside, like up a tree.
 
-Remember: be careful about what content you place on the internet, especially in a public channel.
+The easiest way to remotely access the Pi is to use VNC.
 

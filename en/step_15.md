@@ -55,4 +55,3 @@ The touchscreen works to move a mouse cursor around the screen, and tapping the 
 ![Raspberry Pi desktop through the Android VNC viewer](images/vnc_remote_connection_android.png)
 
 
-
