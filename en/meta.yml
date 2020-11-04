@@ -14,7 +14,7 @@ technologies: electronic-components, python
 site_areas: projects
 hardware: electronic-components
 software: python
-version: 3.01
+version: 4
 last_tested: 2017-01-01
 steps: 
 - title: Introduction
@@ -30,5 +30,5 @@ steps:
 - title: Streaming with FFmpeg
 - title: Viewing your stream
 - title: Remote control
-- title: VNC setup on the Raspberry Pi
+- title: VNC on the Raspberry Pi
 - title: What next?
