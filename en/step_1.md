@@ -1,4 +1,7 @@
 ## What you will make
+
+[[[camera-bullseye]]]
+
 In this resource you will make an infrared bird box. This project will not only teach you about electronics and programming, but can also help support the bird population in your area. Having a camera inside a nesting box can be tremendously rewarding; however, with the Raspberry Pi you can also share the nesting box with the world by streaming the video content to the internet. Watch as your birds gain their own internet following!
 
 ## What you will learn
