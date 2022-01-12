@@ -16,9 +16,10 @@ hardware: electronic-components
 software: python
 version: 4
 last_tested: 2017-01-01
-steps: 
+steps:
 - title: Introduction
 - title: What you will need
+  completion: engaged
 - title: Infrared Bird Box
 - title: Why use the Pi NoIR?
 - title: Setting up the Pi NoIR
@@ -30,4 +31,5 @@ steps:
 - title: Streaming with FFmpeg
 - title: Viewing your stream
 - title: Remote control
+  completion: internal
 - title: VNC on the Raspberry Pi
