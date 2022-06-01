@@ -17,18 +17,22 @@ software: Python
 version: 3.01
 last_tested: 2017-01-01
 steps:
-  - title: Einleitung
-  - title: Was du brauchen wirst
-  - title: Infrarot-Nistkasten
-  - title: Warum die Pi NoIR benutzen?
-  - title: Pi NoIR einrichten
-  - title: Verkabelung der Infrarot-LED
-  - title: Anpassen des Kamerafokus
-  - title: Installation der Kamera und der LED im Nistkasten
-  - title: 'Infrarot-Nistkasten - Teil 2 '
-  - title: YouTube-Setup
-  - title: Streaming mit FFmpeg
-  - title: Anzeigen deines Streams
-  - title: Fernbedienung
-  - title: VNC-Setup auf dem Raspberry Pi
-  - title: Wie geht es weiter?
+- title: Einleitung
+- title: Was du brauchen wirst
+- title: Infrarot-Nistkasten
+- title: Warum die Pi NoIR benutzen?
+  completion:
+  - engaged
+- title: Pi NoIR einrichten
+- title: Verkabelung der Infrarot-LED
+- title: Anpassen des Kamerafokus
+- title: Installation der Kamera und der LED im Nistkasten
+- title: 'Infrarot-Nistkasten - Teil 2 '
+- title: YouTube-Setup
+- title: Streaming mit FFmpeg
+- title: Anzeigen deines Streams
+- title: Fernbedienung
+- title: VNC-Setup auf dem Raspberry Pi
+  completion:
+  - internal
+- title: Wie geht es weiter?

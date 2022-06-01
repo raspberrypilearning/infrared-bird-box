@@ -16,11 +16,13 @@ hardware: electronic-components
 software: python
 version: 4
 last_tested: 2017-01-01
-steps: 
+steps:
 - title: Introduction
 - title: What you will need
 - title: Infrared Bird Box
 - title: Why use the Pi NoIR?
+  completion:
+  - engaged
 - title: Setting up the Pi NoIR
 - title: Wiring up the infrared LED
 - title: Adjusting the camera focus
@@ -31,3 +33,5 @@ steps:
 - title: Viewing your stream
 - title: Remote control
 - title: VNC on the Raspberry Pi
+  completion:
+  - internal
