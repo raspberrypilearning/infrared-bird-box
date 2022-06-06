@@ -19,9 +19,10 @@ last_tested: 2017-01-01
 steps:
 - title: Introduction
 - title: What you will need
-  completion: engaged
 - title: Infrared Bird Box
 - title: Why use the Pi NoIR?
+  completion:
+  - engaged
 - title: Setting up the Pi NoIR
 - title: Wiring up the infrared LED
 - title: Adjusting the camera focus
@@ -31,5 +32,6 @@ steps:
 - title: Streaming with FFmpeg
 - title: Viewing your stream
 - title: Remote control
-  completion: internal
 - title: VNC on the Raspberry Pi
+  completion:
+  - internal

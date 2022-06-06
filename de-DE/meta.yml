@@ -19,9 +19,10 @@ last_tested: 2017-01-01
 steps:
 - title: Einleitung
 - title: Was du brauchen wirst
-  completion: engaged
 - title: Infrarot-Nistkasten
 - title: Warum die Pi NoIR benutzen?
+  completion:
+  - engaged
 - title: Pi NoIR einrichten
 - title: Verkabelung der Infrarot-LED
 - title: Anpassen des Kamerafokus
@@ -31,6 +32,7 @@ steps:
 - title: Streaming mit FFmpeg
 - title: Anzeigen deines Streams
 - title: Fernbedienung
-  completion: internal
 - title: VNC-Setup auf dem Raspberry Pi
+  completion:
+  - internal
 - title: Wie geht es weiter?
