@@ -32,6 +32,8 @@ steps:
 - title: Streaming with FFmpeg
 - title: Viewing your stream
 - title: Remote control
-- title: VNC on the Raspberry Pi
   completion:
   - internal
+- title: VNC on the Raspberry Pi
+  completion:
+  - external
